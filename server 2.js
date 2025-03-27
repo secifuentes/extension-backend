@@ -9,22 +9,8 @@ const inscripcionesRoutes = require('./routes/inscripciones');  // Solo esta dec
 
 const app = express();
 
-// Configuración de CORS para permitir solo ciertos orígenes
-const allowedOrigins = [
-  'http://localhost:5173',
-  'https://extension-presentacion.vercel.app' // dominio del frontend en Vercel
-];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('No permitido por CORS'));
-    }
-  }
-}));
-
+// Middleware
+app.use(cors());
 app.use(express.json());
 
 // Configuración de Nodemailer para enviar correos
@@ -73,31 +59,29 @@ mongoose.connect(process.env.MONGO_URI)
 // Ruta para las inscripciones (esta es la única vez que necesitamos declararla)
 app.use('/api/inscripciones', inscripcionesRoutes);
 
-// Puerto del servidor y entorno
+// Puerto del servidor
 const PORT = process.env.PORT || 5050;
 
 app.listen(PORT, () => {
-  const environment = process.env.NODE_ENV === 'production' ? 'Producción (Heroku)' : 'Desarrollo (Localhost)';
-  console.log(`🚀 Servidor corriendo en el puerto ${PORT} — Entorno: ${environment}`);
+  console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
 });
 
-// Función de prueba para envío de correos
 const testEmail = () => {
-  const mailOptions = {
-    from: process.env.MAIL_USER,  // Tu correo
-    to: 'sebascifuentesc24@gmail.com', // Cambia esto por tu propio correo o un correo de prueba
-    subject: 'Correo de prueba',  // Asunto del correo
-    text: 'Este es un correo de prueba para verificar que Nodemailer está funcionando.', // Contenido del correo
+    const mailOptions = {
+      from: process.env.MAIL_USER,  // Tu correo
+      to: 'sebascifuentesc24@gmail.com', // Cambia esto por tu propio correo o un correo de prueba
+      subject: 'Correo de prueba',  // Asunto del correo
+      text: 'Este es un correo de prueba para verificar que Nodemailer está funcionando.', // Contenido del correo
+    };
+  
+    transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log('❌ Error al enviar el correo de prueba:', error);
+      } else {
+        console.log('✅ Correo de prueba enviado: ' + info.response);
+      }
+    });
   };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log('❌ Error al enviar el correo de prueba:', error);
-    } else {
-      console.log('✅ Correo de prueba enviado: ' + info.response);
-    }
-  });
-};
-
-// Llama a esta función para probar el envío de correo
-testEmail();
+  
+  // Llama a esta función para probar el envío de correo
+  testEmail();

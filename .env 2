@@ -1,0 +1,5 @@
+MONGO_URI=mongodb+srv://secifuentes:1624Scc%24@cluster0.kun5f.mongodb.net/extension?retryWrites=true&w=majority
+PORT=5050
+
+MAIL_USER=sistemas@lapresentaciongirardota.edu.co
+MAIL_PASS=1624Cifuente$
