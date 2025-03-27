@@ -4,22 +4,23 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-// Importar las rutas solo una vez
-const inscripcionesRoutes = require('./routes/inscripciones');  // Solo esta declaración es suficiente
+// Importar rutas
+const inscripcionesRoutes = require('./routes/inscripciones');
 
 const app = express();
 
 // Configuración de CORS para permitir solo ciertos orígenes
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://extension-presentacion.vercel.app' // dominio del frontend en Vercel
+  'https://extension-presentacion.vercel.app', // dominio del frontend
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin)) {
+    if (!origin || allowedOrigins.includes(origin) || origin === 'null') {
       callback(null, true);
     } else {
+      console.log('❌ CORS bloqueado para:', origin);
       callback(new Error('No permitido por CORS'));
     }
   }
@@ -27,20 +28,20 @@ app.use(cors({
 
 app.use(express.json());
 
-// Configuración de Nodemailer para enviar correos
+// Configuración de Nodemailer
 const transporter = nodemailer.createTransport({
-  service: 'gmail',  // Usamos Gmail, pero puedes cambiar esto si usas otro servicio
+  service: 'gmail',
   auth: {
-    user: process.env.MAIL_USER,  // Cambia esto por tu correo en el archivo .env
-    pass: process.env.MAIL_PASS,  // Cambia esto por tu contraseña en el archivo .env
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
   },
 });
 
-// Función para enviar el correo de confirmación
+// Función para enviar correo de confirmación
 const enviarCorreoConfirmacion = (inscripcion) => {
   const mailOptions = {
-    from: process.env.MAIL_USER,  // Usamos la variable de entorno MAIL_USER
-    to: inscripcion.correo,  // El correo del estudiante
+    from: process.env.MAIL_USER,
+    to: inscripcion.correo,
     subject: 'Confirmación de Inscripción - Curso',
     text: `
       ¡Felicidades, ${inscripcion.nombres} ${inscripcion.apellidos}!
@@ -70,10 +71,10 @@ mongoose.connect(process.env.MONGO_URI)
     console.error('❌ Error al conectar a MongoDB:', err);
   });
 
-// Ruta para las inscripciones (esta es la única vez que necesitamos declararla)
+// Ruta principal para inscripciones
 app.use('/api/inscripciones', inscripcionesRoutes);
 
-// Puerto del servidor y entorno
+// Puerto del servidor
 const PORT = process.env.PORT || 5050;
 
 app.listen(PORT, () => {
@@ -81,13 +82,13 @@ app.listen(PORT, () => {
   console.log(`🚀 Servidor corriendo en el puerto ${PORT} — Entorno: ${environment}`);
 });
 
-// Función de prueba para envío de correos
+// Función para probar envío de correo
 const testEmail = () => {
   const mailOptions = {
-    from: process.env.MAIL_USER,  // Tu correo
-    to: 'sebascifuentesc24@gmail.com', // Cambia esto por tu propio correo o un correo de prueba
-    subject: 'Correo de prueba',  // Asunto del correo
-    text: 'Este es un correo de prueba para verificar que Nodemailer está funcionando.', // Contenido del correo
+    from: process.env.MAIL_USER,
+    to: 'sebascifuentesc24@gmail.com',
+    subject: 'Correo de prueba',
+    text: 'Este es un correo de prueba para verificar que Nodemailer está funcionando.',
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
@@ -99,5 +100,5 @@ const testEmail = () => {
   });
 };
 
-// Llama a esta función para probar el envío de correo
+// Ejecuta una vez para probar correo
 testEmail();
