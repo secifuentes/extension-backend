@@ -40,10 +40,14 @@ const enviarCorreoConfirmacion = (inscripcion) => {
 // POST - Guardar nueva inscripción
 router.post('/', async (req, res) => {
   try {
+    // Log para ver los datos que recibimos
+    console.log("Datos recibidos para inscripción: ", req.body);
+
     const nueva = new Inscripcion(req.body);
     await nueva.save();
     res.status(201).json({ mensaje: '✅ Inscripción guardada correctamente' });
   } catch (error) {
+    console.error('❌ Error al guardar inscripción:', error);
     res.status(500).json({ error: 'Error al guardar inscripción', detalle: error.message });
   }
 });
