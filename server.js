@@ -83,6 +83,31 @@ mongoose.connect(process.env.MONGO_URI)
 // Ruta principal para inscripciones
 app.use('/api/inscripciones', inscripcionesRoutes);
 
+// Nueva ruta para confirmar el pago
+app.post('/api/confirmarPago', async (req, res) => {
+  try {
+    const { inscripcionId } = req.body; // Se espera que se envíe el ID de la inscripción
+
+    // Buscar la inscripción por ID
+    const inscripcion = await Inscripcion.findById(inscripcionId);
+    if (!inscripcion) {
+      return res.status(404).json({ message: 'Inscripción no encontrada' });
+    }
+
+    // Actualizar el estado de pago
+    inscripcion.pagoConfirmado = true;
+    await inscripcion.save();
+
+    // Enviar el correo de confirmación
+    enviarCorreoConfirmacion(inscripcion);
+
+    res.status(200).json({ message: 'Pago confirmado y correo enviado' });
+  } catch (err) {
+    console.error('Error al confirmar pago:', err);
+    res.status(500).json({ message: 'Error al confirmar pago' });
+  }
+});
+
 // Puerto del servidor
 const PORT = process.env.PORT || 5050;
 
