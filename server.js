@@ -9,6 +9,10 @@ const inscripcionesRoutes = require('./routes/inscripciones');
 
 const app = express();
 
+// Configurar body-parser para permitir cuerpos más grandes
+app.use(express.json({ limit: '10mb' }));  // Establece un límite de 10MB
+app.use(express.urlencoded({ limit: '10mb', extended: true })); // Para datos urlencoded
+
 // Configuración de CORS para permitir solo ciertos orígenes
 const allowedOrigins = [
   'http://localhost:5173',
