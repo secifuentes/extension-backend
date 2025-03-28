@@ -15,7 +15,7 @@ const transporter = nodemailer.createTransport({
 // Función para enviar el correo de confirmación
 const enviarCorreoConfirmacion = (inscripcion) => {
   const mailOptions = {
-    from: 'tucorreo@gmail.com',  // Cambia esto por tu correo
+    from: process.env.MAIL_USER,  // Ahora se usa el correo configurado en .env
     to: inscripcion.correo, // El correo del estudiante
     subject: 'Confirmación de Inscripción - Curso',
     text: `
