@@ -46,27 +46,75 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Función para enviar correo de confirmación
+// Función para enviar correo de bienvenida con estilo HTML
 const enviarCorreoConfirmacion = (inscripcion) => {
   const mailOptions = {
     from: process.env.MAIL_USER,
     to: inscripcion.correo,
-    subject: 'Confirmación de Inscripción - Curso',
-    text: `
-      ¡Felicidades, ${inscripcion.nombres} ${inscripcion.apellidos}!
+    subject: `¡Bienvenido al curso de ${inscripcion.cursoNombre}! 🎉`,
+    html: `
+      <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 40px 20px; color: #333;">
+        <!-- Contenedor Principal -->
+        <div style="background-color: #ffffff; border-radius: 8px; padding: 40px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;">
+  
+          <!-- Encabezado -->
+          <div style="text-align: center; margin-bottom: 30px;">
+            <img src="https://via.placeholder.com/150" alt="Logo de la institución" style="width: 150px; border-radius: 50%; margin-bottom: 20px;">
+            <h1 style="color: #0078D4; font-size: 28px; font-weight: bold;">¡Felicidades, ${inscripcion.nombres}!</h1>
+            <p style="font-size: 16px; color: #555;">¡Ya eres parte del curso de <strong>${inscripcion.cursoNombre}</strong>! 🏆</p>
+          </div>
 
-      Tu inscripción al curso de ${inscripcion.cursoNombre} ha sido confirmada.
-      Estamos verificando tu pago y te notificaremos pronto.
+          <!-- Cuerpo del mensaje -->
+          <div style="margin-bottom: 30px;">
+            <p style="font-size: 16px; line-height: 1.5; color: #555;">
+              ¡Estamos muy emocionados de que te hayas unido a este curso! 🎉 Tu inscripción está completa y todo está listo para que empieces a disfrutar de esta nueva aventura de aprendizaje. 🎓
+            </p>
+            <p style="font-size: 16px; line-height: 1.5; color: #555;">
+              Tu pago ha sido procesado con éxito. ¡Ya eres oficialmente parte de nuestro curso! 🌟 Ahora solo queda ponerte en acción y disfrutar del contenido que tenemos preparado para ti.
+            </p>
+          </div>
 
-      ¡Nos vemos en clase! 🎉
+          <!-- Beneficios -->
+          <div style="background-color: #e9f6ff; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+            <h3 style="color: #0078D4; font-size: 20px; font-weight: bold; text-align: center;">¡Ventajas y beneficios para ti!</h3>
+            <ul style="list-style-type: none; padding: 0; color: #333;">
+              <li style="font-size: 16px; padding: 5px 0;"><strong>Descuento Familiar:</strong> ¡Disfruta de un 5% de descuento por ser parte de la familia Presentación!</li>
+              <li style="font-size: 16px; padding: 5px 0;"><strong>Pago Trimestral:</strong> Si decides pagar el curso completo, obtendrás un 10% de descuento.</li>
+            </ul>
+          </div>
+
+          <!-- Acción - Botón -->
+          <div style="text-align: center;">
+            <a href="https://www.tucursos.com" style="background-color: #0078D4; color: #fff; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 50px; display: inline-block;">Ver detalles del curso</a>
+          </div>
+
+          <!-- Redes Sociales -->
+          <div style="margin-top: 30px; text-align: center; font-size: 14px; color: #777;">
+            <p>Síguenos en nuestras redes sociales:</p>
+            <div>
+              <a href="https://www.facebook.com/tuPagina" style="margin: 0 10px; text-decoration: none; color: #3b5998;">Facebook</a>|
+              <a href="https://twitter.com/tuPagina" style="margin: 0 10px; text-decoration: none; color: #1da1f2;">Twitter</a>|
+              <a href="https://www.instagram.com/tuPagina" style="margin: 0 10px; text-decoration: none; color: #e1306c;">Instagram</a>
+            </div>
+          </div>
+
+          <!-- Firma -->
+          <div style="margin-top: 40px; text-align: center; color: #777;">
+            <p style="font-size: 14px;">¡Nos vemos en clase! 🚀</p>
+            <p style="font-size: 14px;">Equipo de Extensión Educativa de La Presentación Girardota</p>
+          </div>
+
+        </div>
+      </div>
     `,
   };
 
+  // Enviar el correo
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log('❌ Error al enviar el correo:', error);
     } else {
-      console.log('✅ Correo de confirmación enviado: ' + info.response);
+      console.log('✅ Correo de bienvenida enviado: ' + info.response);
     }
   });
 };
