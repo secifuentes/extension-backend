@@ -12,12 +12,17 @@ const app = express();
 // Configuración de CORS para permitir solo ciertos orígenes
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://extension-presentacion.vercel.app', // dominio del frontend
+  'https://extension-presentacion.vercel.app',
+  /^https:\/\/.*\.vercel\.app$/, // 🟢 acepta previews de Vercel
 ];
 
 app.use(cors({
   origin: function (origin, callback) {
-    if (!origin || allowedOrigins.includes(origin) || origin === 'null') {
+    const isAllowed = allowedOrigins.some(o =>
+      typeof o === 'string' ? o === origin : o instanceof RegExp && o.test(origin)
+    );
+  
+    if (!origin || isAllowed || origin === 'null') {
       callback(null, true);
     } else {
       console.log('❌ CORS bloqueado para:', origin);
