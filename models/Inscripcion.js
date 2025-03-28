@@ -9,7 +9,7 @@ const InscripcionSchema = new mongoose.Schema({
   correo: String,
   telefono: String,
   fechaNacimiento: Date,
-  cursoId: Number,
+  cursoId: String,
   cursoNombre: String,
   esEstudiante: Boolean,
   valorPagado: Number,
