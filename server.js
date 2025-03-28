@@ -115,24 +115,3 @@ app.listen(PORT, () => {
   const environment = process.env.NODE_ENV === 'production' ? 'Producción (Heroku)' : 'Desarrollo (Localhost)';
   console.log(`🚀 Servidor corriendo en el puerto ${PORT} — Entorno: ${environment}`);
 });
-
-// Función para probar envío de correo
-const testEmail = () => {
-  const mailOptions = {
-    from: process.env.MAIL_USER,
-    to: 'sebascifuentesc24@gmail.com',
-    subject: 'Correo de prueba',
-    text: 'Este es un correo de prueba para verificar que Nodemailer está funcionando.',
-  };
-
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log('❌ Error al enviar el correo de prueba:', error);
-    } else {
-      console.log('✅ Correo de prueba enviado: ' + info.response);
-    }
-  });
-};
-
-// Ejecuta una vez para probar correo
-testEmail();
