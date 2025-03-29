@@ -41,4 +41,15 @@ router.post('/', async (req, res) => {
   }
 });
 
+// ❗ Endpoint temporal para eliminar todos los cursos
+router.delete('/eliminar-todos', async (req, res) => {
+  try {
+    await Curso.deleteMany({});
+    res.status(200).json({ mensaje: '✅ Todos los cursos han sido eliminados' });
+  } catch (error) {
+    console.error('❌ Error al eliminar cursos:', error);
+    res.status(500).json({ error: 'Error al eliminar los cursos' });
+  }
+});
+
 module.exports = router;
