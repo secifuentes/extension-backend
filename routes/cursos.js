@@ -29,4 +29,16 @@ router.get('/con-inscritos', async (req, res) => {
   }
 });
 
+// Crear un nuevo curso
+router.post('/', async (req, res) => {
+  try {
+    const nuevoCurso = new Curso(req.body);
+    await nuevoCurso.save();
+    res.status(201).json(nuevoCurso);
+  } catch (error) {
+    console.error('❌ Error al crear curso:', error);
+    res.status(500).json({ error: 'No se pudo crear el curso' });
+  }
+});
+
 module.exports = router;
