@@ -89,4 +89,18 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// 🧩 Obtener un curso por su slug
+router.get('/slug/:slug', async (req, res) => {
+  try {
+    const curso = await Curso.findOne({ slug: req.params.slug });
+    if (!curso) {
+      return res.status(404).json({ error: 'Curso no encontrado' });
+    }
+    res.json(curso);
+  } catch (error) {
+    console.error('❌ Error al buscar curso por slug:', error);
+    res.status(500).json({ error: 'Error del servidor' });
+  }
+});
+
 module.exports = router;
