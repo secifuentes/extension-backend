@@ -7,6 +7,7 @@ require('dotenv').config();
 // Importar rutas
 const inscripcionesRoutes = require('./routes/inscripciones');
 const cursosRoutes = require('./routes/cursos'); // 👈 nueva línea
+const Inscripcion = require('./models/Inscripcion');
 
 const app = express();
 
