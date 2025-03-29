@@ -42,6 +42,7 @@ router.post('/', async (req, res) => {
 });
 
 // ❗ Endpoint temporal para eliminar todos los cursos
+// ❗ Endpoint temporal para eliminar todos los cursos
 router.delete('/eliminar-todos', async (req, res) => {
   try {
     await Curso.deleteMany({});
