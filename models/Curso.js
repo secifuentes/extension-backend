@@ -1,20 +1,21 @@
 const mongoose = require('mongoose');
 
 const CursoSchema = new mongoose.Schema({
-  nombre: String,
+  nombre: { type: String, required: true },
+  precio: Number,
   imagen: String,
   modalidad: String,
   duracion: String,
   ubicacion: String,
-  horario: String,
+  descripcion: String,
   requisitos: String,
   implementos: String,
   beneficios: String,
   edad: String,
   reserva: String,
-  descripcion: String,
-  precio: Number,
-  creadoEn: { type: Date, default: Date.now }
-});
+  horario: String,
+
+  slug: { type: String, required: true, unique: true }, // ✅ este campo
+}, { timestamps: true });
 
 module.exports = mongoose.model('Curso', CursoSchema);

@@ -3,7 +3,16 @@ const router = express.Router();
 const Curso = require('../models/Curso');
 const Inscripcion = require('../models/Inscripcion');
 
-// Obtener todos los cursos con cantidad de inscritos
+// 🧠 Función para generar slug automáticamente desde el nombre
+const generarSlug = (nombre) =>
+  nombre
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // quitar tildes
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-');
+
+// 📌 Obtener todos los cursos con cantidad de inscritos
 router.get('/con-inscritos', async (req, res) => {
   try {
     const cursos = await Curso.find();
@@ -29,10 +38,13 @@ router.get('/con-inscritos', async (req, res) => {
   }
 });
 
-// Crear un nuevo curso
+// ✅ Crear un nuevo curso con slug automático
 router.post('/', async (req, res) => {
   try {
-    const nuevoCurso = new Curso(req.body);
+    const data = req.body;
+    data.slug = generarSlug(data.nombre); // 👈 genera slug automáticamente
+
+    const nuevoCurso = new Curso(data);
     await nuevoCurso.save();
     res.status(201).json(nuevoCurso);
   } catch (error) {
@@ -41,8 +53,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// ❗ Endpoint temporal para eliminar todos los cursos
-// ❗ Endpoint temporal para eliminar todos los cursos
+// 🗑️ Endpoint temporal para eliminar todos los cursos
 router.delete('/eliminar-todos', async (req, res) => {
   try {
     await Curso.deleteMany({});
