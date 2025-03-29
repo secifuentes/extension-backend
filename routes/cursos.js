@@ -64,4 +64,29 @@ router.delete('/eliminar-todos', async (req, res) => {
   }
 });
 
+// ✏️ Actualizar curso por ID
+router.put('/:id', async (req, res) => {
+  try {
+    const { nombre, ...resto } = req.body;
+
+    // Si se cambió el nombre, regenerar el slug
+    const dataActualizada = {
+      ...resto,
+      nombre,
+      slug: generarSlug(nombre),
+    };
+
+    const cursoActualizado = await Curso.findByIdAndUpdate(
+      req.params.id,
+      dataActualizada,
+      { new: true }
+    );
+
+    res.json(cursoActualizado);
+  } catch (error) {
+    console.error('❌ Error al actualizar curso:', error);
+    res.status(500).json({ error: 'No se pudo actualizar el curso' });
+  }
+});
+
 module.exports = router;
