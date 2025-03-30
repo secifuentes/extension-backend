@@ -19,6 +19,7 @@ app.use(express.urlencoded({ limit: '10mb', extended: true })); // Para datos ur
 const allowedOrigins = [
   'http://localhost:5173',
   'https://extension-presentacion.vercel.app',
+  'https://www.extensionlapresentacion.com',
   /^https:\/\/.*\.vercel\.app$/, // 🟢 acepta previews de Vercel
 ];
 
