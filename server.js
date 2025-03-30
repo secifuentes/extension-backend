@@ -6,10 +6,8 @@ require('dotenv').config();
 
 // Importar rutas
 const inscripcionesRoutes = require('./routes/inscripciones');
-const cursosRoutes = require('./routes/cursos');  // 👈 Nueva línea para cursos
-const Curso = require('./models/Curso');  // Modelo de Curso
-const Estudiante = require('./models/Estudiante');  // Modelo de Estudiante (asumido)
-const Inscripcion = require('./models/Inscripcion');  // Modelo de Inscripción
+const cursosRoutes = require('./routes/cursos'); // 👈 nueva línea
+const Inscripcion = require('./models/Inscripcion');
 
 const app = express();
 
@@ -22,6 +20,7 @@ const allowedOrigins = [
   'http://localhost:5173',
   'https://extension-presentacion.vercel.app',
   'https://www.extensionlapresentacion.com',
+
   /^https:\/\/.*\.vercel\.app$/, // 🟢 acepta previews de Vercel
 ];
 
@@ -59,13 +58,17 @@ const enviarCorreoConfirmacion = (inscripcion) => {
     subject: `¡Bienvenido al curso de ${inscripcion.cursoNombre}! 🎉`,
     html: `
       <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 40px 20px; color: #333;">
+        <!-- Contenedor Principal -->
         <div style="background-color: #ffffff; border-radius: 8px; padding: 40px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;">
+  
+          <!-- Encabezado -->
           <div style="text-align: center; margin-bottom: 30px;">
             <img src="https://via.placeholder.com/150" alt="Logo de la institución" style="width: 150px; border-radius: 50%; margin-bottom: 20px;">
             <h1 style="color: #0078D4; font-size: 28px; font-weight: bold;">¡Felicidades, ${inscripcion.nombres}!</h1>
             <p style="font-size: 16px; color: #555;">¡Ya eres parte del curso de <strong>${inscripcion.cursoNombre}</strong>! 🏆</p>
           </div>
 
+          <!-- Cuerpo del mensaje -->
           <div style="margin-bottom: 30px;">
             <p style="font-size: 16px; line-height: 1.5; color: #555;">
               ¡Estamos muy emocionados de que te hayas unido a este curso! 🎉 Tu inscripción está completa y todo está listo para que empieces a disfrutar de esta nueva aventura de aprendizaje. 🎓
@@ -75,6 +78,7 @@ const enviarCorreoConfirmacion = (inscripcion) => {
             </p>
           </div>
 
+          <!-- Beneficios -->
           <div style="background-color: #e9f6ff; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
             <h3 style="color: #0078D4; font-size: 20px; font-weight: bold; text-align: center;">¡Ventajas y beneficios para ti!</h3>
             <ul style="list-style-type: none; padding: 0; color: #333;">
@@ -83,10 +87,12 @@ const enviarCorreoConfirmacion = (inscripcion) => {
             </ul>
           </div>
 
+          <!-- Acción - Botón -->
           <div style="text-align: center;">
             <a href="https://www.tucursos.com" style="background-color: #0078D4; color: #fff; padding: 15px 30px; text-decoration: none; font-size: 18px; border-radius: 50px; display: inline-block;">Ver detalles del curso</a>
           </div>
 
+          <!-- Redes Sociales -->
           <div style="margin-top: 30px; text-align: center; font-size: 14px; color: #777;">
             <p>Síguenos en nuestras redes sociales:</p>
             <div>
@@ -96,6 +102,7 @@ const enviarCorreoConfirmacion = (inscripcion) => {
             </div>
           </div>
 
+          <!-- Firma -->
           <div style="margin-top: 40px; text-align: center; color: #777;">
             <p style="font-size: 14px;">¡Nos vemos en clase! 🚀</p>
             <p style="font-size: 14px;">Equipo de Extensión Educativa de La Presentación Girardota</p>
@@ -127,29 +134,9 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Ruta principal para inscripciones
 app.use('/api/inscripciones', inscripcionesRoutes);
-app.use('/api/cursos', cursosRoutes); // 👈 Nueva línea para rutas de cursos
+app.use('/api/cursos', cursosRoutes); // 👈 nueva línea para rutas de cursos
 
-// Nueva ruta para obtener datos del dashboard
-app.get('/api/admin/dashboard', async (req, res) => {
-  try {
-    // Obtener la cantidad de cursos, estudiantes e inscripciones
-    const cursos = await Curso.countDocuments();
-    const estudiantes = await Estudiante.countDocuments();
-    const inscritos = await Inscripcion.countDocuments();
-
-    // Enviar los datos al frontend
-    res.json({
-      cursos,
-      estudiantes,
-      inscritos,
-    });
-  } catch (err) {
-    console.error('Error al obtener los datos del dashboard:', err);
-    res.status(500).json({ message: 'Error al obtener los datos' });
-  }
-});
-
-// Ruta para confirmar el pago
+// Nueva ruta para confirmar el pago
 app.post('/api/confirmarPago', async (req, res) => {
   try {
     const { inscripcionId } = req.body; // Se espera que se envíe el ID de la inscripción
