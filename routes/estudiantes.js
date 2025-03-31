@@ -8,10 +8,9 @@ router.get('/:tipoDoc/:documento', async (req, res) => {
 
   try {
     const estudiante = await Estudiante.findOne({
-      tipoDocumento: tipoDoc,
-      documento: documento,
+      tipoDocumento: new RegExp(`^${tipoDoc.trim()}$`, 'i'),
+      documento: documento.trim(),
     });
-
     if (!estudiante) {
       return res.status(404).json({ message: 'Estudiante no encontrado' });
     }
