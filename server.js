@@ -8,6 +8,7 @@ require('dotenv').config();
 const inscripcionesRoutes = require('./routes/inscripciones');
 const cursosRoutes = require('./routes/cursos'); // 👈 nueva línea
 const Inscripcion = require('./models/Inscripcion');
+const estudiantesRoutes = require('./routes/estudiantes');
 
 const app = express();
 
@@ -135,6 +136,8 @@ mongoose.connect(process.env.MONGO_URI)
 // Ruta principal para inscripciones
 app.use('/api/inscripciones', inscripcionesRoutes);
 app.use('/api/cursos', cursosRoutes); // 👈 nueva línea para rutas de cursos
+
+app.use('/api/estudiantes', estudiantesRoutes);
 
 // Nueva ruta para confirmar el pago
 app.post('/api/confirmarPago', async (req, res) => {
