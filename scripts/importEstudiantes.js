@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://secifuentes:1624Scc%24@cluster0.kun5f.mongodb.ne
   .catch(err => console.error('Error al conectar a MongoDB:', err));
 
 // Leer el archivo CSV
-fs.createReadStream('scripts/estudiantes.csv')  // Asegúrate de que la ruta sea la correcta
+fs.createReadStream('/Users/sebastian/Desktop/EXTENSION/EXTENSION-BACKEND/scripts/estudiantes.csv')  // Ruta completa
   .pipe(csv({ separator: ';' }))  // Usamos punto y coma como separador
   .on('data', async (row) => {
     try {
