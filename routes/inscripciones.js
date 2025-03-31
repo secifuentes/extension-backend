@@ -83,4 +83,15 @@ router.put('/confirmar-pago/:id', async (req, res) => {
   }
 });
 
+// Ruta para eliminar todas las inscripciones
+router.delete('/', async (req, res) => {
+  try {
+    await Inscripcion.deleteMany({});  // Elimina todas las inscripciones de la base de datos
+    res.status(200).json({ mensaje: '✅ Todas las inscripciones han sido eliminadas correctamente' });
+  } catch (error) {
+    console.error('❌ Error al eliminar las inscripciones:', error);
+    res.status(500).json({ error: '❌ Error al eliminar las inscripciones', detalle: error.message });
+  }
+});
+
 module.exports = router;
