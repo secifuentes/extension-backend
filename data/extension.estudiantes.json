@@ -1,0 +1,5060 @@
+[{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f89f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020325773,
+  "NOMBRES": "PABLO",
+  "APELLIDOS": "ARISTIZABAL GOMEZ",
+  "CORREO": "paaristizabal@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a0"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023548002,
+  "NOMBRES": "GABRIELA",
+  "APELLIDOS": "BEDOYA TORRES",
+  "CORREO": "gabedoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521683,
+  "NOMBRES": "LUCIA",
+  "APELLIDOS": "BLANDON CADAVID",
+  "CORREO": "lublandon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021945456,
+  "NOMBRES": "TOMAS DAVID",
+  "APELLIDOS": "BOLIVAR ARIAS",
+  "CORREO": "tobolivar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a3"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521652,
+  "NOMBRES": "JERONIMO",
+  "APELLIDOS": "CASTRILLON CASTRILLON",
+  "CORREO": "jecastrillon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a4"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035013595,
+  "NOMBRES": "EMILIANO",
+  "APELLIDOS": "CASTRILLON HOYOS",
+  "CORREO": "emcastrillonh@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020237772,
+  "NOMBRES": "ISABELLA",
+  "APELLIDOS": "CONTRERAS QUINTERO",
+  "CORREO": "iscontreras@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023547882,
+  "NOMBRES": "JUAN ANTONIO",
+  "APELLIDOS": "ESCOBAR BETANCURT",
+  "CORREO": "juescobar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a7"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521594,
+  "NOMBRES": "SOFIA",
+  "APELLIDOS": "HERNANDEZ CHAVERRA",
+  "CORREO": "sohernandez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a8"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013370039,
+  "NOMBRES": "DANIEL",
+  "APELLIDOS": "HOYOS OQUENDO",
+  "CORREO": "dahoyos@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8a9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1018269456,
+  "NOMBRES": "EMILIANA",
+  "APELLIDOS": "ISAZA BEDOYA",
+  "CORREO": "emisaza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8aa"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521751,
+  "NOMBRES": "ISABELLA",
+  "APELLIDOS": "JIMÉNEZ LÓPEZ",
+  "CORREO": "isjimenez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ab"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880810,
+  "NOMBRES": "AGUSTÍN",
+  "APELLIDOS": "MARTÍNEZ CASTRO",
+  "CORREO": "agmartinez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ac"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521678,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "MEJIA RESTREPO",
+  "CORREO": "ismejia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ad"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035012969,
+  "NOMBRES": "MARIANA",
+  "APELLIDOS": "MESA VILLA",
+  "CORREO": "mamesa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ae"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1129587123,
+  "NOMBRES": "JUAN JOSÉ",
+  "APELLIDOS": "MONTERO GÓMEZ",
+  "CORREO": "jumontero@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8af"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023548319,
+  "NOMBRES": "JOAQUIN",
+  "APELLIDOS": "MONTOYA RAMIREZ",
+  "CORREO": "jomontoyar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b0"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025675533,
+  "NOMBRES": "MARIA CLARA",
+  "APELLIDOS": "MORENO",
+  "CORREO": "mamoreno@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023553465,
+  "NOMBRES": "TOMÁS",
+  "APELLIDOS": "OROZCO HENAO",
+  "CORREO": "toorozco@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521658,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "OSORIO JARAMILLO",
+  "CORREO": "maosorio@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b3"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880979,
+  "NOMBRES": "EMMA",
+  "APELLIDOS": "PÉREZ MOLINA",
+  "CORREO": "emperez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b4"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880843,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "RAMÍREZ MONTOYA",
+  "CORREO": "saramirez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880843,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "RAMÍREZ MONTOYA",
+  "CORREO": "saramirezm@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521566,
+  "NOMBRES": "ANTONELLA",
+  "APELLIDOS": "RUA GOMEZ",
+  "CORREO": "anrua@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b7"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521728,
+  "NOMBRES": "TOMÁS",
+  "APELLIDOS": "RUÍZ ARIAS",
+  "CORREO": "toruiz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b8"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035237471,
+  "NOMBRES": "JUAN PABLO",
+  "APELLIDOS": "SEGURO PATIÑO",
+  "CORREO": "juseguro@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8b9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023546061,
+  "NOMBRES": "MIGUEL ANGEL",
+  "APELLIDOS": "UÑATES CARO",
+  "CORREO": "miunates@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ba"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521704,
+  "NOMBRES": "MARIA FERNANDA",
+  "APELLIDOS": "VALENCIA CORTES",
+  "CORREO": "mavalenciac@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8bb"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035237489,
+  "NOMBRES": "SOFÍA",
+  "APELLIDOS": "VÁSQUEZ CATAÑO",
+  "CORREO": "sovasquez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8bc"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1127455376,
+  "NOMBRES": "JACOB GAEL",
+  "APELLIDOS": "ZULUAGA MADRID",
+  "CORREO": "jazuluaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8bd"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881058,
+  "NOMBRES": "ANA BELEN",
+  "APELLIDOS": "ALZATE MARTINEZ",
+  "CORREO": "analzatem@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8be"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023549938,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "ARIAS JIMENEZ",
+  "CORREO": "emariasj@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8bf"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035013307,
+  "NOMBRES": "MÁXIMO",
+  "APELLIDOS": "BETANCOURT ARROYAVE",
+  "CORREO": "mabetancourt@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c0"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880871,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "BUSTAMANTE BUSTAMANTE",
+  "CORREO": "sabustamanteb@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023547717,
+  "NOMBRES": "EMILIANO",
+  "APELLIDOS": "CABEZA GOMEZ",
+  "CORREO": "emcabeza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521604,
+  "NOMBRES": "MARIA ANTONIA",
+  "APELLIDOS": "CASAS ALZATE",
+  "CORREO": "macasas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c3"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521709,
+  "NOMBRES": "FREDY SANTIAGO",
+  "APELLIDOS": "CORTÉS FONTALVO",
+  "CORREO": "frcortes@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c4"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521694,
+  "NOMBRES": "LEONARDO DAVID",
+  "APELLIDOS": "DAVILA MEDINA",
+  "CORREO": "ledavila@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023551331,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "ESCOBAR MUÑOZ",
+  "CORREO": "emescobar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023548573,
+  "NOMBRES": "ANTONIA",
+  "APELLIDOS": "GALLEGO ARIAS",
+  "CORREO": "angallegoa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c7"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1018269659,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "GRACIANO ROLDAN",
+  "CORREO": "isgraciano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c8"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521608,
+  "NOMBRES": "DAVID SANTIAGO",
+  "APELLIDOS": "HOYOS AGUIRRE",
+  "CORREO": "davhoyos@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8c9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013367316,
+  "NOMBRES": "MARIA CELESTE",
+  "APELLIDOS": "HOYOS RUA",
+  "CORREO": "mahoyosr@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ca"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035013780,
+  "NOMBRES": "EZEQUIEL",
+  "APELLIDOS": "LONDOÑO VALENCIA",
+  "CORREO": "ezlondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8cb"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023551346,
+  "NOMBRES": "GABRIELA",
+  "APELLIDOS": "MARÍN HOYOS",
+  "CORREO": "gamarin@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8cc"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035014176,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "MONSALVE PIEDRAHITA",
+  "CORREO": "samonsalvep@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8cd"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023550805,
+  "NOMBRES": "ALICIA",
+  "APELLIDOS": "MORALES SERNA",
+  "CORREO": "almorales@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ce"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521619,
+  "NOMBRES": "GUADALUPE",
+  "APELLIDOS": "MUÑOZ LONDOÑO",
+  "CORREO": "gumunoz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8cf"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020238327,
+  "NOMBRES": "SIMÓN",
+  "APELLIDOS": "OSORIO TELLO",
+  "CORREO": "siosorio@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d0"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025155786,
+  "NOMBRES": "ANTONELLA",
+  "APELLIDOS": "QUINTERO GONZALEZ",
+  "CORREO": "anquintero@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521582,
+  "NOMBRES": "MARÍA CELESTE",
+  "APELLIDOS": "RUA ORTEGA",
+  "CORREO": "marua@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521635,
+  "NOMBRES": "THIAGO",
+  "APELLIDOS": "SALDARRIAGA CARMONA",
+  "CORREO": "thsaldarriaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d3"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521613,
+  "NOMBRES": "SIMON",
+  "APELLIDOS": "SALDARRIAGA TAMAYO",
+  "CORREO": "sisaldarriaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d4"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521565,
+  "NOMBRES": "SALOMÉ",
+  "APELLIDOS": "SANCHEZ CASTRILLON",
+  "CORREO": "sasanchez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521624,
+  "NOMBRES": "MARIANA",
+  "APELLIDOS": "SIERRA JARAMILLO",
+  "CORREO": "masierraj@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881222,
+  "NOMBRES": "#N/D",
+  "APELLIDOS": "#N/D",
+  "CORREO": "emsuares@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d7"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880978,
+  "NOMBRES": "AURORA",
+  "APELLIDOS": "VANEGAS ZAPATA",
+  "CORREO": "auvanegas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d8"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025773574,
+  "NOMBRES": "VIOLETTA",
+  "APELLIDOS": "VELASQUEZ ALVAREZ",
+  "CORREO": "vivelasquez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8d9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023550156,
+  "NOMBRES": "MIGUEL ANGEL",
+  "APELLIDOS": "VILLA CARVAJAL",
+  "CORREO": "mivilla@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8da"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880831,
+  "NOMBRES": "SALOMÉ",
+  "APELLIDOS": "ALZATE ACEVEDO",
+  "CORREO": "saalzatea@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8db"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521491,
+  "NOMBRES": "JUAN ANDRÉS",
+  "APELLIDOS": "ARANGO SIERRA",
+  "CORREO": "juarango@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8dc"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023542338,
+  "NOMBRES": "BENJAMÍN",
+  "APELLIDOS": "BEDOYA BUSTAMANTE",
+  "CORREO": "bebedoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8dd"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880237,
+  "NOMBRES": "EZEQUIEL",
+  "APELLIDOS": "BETANCURT CARO",
+  "CORREO": "ezbetancurt@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8de"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521368,
+  "NOMBRES": "EMILIA",
+  "APELLIDOS": "BLANDÓN OCHOA",
+  "CORREO": "emblandon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8df"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013466363,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "CARVAJAL CÓRDOBA",
+  "CORREO": "iscarvajal@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e0"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880497,
+  "NOMBRES": "JULIETA",
+  "APELLIDOS": "CARVAJAL VALENCIA",
+  "CORREO": "jucarvajalv@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521028,
+  "NOMBRES": "MACARENA",
+  "APELLIDOS": "DUARTE LONDOÑO",
+  "CORREO": "maduarte@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521476,
+  "NOMBRES": "FEDERICO",
+  "APELLIDOS": "FORONDA HENAO",
+  "CORREO": "feforonda@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e3"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033268436,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "GARCES CORREA",
+  "CORREO": "isgarces@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e4"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033202788,
+  "NOMBRES": "SARA ISABEL",
+  "APELLIDOS": "GÓMEZ PINEDA",
+  "CORREO": "sagomez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880700,
+  "NOMBRES": "SARA",
+  "APELLIDOS": "GONZÁLEZ RUA",
+  "CORREO": "sagonzalez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1128909930,
+  "NOMBRES": "RAFAEL",
+  "APELLIDOS": "HERNÁNDEZ MONTOYA",
+  "CORREO": "rahernandez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e7"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1017941307,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "HOYOS FRANCO",
+  "CORREO": "mahoyosf@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e8"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521372,
+  "NOMBRES": "EMILIANO",
+  "APELLIDOS": "JARAMILLO JARAMILLO",
+  "CORREO": "emjaramillo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8e9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521504,
+  "NOMBRES": "MATEO",
+  "APELLIDOS": "LONDOÑO VARGAS",
+  "CORREO": "malondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ea"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880478,
+  "NOMBRES": "MARÍA JOSÉ",
+  "APELLIDOS": "MADRID SÁNCHEZ",
+  "CORREO": "mamadrid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8eb"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035012104,
+  "NOMBRES": "SUSANA",
+  "APELLIDOS": "MONSALVE PIEDRAHITA",
+  "CORREO": "sumonsalve@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ec"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521507,
+  "NOMBRES": "ANTONIA",
+  "APELLIDOS": "MONTOYA BUSTAMANTE",
+  "CORREO": "anmontoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ed"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880139,
+  "NOMBRES": "GABRIELA",
+  "APELLIDOS": "MONTOYA MONSALVE",
+  "CORREO": "gamontoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ee"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880605,
+  "NOMBRES": "THIAGO",
+  "APELLIDOS": "MONTOYA MONTOYA",
+  "CORREO": "thmontoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ef"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521385,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "MUÑOZ CATRILLON",
+  "CORREO": "matmunoz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f0"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880304,
+  "NOMBRES": "SOFÍA",
+  "APELLIDOS": "MUÑOZ SILVA",
+  "CORREO": "somunoz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880196,
+  "NOMBRES": "VICENTE",
+  "APELLIDOS": "OCHOA ZULUAGA",
+  "CORREO": "viochoa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1039312882,
+  "NOMBRES": "GIANMARCO",
+  "APELLIDOS": "OLIVEIRA LÓPEZ",
+  "CORREO": "gioliveira@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f3"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879905,
+  "NOMBRES": "TOMÁS",
+  "APELLIDOS": "PINO ARBOLEDA",
+  "CORREO": "topino@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f4"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521416,
+  "NOMBRES": "GABRIELLA",
+  "APELLIDOS": "SANCHEZ QUEVEDO",
+  "CORREO": "gasanchez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880477,
+  "NOMBRES": "AMELIA",
+  "APELLIDOS": "TURIZO MONSALVE",
+  "CORREO": "amturizo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1220225504,
+  "NOMBRES": "AVY MARTINA",
+  "APELLIDOS": "USAQUEN BARCO",
+  "CORREO": "ausaquen@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f7"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013363149,
+  "NOMBRES": "EMILIA",
+  "APELLIDOS": "YEPES MOLINA",
+  "CORREO": "emyepes@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f8"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013362062,
+  "NOMBRES": "ELENA",
+  "APELLIDOS": "ALZATE OSORNO",
+  "CORREO": "elalzateo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8f9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521443,
+  "NOMBRES": "ALEJANDRO",
+  "APELLIDOS": "ARIAS ALZATE",
+  "CORREO": "alarias@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8fa"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521475,
+  "NOMBRES": "EMILIA",
+  "APELLIDOS": "ARIAS MONSALVE",
+  "CORREO": "emarias@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8fb"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521551,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "ARIAS SIERRA",
+  "CORREO": "maariass@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8fc"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880581,
+  "NOMBRES": "LIZ ANTONELLA",
+  "APELLIDOS": "CARMONA MOLINA",
+  "CORREO": "licarmona@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8fd"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1022162599,
+  "NOMBRES": "JUAN DAVID",
+  "APELLIDOS": "CASTRO MESA",
+  "CORREO": "jucastrom@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8fe"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880141,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "CORTÉS RUÍZ",
+  "CORREO": "lucortes@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f8ff"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521334,
+  "NOMBRES": "SIMÓN",
+  "APELLIDOS": "DÍAZ ZULETA",
+  "CORREO": "sidiazz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f900"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023541317,
+  "NOMBRES": "JULIETA",
+  "APELLIDOS": "GARCÍA CARMONA",
+  "CORREO": "jugarcia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f901"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880880,
+  "NOMBRES": "SANTIAGO",
+  "APELLIDOS": "HENAO MADRID",
+  "CORREO": "sahenaom@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f902"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521501,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "HERNÁNDEZ RENDÓN",
+  "CORREO": "mahernandez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f903"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879841,
+  "NOMBRES": "CELESTE",
+  "APELLIDOS": "LOAIZA GIRALDO",
+  "CORREO": "celoaiza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f904"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521387,
+  "NOMBRES": "MIGUEL ANGEL",
+  "APELLIDOS": "LÓPEZ HENAO",
+  "CORREO": "milopez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f905"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880378,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "LÓPEZ SALDARRIAGA",
+  "CORREO": "salopezs@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f906"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521520,
+  "NOMBRES": "JUAN PABLO",
+  "APELLIDOS": "MADRID OCHOA",
+  "CORREO": "jumadrid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f907"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021943085,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "MAZO CORTÉS",
+  "CORREO": "mamazo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f908"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879983,
+  "NOMBRES": "JERONIMO",
+  "APELLIDOS": "QUIROZ CASTRILLON",
+  "CORREO": "jequiroz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f909"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033501327,
+  "NOMBRES": "MAXIMILIANO",
+  "APELLIDOS": "RAVE GRACIANO",
+  "CORREO": "marave@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f90a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033202758,
+  "NOMBRES": "JUAN MARTÍN",
+  "APELLIDOS": "RESTREPO SERNA",
+  "CORREO": "jurestrepo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f90b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035237838,
+  "NOMBRES": "SANTIAGO ALFREDO",
+  "APELLIDOS": "RIOS OLARTE",
+  "CORREO": "sarios@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f90c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1125643916,
+  "NOMBRES": "ANTONELLA",
+  "APELLIDOS": "RUÍZ RINCÓN",
+  "CORREO": "anruiz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f90d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033203139,
+  "NOMBRES": "GUADALUPE",
+  "APELLIDOS": "TABORDA DAVID",
+  "CORREO": "gutaborda@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f90e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035237096,
+  "NOMBRES": "JOSE MANUEL",
+  "APELLIDOS": "TABARES SOSSA",
+  "CORREO": "jotabares@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f90f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879943,
+  "NOMBRES": "EMILIANO",
+  "APELLIDOS": "VÉLEZ DAZA",
+  "CORREO": "emvelez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f910"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880651,
+  "NOMBRES": "HELENA",
+  "APELLIDOS": "VILLA ALVAREZ",
+  "CORREO": "hevilla@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f911"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025904826,
+  "NOMBRES": "AGUSTÍN",
+  "APELLIDOS": "YEPES ZULETA",
+  "CORREO": "agyepes@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f912"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521361,
+  "NOMBRES": "ABIGAIL",
+  "APELLIDOS": "ZAPATA LOAIZA",
+  "CORREO": "abzapata@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f913"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521508,
+  "NOMBRES": "HELENA",
+  "APELLIDOS": "ZAPE VARGAS",
+  "CORREO": "hezape@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f914"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521270,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "ALZATE ARIAS",
+  "CORREO": "saalzate@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f915"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521373,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "ASPRILLA SALDARRIAGA",
+  "CORREO": "luasprilla@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f916"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035878441,
+  "NOMBRES": "MARÍA PAULINA",
+  "APELLIDOS": "BEDOYA CANO",
+  "CORREO": "marbedoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f917"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879597,
+  "NOMBRES": "SANTIAGO",
+  "APELLIDOS": "BUITRAGO MARÍN",
+  "CORREO": "sabuitrago@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f918"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879065,
+  "NOMBRES": "RENATA",
+  "APELLIDOS": "CAMACHO VELASCO",
+  "CORREO": "recamacho@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f919"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521071,
+  "NOMBRES": "JULIETA",
+  "APELLIDOS": "CARMONA BUSTAMANTE",
+  "CORREO": "julcarmona@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f91a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521294,
+  "NOMBRES": "EMILIA",
+  "APELLIDOS": "CATAÑO MÚNERA",
+  "CORREO": "emcatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f91b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879037,
+  "NOMBRES": "MARIANA",
+  "APELLIDOS": "CIRO LOAIZA",
+  "CORREO": "maciro@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f91c"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1013361098,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "ESCOBAR SÁNCHEZ",
+  "CORREO": "maescobar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f91d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021940500,
+  "NOMBRES": "SIMÓN",
+  "APELLIDOS": "GARCÍA CÓRDOBA",
+  "CORREO": "sigarcia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f91e"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1130277400,
+  "NOMBRES": "ESTEBAN",
+  "APELLIDOS": "GUTIERREZ OCHOA",
+  "CORREO": "esgutierrez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f91f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1157214190,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "HOYOS GOMEZ",
+  "CORREO": "ishoyosg@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f920"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521207,
+  "NOMBRES": "CRISTÓBAL",
+  "APELLIDOS": "LONDOÑO ALZATE",
+  "CORREO": "crlondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f921"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035008432,
+  "NOMBRES": "ANA ISABEL",
+  "APELLIDOS": "LONDOÑO SIERRA",
+  "CORREO": "anlondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f922"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020323566,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "MAZO PINO",
+  "CORREO": "samazo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f923"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521159,
+  "NOMBRES": "SAMANTHA",
+  "APELLIDOS": "MENESES ZULETA",
+  "CORREO": "sameneses@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f924"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1053866036,
+  "NOMBRES": "JUAN JOSÉ",
+  "APELLIDOS": "MUÑOZ GARCÍA",
+  "CORREO": "jumunoz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f925"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521148,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "MUÑOZ LONDOÑO",
+  "CORREO": "emmunoz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f926"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879755,
+  "NOMBRES": "JERÓNIMO",
+  "APELLIDOS": "PARRA CARMONA",
+  "CORREO": "jeparra@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f927"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036458672,
+  "NOMBRES": "TOMÁS",
+  "APELLIDOS": "RAMIREZ CASTAÑO",
+  "CORREO": "toramirez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f928"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521239,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "RAMÍREZ FLÓREZ",
+  "CORREO": "saramirezf@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f929"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033429628,
+  "NOMBRES": "#N/D",
+  "APELLIDOS": "#N/D",
+  "CORREO": "jurios@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f92a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879226,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "VALENCIA CATAÑO",
+  "CORREO": "mavalencia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f92b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521269,
+  "NOMBRES": "CELESTE",
+  "APELLIDOS": "VANEGAS CALVO",
+  "CORREO": "cevanegas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f92c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020234255,
+  "NOMBRES": "MARÍA ANTONIA",
+  "APELLIDOS": "ZAPATA SÁNCHEZ",
+  "CORREO": "mazapatas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f92d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1234438092,
+  "NOMBRES": "NICOLÁS",
+  "APELLIDOS": "ARIAS GUZMÁN",
+  "CORREO": "niarias@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f92e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035878027,
+  "NOMBRES": "JUAN JOSÉ",
+  "APELLIDOS": "ARIAS URREGO",
+  "CORREO": "juarias@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f92f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879082,
+  "NOMBRES": "ISABELLA",
+  "APELLIDOS": "CADAVID PARRA",
+  "CORREO": "iscadavid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f930"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1027742714,
+  "NOMBRES": "LUISA MARÍA",
+  "APELLIDOS": "CAMPIÑO CASTRO",
+  "CORREO": "lucampino@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f931"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521218,
+  "NOMBRES": "SALOMÉ",
+  "APELLIDOS": "CATAÑO GRANDA",
+  "CORREO": "sacatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f932"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035878584,
+  "NOMBRES": "DULCE MARÍA",
+  "APELLIDOS": "CATAÑO URREGO",
+  "CORREO": "ducatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f933"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036521014,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "ECHEVERRY ARISTIZABAL",
+  "CORREO": "maecheverry@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f934"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035878178,
+  "NOMBRES": "SEBASTIÁN",
+  "APELLIDOS": "GÓMEZ HINCAPIÉ",
+  "CORREO": "segomez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f935"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521057,
+  "NOMBRES": "SOFIA DAFNE",
+  "APELLIDOS": "ISAZA CATAÑO",
+  "CORREO": "soisaza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f936"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1034926099,
+  "NOMBRES": "ELENA",
+  "APELLIDOS": "JARAMILLO ALZATE",
+  "CORREO": "eljaramillo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f937"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035880940,
+  "NOMBRES": "DAMIAN",
+  "APELLIDOS": "LONDOÑO GIL",
+  "CORREO": "dalondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f938"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1022162119,
+  "NOMBRES": "SUSANA",
+  "APELLIDOS": "MADRIGAL ZAPATA",
+  "CORREO": "sumadrigal@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f939"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1039472200,
+  "NOMBRES": "VICTORIA",
+  "APELLIDOS": "MÁRQUEZ VARGAS",
+  "CORREO": "vimarquez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f93a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521338,
+  "NOMBRES": "MARIA PAZ",
+  "APELLIDOS": "MONTOYA CARMONA",
+  "CORREO": "marmontoyac@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f93b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521136,
+  "NOMBRES": "THIAGO",
+  "APELLIDOS": "OQUENDO CIRO",
+  "CORREO": "thoquendo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f93c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035879533,
+  "NOMBRES": "HANNAH SOPHIA",
+  "APELLIDOS": "ORTÍZ QUINTERO",
+  "CORREO": "haortiz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f93d"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035879613,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "OSORIO MUÑETON",
+  "CORREO": "luosorio@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f93e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521261,
+  "NOMBRES": "ANTONIA",
+  "APELLIDOS": "RAMÍREZ MONTOYA",
+  "CORREO": "anramirez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f93f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521153,
+  "NOMBRES": "MARÍA JOSÉ",
+  "APELLIDOS": "ROJAS USMA",
+  "CORREO": "marojas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f940"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035878105,
+  "NOMBRES": "MARÍA CELESTE",
+  "APELLIDOS": "SERNA BARRIENTOS",
+  "CORREO": "maserna@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f941"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521117,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "VANEGAS MONTOYA",
+  "CORREO": "mavanegasm@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f942"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521165,
+  "NOMBRES": "CATALINA",
+  "APELLIDOS": "VILLA MONSALVE",
+  "CORREO": "cavilla@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f943"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521020,
+  "NOMBRES": "EMILIANO",
+  "APELLIDOS": "ACOSTA HINCAPIÉ",
+  "CORREO": "emacosta@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f944"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023535681,
+  "NOMBRES": "SANTIAGO",
+  "APELLIDOS": "ALZATE MOLINA",
+  "CORREO": "saalzatem@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f945"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520941,
+  "NOMBRES": "MARÍA ANTONIA",
+  "APELLIDOS": "CARVAJAL VALENCIA",
+  "CORREO": "macarvajal@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f946"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035007186,
+  "NOMBRES": "SUSANA",
+  "APELLIDOS": "CATAÑO LUGO",
+  "CORREO": "sucatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f947"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036520987,
+  "NOMBRES": "THOMAS",
+  "APELLIDOS": "ECHEVERRY VALENCIA",
+  "CORREO": "thecheverry@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f948"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021938995,
+  "NOMBRES": "PALOMA",
+  "APELLIDOS": "GARCÍA GIL",
+  "CORREO": "pagarcia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f949"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020322685,
+  "NOMBRES": "ANA LUCIA",
+  "APELLIDOS": "GÓMEZ LLANO",
+  "CORREO": "angomezl@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f94a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520841,
+  "NOMBRES": "CELESTE",
+  "APELLIDOS": "GONZÁLEZ OSPINA",
+  "CORREO": "cegonzalez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f94b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520972,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "LONDOÑO VARGAS",
+  "CORREO": "salondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f94c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520919,
+  "NOMBRES": "JULIETA",
+  "APELLIDOS": "PINEDA ORTÍZ",
+  "CORREO": "jupineda@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f94d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520833,
+  "NOMBRES": "CRISTÓBAL",
+  "APELLIDOS": "QUINTERO CASTRO",
+  "CORREO": "crquintero@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f94e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033265983,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "RAMÍREZ ARISTIZÁBAL",
+  "CORREO": "luramirez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f94f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520801,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "RÚA GÓMEZ",
+  "CORREO": "lurua@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f950"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520726,
+  "NOMBRES": "LUCYANNA",
+  "APELLIDOS": "SERNA GÓMEZ",
+  "CORREO": "luserna@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f951"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521002,
+  "NOMBRES": "CANDELARIA",
+  "APELLIDOS": "SIERRA CARDONA",
+  "CORREO": "casierra@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f952"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033199194,
+  "NOMBRES": "EMILY",
+  "APELLIDOS": "THYME LONDOÑO",
+  "CORREO": "emthyme@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f953"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020232682,
+  "NOMBRES": "MAXIMILIANO",
+  "APELLIDOS": "VALENCIA LONGAS",
+  "CORREO": "maxvalencia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f954"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035007909,
+  "NOMBRES": "ISABELA",
+  "APELLIDOS": "VARGAS CADAVID",
+  "CORREO": "isvargas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f955"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1042214288,
+  "NOMBRES": "ANGEL",
+  "APELLIDOS": "VERGARA GARCIA",
+  "CORREO": "anvergara@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f956"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033498207,
+  "NOMBRES": "MARÍA CLARA",
+  "APELLIDOS": "YEPES OQUENDO",
+  "CORREO": "mayepes@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f957"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1038874111,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "ZAPATA BERRIO",
+  "CORREO": "marzapata@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f958"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036520643,
+  "NOMBRES": "MAXIMILIANO",
+  "APELLIDOS": "ZULETA CARMONA",
+  "CORREO": "mazuleta@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f959"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036520643,
+  "NOMBRES": "MAXIMILIANO",
+  "APELLIDOS": "ZULETA CARMONA",
+  "CORREO": "maxzuleta@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f95a"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1018260211,
+  "NOMBRES": "MIGUEL ANGEL",
+  "APELLIDOS": "ZULUAGA MADRID",
+  "CORREO": "mizuluaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f95b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035877618,
+  "NOMBRES": "MARTINA",
+  "APELLIDOS": "AGUDELO CARMONA",
+  "CORREO": "maragudelo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f95c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520975,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "ARIAS ARISTIZÁBAL",
+  "CORREO": "isarias@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f95d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520859,
+  "NOMBRES": "SALOMÉ",
+  "APELLIDOS": "BARRIENTOS DÍAZ",
+  "CORREO": "sabarrientos@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f95e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020232669,
+  "NOMBRES": "ANTONELLA",
+  "APELLIDOS": "BEDOYA JARAMILLO",
+  "CORREO": "anbedoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f95f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035877247,
+  "NOMBRES": "EMILIO",
+  "APELLIDOS": "BEDOYA RODRIGUEZ",
+  "CORREO": "embedoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f960"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520762,
+  "NOMBRES": "LUCIANNA",
+  "APELLIDOS": "CASAS TEJADA",
+  "CORREO": "lucasas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f961"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520911,
+  "NOMBRES": "SOPHIA",
+  "APELLIDOS": "DÁVILA MEDINA",
+  "CORREO": "sodavila@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f962"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035878350,
+  "NOMBRES": "JUAN FELIPE",
+  "APELLIDOS": "ESTRADA ALZATE",
+  "CORREO": "juestrada@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f963"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1070621505,
+  "NOMBRES": "LINDA VALERIA",
+  "APELLIDOS": "GARZÓN DOMINGUEZ",
+  "CORREO": "ligarzon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f964"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520945,
+  "NOMBRES": "JERÓNIMO",
+  "APELLIDOS": "GONZÁLEZ RUBIANO",
+  "CORREO": "jegonzalez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f965"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020124432,
+  "NOMBRES": "MARÍA CELESTE",
+  "APELLIDOS": "HENAO ALZATE",
+  "CORREO": "mahenaoa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f966"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020233015,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "HENAO RIOS",
+  "CORREO": "luhenao@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f967"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520901,
+  "NOMBRES": "SALOMÉ",
+  "APELLIDOS": "JIMÉNEZ VILLADA",
+  "CORREO": "sajimenez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f968"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033497922,
+  "NOMBRES": "EMILIANA",
+  "APELLIDOS": "LONDOÑO DURANGO",
+  "CORREO": "emlondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f969"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521065,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "MONTOYA CARMONA",
+  "CORREO": "mamontoyac@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f96a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520989,
+  "NOMBRES": "JULIETA",
+  "APELLIDOS": "OCHOA CASTRILLÓN",
+  "CORREO": "julochoa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f96b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035006018,
+  "NOMBRES": "MARIA LAURA",
+  "APELLIDOS": "OCHOA VANEGAS",
+  "CORREO": "malochoa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f96c"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1013356007,
+  "NOMBRES": "ORIANA",
+  "APELLIDOS": "PALACIO GARCIA",
+  "CORREO": "opalacio@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f96d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520846,
+  "NOMBRES": "SOPHIA",
+  "APELLIDOS": "PULGARÍN ZAPATA",
+  "CORREO": "sopulgarin@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f96e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020233075,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "VANEGAS ECHEVERRI",
+  "CORREO": "isvanegas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f96f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1112492082,
+  "NOMBRES": "DILAN DAVID",
+  "APELLIDOS": "VEGA MARTÍNEZ",
+  "CORREO": "divega@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f970"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035875798,
+  "NOMBRES": "MARÍA FERNANDA",
+  "APELLIDOS": "ACEVEDO ECHEVERRY",
+  "CORREO": "maracevedo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f971"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520642,
+  "NOMBRES": "JOSÉ MANUEL",
+  "APELLIDOS": "ALZATE CORREA",
+  "CORREO": "joalzate@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f972"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035873570,
+  "NOMBRES": "MARÍA ANTONIA",
+  "APELLIDOS": "BUSTAMANTE MARIN",
+  "CORREO": "mabustamante@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f973"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033429290,
+  "NOMBRES": "MAXIMILIANO",
+  "APELLIDOS": "CASTRILLÓN GARCÍA",
+  "CORREO": "macastrillon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f974"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021935484,
+  "NOMBRES": "MARIA JOSÉ",
+  "APELLIDOS": "CÓRDOBA CATAÑO",
+  "CORREO": "macordobac@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f975"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023533159,
+  "NOMBRES": "MARTÍN",
+  "APELLIDOS": "CÓRDOBA RAMÍREZ",
+  "CORREO": "martcordoba@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f976"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1027663724,
+  "NOMBRES": "ISABEL",
+  "APELLIDOS": "FLOREZ QUINTERO",
+  "CORREO": "isflorez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f977"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035874806,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "GARCÍA RÚA",
+  "CORREO": "emgarcia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f978"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036520670,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "HENAO DELGADO",
+  "CORREO": "ishenao@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f979"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1034924946,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "JARAMILLO ALZATE",
+  "CORREO": "sajaramilloa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f97a"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033429259,
+  "NOMBRES": "ANTONELLA",
+  "APELLIDOS": "MARÍN IDÁRRAGA",
+  "CORREO": "anmarin@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f97b"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1038873372,
+  "NOMBRES": "NICOLÁS",
+  "APELLIDOS": "MEDINA CASTAÑEDA",
+  "CORREO": "nimedina@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f97c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520769,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "MUÑOZ CADAVID",
+  "CORREO": "emmunozc@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f97d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035873616,
+  "NOMBRES": "EMANUEL",
+  "APELLIDOS": "MUÑOZ VILLA",
+  "CORREO": "emmunozv@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f97e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520760,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "OROZCO CARMONA",
+  "CORREO": "maorozco@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f97f"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033496427,
+  "NOMBRES": "XIMENA",
+  "APELLIDOS": "ORTEGA CORREA",
+  "CORREO": "xiortega@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f980"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520648,
+  "NOMBRES": "ESTEBAN",
+  "APELLIDOS": "OSPINA ARBOLEDA",
+  "CORREO": "esospina@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f981"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1125250351,
+  "NOMBRES": "EMANUEL",
+  "APELLIDOS": "RAMÍREZ CARDONA",
+  "CORREO": "emramirez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f982"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020319826,
+  "NOMBRES": "JUAN ANDRES",
+  "APELLIDOS": "RAMIREZ GONZALEZ",
+  "CORREO": "juramirez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f983"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033429265,
+  "NOMBRES": "THOMAS",
+  "APELLIDOS": "SANCHEZ CARMONA",
+  "CORREO": "thsanchez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f984"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020319458,
+  "NOMBRES": "MARIA JOSE",
+  "APELLIDOS": "SOSA ALVAREZ",
+  "CORREO": "marsosa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f985"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520635,
+  "NOMBRES": "SARA",
+  "APELLIDOS": "SUÁREZ ZAPATA",
+  "CORREO": "sasuarez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f986"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035876172,
+  "NOMBRES": "ANA SOFIA",
+  "APELLIDOS": "VÈLEZ GAMBOA",
+  "CORREO": "anvelez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f987"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520641,
+  "NOMBRES": "JULIETA",
+  "APELLIDOS": "VILLA OSPINA",
+  "CORREO": "juvilla@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f988"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1034924890,
+  "NOMBRES": "SANTIAGO",
+  "APELLIDOS": "VIVEROS LONDOÑO",
+  "CORREO": "saviveros@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f989"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035004307,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "ZULUAGA ARANGO",
+  "CORREO": "mazuluaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f98a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520564,
+  "NOMBRES": "ANGEL DAVID",
+  "APELLIDOS": "ALZATE ARENAS",
+  "CORREO": "andalzate@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f98b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020231790,
+  "NOMBRES": "SEBASTIAN",
+  "APELLIDOS": "ALZATE BUSTAMANTE",
+  "CORREO": "sealzate@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f98c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520559,
+  "NOMBRES": "MARÍA ALEJANDRA",
+  "APELLIDOS": "ARBOLEDA ISAZA",
+  "CORREO": "mararboleda@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f98d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035005876,
+  "NOMBRES": "DANIELA",
+  "APELLIDOS": "BETANCOURT ARROYAVE",
+  "CORREO": "dabetancourt@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f98e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033198349,
+  "NOMBRES": "MARTINA",
+  "APELLIDOS": "BETANCUR OSPINA",
+  "CORREO": "mabetancur@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f98f"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035872872,
+  "NOMBRES": "#N/D",
+  "APELLIDOS": "#N/D",
+  "CORREO": "jucardona@lapresentaciongiradota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f990"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035233878,
+  "NOMBRES": "SANTIAGO",
+  "APELLIDOS": "CARMONA CALLEJAS",
+  "CORREO": "sancarmona@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f991"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035874374,
+  "NOMBRES": "SANTIAGO",
+  "APELLIDOS": "CARMONA GALLEGO",
+  "CORREO": "sacarmonag@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f992"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520524,
+  "NOMBRES": "SAMANTHA",
+  "APELLIDOS": "CORDOBA HERNÀNDEZ",
+  "CORREO": "sacordoba@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f993"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020317735,
+  "NOMBRES": "FEDERICO",
+  "APELLIDOS": "ECHEVERRY CASTRILLÓN",
+  "CORREO": "feecheverry@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f994"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035875478,
+  "NOMBRES": "MARIA JOSÉ",
+  "APELLIDOS": "FORONDA MARTÍNEZ",
+  "CORREO": "maforonda@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f995"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033429217,
+  "NOMBRES": "JUAN FELIPE",
+  "APELLIDOS": "GÓMEZ SARMIENTO",
+  "CORREO": "jugomez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f996"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033265457,
+  "NOMBRES": "EMILIANO",
+  "APELLIDOS": "LOAIZA VANEGAS",
+  "CORREO": "emloaiza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f997"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1094223957,
+  "NOMBRES": "SIMÓN DAVID",
+  "APELLIDOS": "MIRA CAICEDO",
+  "CORREO": "simira@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f998"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520697,
+  "NOMBRES": "GUADALUPE",
+  "APELLIDOS": "MONTOYA JIMÉNEZ",
+  "CORREO": "gumontoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f999"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033429210,
+  "NOMBRES": "SANTIAGO",
+  "APELLIDOS": "MORALES CHAVARRIA",
+  "CORREO": "samorales@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f99a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021933485,
+  "NOMBRES": "ISABELLA",
+  "APELLIDOS": "PEREZ GIRALDO",
+  "CORREO": "isperez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f99b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520608,
+  "NOMBRES": "JACOBO",
+  "APELLIDOS": "RODRIGUEZ CLAVIJO",
+  "CORREO": "jarodriguez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f99c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033198024,
+  "NOMBRES": "JUAN ALEJANDRO",
+  "APELLIDOS": "SALDARRIAGA OCHOA",
+  "CORREO": "jusaldarriaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f99d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033429200,
+  "NOMBRES": "JERÓNIMO",
+  "APELLIDOS": "SANCHEZ CASTILLO",
+  "CORREO": "jesanchez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f99e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520682,
+  "NOMBRES": "MARIA SALOMÉ",
+  "APELLIDOS": "SUÁREZ ACEVEDO",
+  "CORREO": "masuareza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f99f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035875084,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "SUÁREZ RINCÓN",
+  "CORREO": "samsuarez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a0"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1039467780,
+  "NOMBRES": "SALOMÉ",
+  "APELLIDOS": "UPEGUI CUERVO",
+  "CORREO": "saupegui@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035876274,
+  "NOMBRES": "JOSÈ MIGUEL",
+  "APELLIDOS": "VALENCIA LONDOÑO",
+  "CORREO": "jovalencia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520699,
+  "NOMBRES": "ESMERALDA",
+  "APELLIDOS": "VÉLEZ CASTRILLÓN",
+  "CORREO": "esvelez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a3"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035233666,
+  "NOMBRES": "AGUSTIN",
+  "APELLIDOS": "VILLA RAVE",
+  "CORREO": "agvilla@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a4"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035875452,
+  "NOMBRES": "ANA SOFIA",
+  "APELLIDOS": "ZAPATA MONTOYA",
+  "CORREO": "anzapata@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035875359,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "ZAPATA SALDARRIAGA",
+  "CORREO": "samzapata@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520311,
+  "NOMBRES": "EMILIANO",
+  "APELLIDOS": "ACEVEDO ANTÍA",
+  "CORREO": "emacevedo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a7"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1011407344,
+  "NOMBRES": "MATEO",
+  "APELLIDOS": "ALZATE ZAPATA",
+  "CORREO": "maalzate@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a8"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020316055,
+  "NOMBRES": "DANIEL",
+  "APELLIDOS": "ARISTIZABAL GOMEZ",
+  "CORREO": "daaristizabal@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9a9"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1041233002,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "BUITRAGO MARIN",
+  "CORREO": "lubuitrago@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9aa"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520410,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "BUSTAMANTE BOHORQUEZ",
+  "CORREO": "sabustamante@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ab"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520428,
+  "NOMBRES": "MARIANA",
+  "APELLIDOS": "CADAVID QUICENO",
+  "CORREO": "macadavid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ac"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035431917,
+  "NOMBRES": "SAMANTHA",
+  "APELLIDOS": "CANO ARENAS",
+  "CORREO": "samcano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ad"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035872442,
+  "NOMBRES": "IAN AGUSTIN",
+  "APELLIDOS": "CARMONA MOLINA",
+  "CORREO": "iacarmona@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ae"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520165,
+  "NOMBRES": "JUAN JOSÉ",
+  "APELLIDOS": "CARMONA SEGURO",
+  "CORREO": "jujocarmona@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9af"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1023533182,
+  "NOMBRES": "JOSÉ ALEJANDRO",
+  "APELLIDOS": "CASTAÑO PAREJA",
+  "CORREO": "jocastano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b0"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520513,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "CASTRILLÓN TORRES",
+  "CORREO": "emcastrillon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520327,
+  "NOMBRES": "MIGUEL ANGEL",
+  "APELLIDOS": "CASTRILLÓN ZULETA",
+  "CORREO": "micastrillon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035869995,
+  "NOMBRES": "JERÓNIMO",
+  "APELLIDOS": "CHAVERRA AGUDELO",
+  "CORREO": "jechaverra@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b3"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035871590,
+  "NOMBRES": "SUSANA",
+  "APELLIDOS": "GARCÍA CASTRO",
+  "CORREO": "sugarcia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b4"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021934442,
+  "NOMBRES": "MARIA ANTONIA",
+  "APELLIDOS": "GARCÍA CÓRDOBA",
+  "CORREO": "margarcia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021934862,
+  "NOMBRES": "MARÍA CAMILA",
+  "APELLIDOS": "GOMEZ URREGO",
+  "CORREO": "margomez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520345,
+  "NOMBRES": "JERÓNIMO",
+  "APELLIDOS": "HENAO CORTÉS",
+  "CORREO": "jehenao@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b7"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036520339,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "HERNÁNDEZ HERNÁNDEZ",
+  "CORREO": "luhernandezh@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b8"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013352877,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "HOYOS OQUENDO",
+  "CORREO": "mahoyos@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9b9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035872440,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "HURTADO VELASQUEZ",
+  "CORREO": "mahurtado@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ba"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036456777,
+  "NOMBRES": "MATEO",
+  "APELLIDOS": "LARREA CARMONA",
+  "CORREO": "malarrea@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9bb"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035003377,
+  "NOMBRES": "ISABELA",
+  "APELLIDOS": "LONDOÑO VALENCIA",
+  "CORREO": "islondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9bc"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020230145,
+  "NOMBRES": "SALOME",
+  "APELLIDOS": "MARTÍNEZ MORALES",
+  "CORREO": "samartinez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9bd"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033264438,
+  "NOMBRES": "ISABELLA",
+  "APELLIDOS": "MOLINA ARGUELLO",
+  "CORREO": "ismolina@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9be"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1018258625,
+  "NOMBRES": "SAMANTHA",
+  "APELLIDOS": "MOLINA MESA",
+  "CORREO": "samolina@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9bf"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1129585135,
+  "NOMBRES": "JOHAN JERÓNIMO",
+  "APELLIDOS": "MONTOYA ALVAREZ",
+  "CORREO": "jomontoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c0"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520360,
+  "NOMBRES": "SAMARA",
+  "APELLIDOS": "MONTOYA GIRALDO",
+  "CORREO": "samontoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520379,
+  "NOMBRES": "ISABELLA",
+  "APELLIDOS": "MORALES ZAPATA",
+  "CORREO": "ismorales@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1022156893,
+  "NOMBRES": "AGUSTÍN",
+  "APELLIDOS": "OCHOA HERNÁNDEZ",
+  "CORREO": "agochoa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c3"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1105474114,
+  "NOMBRES": "JULIAN CAMILO",
+  "APELLIDOS": "PALMA SOTO",
+  "CORREO": "jupalma@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c4"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036456867,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "RAMÍREZ CASTAÑO",
+  "CORREO": "isramirez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c5"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036455930,
+  "NOMBRES": "MIGUEL ÁNGEL",
+  "APELLIDOS": "ROMERO ORREGO",
+  "CORREO": "miromero@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520341,
+  "NOMBRES": "SALOMÉ",
+  "APELLIDOS": "SALDARRIAGA CASTRILLÓN",
+  "CORREO": "sasaldarriaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c7"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033428675,
+  "NOMBRES": "MARIA ADELAIDA",
+  "APELLIDOS": "VELASQUEZ VIVAREZ",
+  "CORREO": "mavelasquez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c8"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036666126,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "ZULETA HERNANDEZ",
+  "CORREO": "luzuleta@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9c9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013352481,
+  "NOMBRES": "JOSÉ DAVID",
+  "APELLIDOS": "ZULETA ZULETA",
+  "CORREO": "jozuleta@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ca"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035870058,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "BARRIENTOS HERNÁNDEZ",
+  "CORREO": "lubarrientos@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9cb"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035433311,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "BORJA EUSSE",
+  "CORREO": "luborja@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9cc"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519871,
+  "NOMBRES": "JERÓNIMO",
+  "APELLIDOS": "CAVADIAS QUICENO",
+  "CORREO": "jecavadias@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9cd"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020313585,
+  "NOMBRES": "DYLAN",
+  "APELLIDOS": "CIFUENTES LONDOnO",
+  "CORREO": "dycifuentes@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ce"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520033,
+  "NOMBRES": "MARÍA CLARA",
+  "APELLIDOS": "GIL FORONDA",
+  "CORREO": "magil@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9cf"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035870495,
+  "NOMBRES": "JUAN PABLO",
+  "APELLIDOS": "GONZALEZ RUA",
+  "CORREO": "jugonzalez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d0"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036520275,
+  "NOMBRES": "JUAN ANTONIO",
+  "APELLIDOS": "GUEVARA LOPEZ",
+  "CORREO": "juguevara@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d1"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519895,
+  "NOMBRES": "CAMILO",
+  "APELLIDOS": "GUEVARA RAMÍREZ",
+  "CORREO": "caguevara@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d2"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1038872676,
+  "NOMBRES": "MARIANA",
+  "APELLIDOS": "GUZMAN SOTO",
+  "CORREO": "maguzman@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d3"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035916949,
+  "NOMBRES": "MATHIAS",
+  "APELLIDOS": "HOYOS GOMEZ",
+  "CORREO": "mahoyosg@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d4"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520203,
+  "NOMBRES": "MATÍAS",
+  "APELLIDOS": "JARAMILLO JARAMILLO",
+  "CORREO": "majaramillo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033428850,
+  "NOMBRES": "VERÒNICA",
+  "APELLIDOS": "LOAIZA OCHOA",
+  "CORREO": "veloaiza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033194384,
+  "NOMBRES": "JUAN JOSÉ",
+  "APELLIDOS": "MONTOYA NIETO",
+  "CORREO": "jumontoya@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d7"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035868843,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "MUÑOZ FORONDA",
+  "CORREO": "mamunoz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d8"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520152,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "OSPINA CASTILLO",
+  "CORREO": "maospina@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9d9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520145,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "PARRA CARMONA",
+  "CORREO": "lucparra@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9da"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1022156289,
+  "NOMBRES": "MIGUEL ANGEL",
+  "APELLIDOS": "PULGARIN CATAÑO",
+  "CORREO": "mipulgarin@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9db"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035869050,
+  "NOMBRES": "MARÍA ISABEL",
+  "APELLIDOS": "RAMÍREZ VANEGAS",
+  "CORREO": "maramirez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9dc"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035230241,
+  "NOMBRES": "LUIS DAVID",
+  "APELLIDOS": "RODRIGUEZ CARDONA",
+  "CORREO": "lurodriguez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9dd"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035230606,
+  "NOMBRES": "MARIA FERNANDA",
+  "APELLIDOS": "RUIZ BEDOYA",
+  "CORREO": "maruizb@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9de"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033191582,
+  "NOMBRES": "DAVID",
+  "APELLIDOS": "SALDARRIAGA SALDARRIAGA",
+  "CORREO": "dasaldarriagas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9df"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520243,
+  "NOMBRES": "VALERY",
+  "APELLIDOS": "SALDARRIAGA SOSA",
+  "CORREO": "vasaldarriaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e0"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020229056,
+  "NOMBRES": "TOMÁS",
+  "APELLIDOS": "SANCHEZ CASTILLO",
+  "CORREO": "tosanchez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021809217,
+  "NOMBRES": "PABLO",
+  "APELLIDOS": "TORRES TORO",
+  "CORREO": "patorres@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e2"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1025897611,
+  "NOMBRES": "JOSÉ MIGUEL",
+  "APELLIDOS": "VELEZ TAPIAS",
+  "CORREO": "jovelez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e3"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1027663258,
+  "NOMBRES": "JUAN EDUARDO",
+  "APELLIDOS": "ZACIPA CATAnO",
+  "CORREO": "juzacipa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e4"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520127,
+  "NOMBRES": "MARTÍN",
+  "APELLIDOS": "ZULETA BOTERO",
+  "CORREO": "marzuleta@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021931180,
+  "NOMBRES": "MANUELA",
+  "APELLIDOS": "ACOSTA HINCAPIE",
+  "CORREO": "maacosta@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e6"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033191872,
+  "NOMBRES": "ANA SOFIA",
+  "APELLIDOS": "ALZATE AGUIRRE",
+  "CORREO": "analzate@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e7"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035867103,
+  "NOMBRES": "ANDRÉS FELIPE",
+  "APELLIDOS": "BETANCUR HENAO",
+  "CORREO": "anbetancur@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e8"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1018251184,
+  "NOMBRES": "JUAN DAVID",
+  "APELLIDOS": "BOLIVAR AGUIRRE",
+  "CORREO": "jubolivar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9e9"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519763,
+  "NOMBRES": "SALOMÉ",
+  "APELLIDOS": "CADAVID HINCAPIÉ",
+  "CORREO": "sacadavid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ea"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519832,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "CADAVID VALENCIA",
+  "CORREO": "lucadavid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9eb"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519893,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "CATAÑO ALZATE",
+  "CORREO": "lucatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ec"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020310258,
+  "NOMBRES": "ANDRÉS FELIPE",
+  "APELLIDOS": "CATAÑO LONDOÑO",
+  "CORREO": "ancatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ed"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025897470,
+  "NOMBRES": "JOSE GABRIEL",
+  "APELLIDOS": "CORDOBA GUZMAN",
+  "CORREO": "jocordoba@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ee"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1038264392,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "ESCOBAR SÁNCHEZ",
+  "CORREO": "emescobars@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ef"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519850,
+  "NOMBRES": "ANTONELLA",
+  "APELLIDOS": "GALLEGO ARIAS",
+  "CORREO": "angallego@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f0"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033190553,
+  "NOMBRES": "THOMAS",
+  "APELLIDOS": "GIRALDO JIMÉNEZ",
+  "CORREO": "thgiraldo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f1"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013464450,
+  "NOMBRES": "MARIA JOSE",
+  "APELLIDOS": "GOMEZ LONDOÑO",
+  "CORREO": "majogomez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f2"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1017935020,
+  "NOMBRES": "VALERIA",
+  "APELLIDOS": "GÒMEZ BETANCUR",
+  "CORREO": "vagomez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f3"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036520009,
+  "NOMBRES": "SANTIAGO",
+  "APELLIDOS": "HURTADO ZAPATA",
+  "CORREO": "sahurtado@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f4"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1034922218,
+  "NOMBRES": "ROSARIO",
+  "APELLIDOS": "IDARRAGA LONDOÑO",
+  "CORREO": "roidarraga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f5"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1032257230,
+  "NOMBRES": "BRAHIAN SMITH",
+  "APELLIDOS": "JARAMILLO ESPINOSA",
+  "CORREO": "brjaramillo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f6"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036520011,
+  "NOMBRES": "EMILIANO",
+  "APELLIDOS": "LONDOÑO ALZATE",
+  "CORREO": "emlondonoa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f7"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035229330,
+  "NOMBRES": "JERÒNIMO",
+  "APELLIDOS": "LONDOÑO GARCÌA",
+  "CORREO": "jelondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f8"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1031655589,
+  "NOMBRES": "MARIA XIMENA",
+  "APELLIDOS": "LONDOÑO SIERRA",
+  "CORREO": "malondonos@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9f9"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1011404571,
+  "NOMBRES": "JUAN JOSE",
+  "APELLIDOS": "MARIN GUZMAN",
+  "CORREO": "jumarin@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9fa"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033190962,
+  "NOMBRES": "LUNA DEL",
+  "APELLIDOS": "MENDOZA ZAMBRANO",
+  "CORREO": "lumendoza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9fb"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036260354,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "MUÑOZ BAENA",
+  "CORREO": "lumunoz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9fc"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519878,
+  "NOMBRES": "NICOLAS",
+  "APELLIDOS": "MUÑOZ CASTRILLON",
+  "CORREO": "nimunoz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9fd"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519884,
+  "NOMBRES": "JUAN MIGUEL",
+  "APELLIDOS": "OCHOA SALDARRIAGA",
+  "CORREO": "juochoa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9fe"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520027,
+  "NOMBRES": "MARIA ANTONIA",
+  "APELLIDOS": "QUIÑONEZ CARMONA",
+  "CORREO": "maquinonez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337f9ff"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520036,
+  "NOMBRES": "JUANITA",
+  "APELLIDOS": "ROJAS CASTRILLÓN",
+  "CORREO": "jurojas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa00"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033191132,
+  "NOMBRES": "EMANUEL",
+  "APELLIDOS": "ROJAS GONZÁLEZ",
+  "CORREO": "emrojas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa01"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1034998674,
+  "NOMBRES": "MARÍA DEL MAR",
+  "APELLIDOS": "ROJAS VÉLEZ",
+  "CORREO": "marojasv@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa02"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1034998673,
+  "NOMBRES": "MARÍA CELESTE",
+  "APELLIDOS": "ROJAS VÉLEZ",
+  "CORREO": "marrojas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa03"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033190983,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "ROJO ARROYAVE",
+  "CORREO": "lurojo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa04"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036454497,
+  "NOMBRES": "ALEJANDRO",
+  "APELLIDOS": "ROMERO ORREGO",
+  "CORREO": "alromero@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa05"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036520054,
+  "NOMBRES": "EMILY",
+  "APELLIDOS": "SALDARRIAGA BERRIO",
+  "CORREO": "emsaldarriaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa06"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519930,
+  "NOMBRES": "JOSÉ DAVID",
+  "APELLIDOS": "SANTIESTEBAN MUÑOZ",
+  "CORREO": "josantiesteban@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa07"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020226238,
+  "NOMBRES": "VALENTINA",
+  "APELLIDOS": "SIERRA MONTOYA",
+  "CORREO": "vasierra@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa08"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519939,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "SOSA MESA",
+  "CORREO": "masosa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa09"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033428798,
+  "NOMBRES": "MARÌA JOSÈ",
+  "APELLIDOS": "SOSSA GIRALDO",
+  "CORREO": "masossa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa0a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519890,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "SUAREZ ZAPATA",
+  "CORREO": "masuarez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa0b"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020308566,
+  "NOMBRES": "MARIA LUNA",
+  "APELLIDOS": "TABARES CHAVERRA",
+  "CORREO": "matabares@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa0c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021808941,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "TORRES TORO",
+  "CORREO": "matorres@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa0d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1028141824,
+  "NOMBRES": "TOMAS",
+  "APELLIDOS": "VALENCIA LAVERDE",
+  "CORREO": "tovalencia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa0e"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020227285,
+  "NOMBRES": "VALENTINA",
+  "APELLIDOS": "VALENCIA YARCE",
+  "CORREO": "vavalencia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa0f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519801,
+  "NOMBRES": "MARIA PAZ",
+  "APELLIDOS": "ARIAS LONDOÑO",
+  "CORREO": "maarias@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa10"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033428362,
+  "NOMBRES": "MARIA ISABEL",
+  "APELLIDOS": "BEDOYA MORALES",
+  "CORREO": "mabedoyam@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa11"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1027662737,
+  "NOMBRES": "JERÓNIMO",
+  "APELLIDOS": "BETANCURT TORRES",
+  "CORREO": "jebetancurt@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa12"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1129584360,
+  "NOMBRES": "NICOLAS",
+  "APELLIDOS": "BORJA EUSSE",
+  "CORREO": "niborja@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa13"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020226284,
+  "NOMBRES": "JULIETA",
+  "APELLIDOS": "CARVAJAL BERMUDEZ",
+  "CORREO": "jucarvajal@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa14"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519670,
+  "NOMBRES": "CRISTOPHER",
+  "APELLIDOS": "CASTAÑEDA SERRANO",
+  "CORREO": "crcastaneda@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa15"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025895691,
+  "NOMBRES": "JUAN DIEGO",
+  "APELLIDOS": "CORDOBA GUZMAN",
+  "CORREO": "jucordoba@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa16"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519570,
+  "NOMBRES": "SOFIA",
+  "APELLIDOS": "FORONDA HOYOS",
+  "CORREO": "soforonda@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa17"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020226641,
+  "NOMBRES": "THOMAS",
+  "APELLIDOS": "GOMEZ HINCAPIE",
+  "CORREO": "thgomez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa18"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519615,
+  "NOMBRES": "ALICIA",
+  "APELLIDOS": "GONZALEZ CORDOBA",
+  "CORREO": "algonzalez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa19"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025654572,
+  "NOMBRES": "TOMÁS",
+  "APELLIDOS": "GRANADA CADAVID",
+  "CORREO": "togranada@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa1a"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519544,
+  "NOMBRES": "MANUELA",
+  "APELLIDOS": "GUEVARA RAMÍREZ",
+  "CORREO": "maguevara@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa1b"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1021928784,
+  "NOMBRES": "JUAN JOSE",
+  "APELLIDOS": "GUTIERREZ OCHOA",
+  "CORREO": "jugutierrez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa1c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035861825,
+  "NOMBRES": "MARIA CAMILA",
+  "APELLIDOS": "HENAO MARIN",
+  "CORREO": "mahenao@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa1d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519518,
+  "NOMBRES": "MARIA ANTONIA",
+  "APELLIDOS": "HINCAPIE CARMONA",
+  "CORREO": "mahincapie@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa1e"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1025661915,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "HOYOS TAPIAS",
+  "CORREO": "sahoyos@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa1f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519634,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "HURTADO LONDOÑO",
+  "CORREO": "luhurtado@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa20"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519585,
+  "NOMBRES": "SALOME",
+  "APELLIDOS": "JARAMILLO JARAMILLO",
+  "CORREO": "sajaramillo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa21"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1011514639,
+  "NOMBRES": "ISABELA",
+  "APELLIDOS": "LEÓN ROJAS",
+  "CORREO": "isaleon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa22"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035864814,
+  "NOMBRES": "GABRIELA",
+  "APELLIDOS": "MONTOYA BETANCUR",
+  "CORREO": "gamontoyab@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa23"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1018250904,
+  "NOMBRES": "MELANNYE",
+  "APELLIDOS": "MUÑETON LONDOÑO",
+  "CORREO": "memuneton@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa24"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1040878311,
+  "NOMBRES": "JUAN JOSÉ",
+  "APELLIDOS": "MUÑOZ BAENA",
+  "CORREO": "jumunozb@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa25"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1022152689,
+  "NOMBRES": "JERÓNIMO",
+  "APELLIDOS": "OSORIO ZAPATA",
+  "CORREO": "jeosorio@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa26"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033189982,
+  "NOMBRES": "MARIANGEL",
+  "APELLIDOS": "POSADA SÁNCHEZ",
+  "CORREO": "maposada@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa27"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1192465539,
+  "NOMBRES": "JULIETA",
+  "APELLIDOS": "RAMIREZ RINCÓN",
+  "CORREO": "julramirez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa28"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020307682,
+  "NOMBRES": "JUAN JOSÉ",
+  "APELLIDOS": "RUIZ SÁNCHEZ",
+  "CORREO": "juruiz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa29"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035858591,
+  "NOMBRES": "NICOLAS",
+  "APELLIDOS": "SERNA AVENDAÑO",
+  "CORREO": "niserna@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa2a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033428248,
+  "NOMBRES": "JULIETA",
+  "APELLIDOS": "SOSA FRANCO",
+  "CORREO": "jusosa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa2b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519630,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "VANEGAS RESTREPO",
+  "CORREO": "mavanegas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa2c"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033428311,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "VÉLEZ CÁRDENAS",
+  "CORREO": "luvelez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa2d"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1109673035,
+  "NOMBRES": "JUAN ESTEBAN",
+  "APELLIDOS": "VILLAMIL MENESES",
+  "CORREO": "juvillamil@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa2e"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1011514881,
+  "NOMBRES": "ISABELLA",
+  "APELLIDOS": "YEPES CÁRDENAS",
+  "CORREO": "isabellayepes@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa2f"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519352,
+  "NOMBRES": "MARÍA ANTONIA",
+  "APELLIDOS": "ACEVEDO ANTIA",
+  "CORREO": "maacevedo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa30"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020305094,
+  "NOMBRES": "LUISA MARIA",
+  "APELLIDOS": "ALZATE OSORNO",
+  "CORREO": "lualzate@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa31"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020306150,
+  "NOMBRES": "RICARDO ALEJANDRO",
+  "APELLIDOS": "BOTERO HERNÁNDEZ",
+  "CORREO": "ribotero@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa32"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025656243,
+  "NOMBRES": "ISABELA",
+  "APELLIDOS": "BUSTAMANTE OROZCO",
+  "CORREO": "isbustamante@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa33"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035858627,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "BUSTAMANTE SOSA",
+  "CORREO": "emmbustamante@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa34"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021927487,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "CELIS VALENCIA",
+  "CORREO": "macelis@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa35"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025658352,
+  "NOMBRES": "JERÓNIMO",
+  "APELLIDOS": "CORTÉS ARANGO",
+  "CORREO": "jecortes@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa36"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1072102858,
+  "NOMBRES": "SAMUEL CAMILO",
+  "APELLIDOS": "GARZÓN DOMÍNGUEZ",
+  "CORREO": "sagarzon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa37"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035857727,
+  "NOMBRES": "MARÍA JOSE",
+  "APELLIDOS": "GAVIRIA CLAVIJO",
+  "CORREO": "magaviria@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa38"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033427875,
+  "NOMBRES": "JUANITA",
+  "APELLIDOS": "HURTADO BUSTAMANTE",
+  "CORREO": "juhurtado@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa39"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1017933661,
+  "NOMBRES": "MICHELL JULIANA",
+  "APELLIDOS": "MADRID ATEHORTUA",
+  "CORREO": "mimadrid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa3a"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035858836,
+  "NOMBRES": "EZEQUIEL",
+  "APELLIDOS": "MARÍN HENAO",
+  "CORREO": "ezmarin@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa3b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021928640,
+  "NOMBRES": "DAVID",
+  "APELLIDOS": "MARTINEZ CASTRO",
+  "CORREO": "damartinez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa3c"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519397,
+  "NOMBRES": "ANA SOFÍA",
+  "APELLIDOS": "MORALES BUSTAMANTE",
+  "CORREO": "anmorales@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa3d"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1034994553,
+  "NOMBRES": "MARÍA JOSÉ",
+  "APELLIDOS": "OCHOA DEL RIO",
+  "CORREO": "maochoar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa3e"
+  },
+  "TIPO DE DOCUMENTO": "Pasaporte",
+  "DOCUMENTO": 663018027,
+  "NOMBRES": "ASHLEY NICOLE",
+  "APELLIDOS": "OROZCO GIL",
+  "CORREO": "asorozco@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa3f"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1015073941,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "PEREZ PATIÑO",
+  "CORREO": "luperezp@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa40"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1025657475,
+  "NOMBRES": "SEBASTIAN",
+  "APELLIDOS": "SALDARRIAGA LOPERA",
+  "CORREO": "sesaldarriaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa41"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519490,
+  "NOMBRES": "LUCIANA",
+  "APELLIDOS": "SANCHEZ USUGA",
+  "CORREO": "lusanchez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa42"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1129584137,
+  "NOMBRES": "EMILIANA",
+  "APELLIDOS": "SÁNCHEZ CASTILLO",
+  "CORREO": "emsanchez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa43"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519453,
+  "NOMBRES": "MAXIMILIANO",
+  "APELLIDOS": "SIERRA CARDONA",
+  "CORREO": "masierra@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa44"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519455,
+  "NOMBRES": "SOFIA",
+  "APELLIDOS": "VALENCIA ALZATE",
+  "CORREO": "sovalencia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa45"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035978467,
+  "NOMBRES": "JERONIMO",
+  "APELLIDOS": "VALENCIA RAMIREZ",
+  "CORREO": "jevalencia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa46"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1025655112,
+  "NOMBRES": "ISABELLA",
+  "APELLIDOS": "VANEGAS ECHEVERRI",
+  "CORREO": "isvanegase@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa47"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1021926457,
+  "NOMBRES": "DANIELA",
+  "APELLIDOS": "BARRERA HOLGUIN",
+  "CORREO": "dabarrera@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa48"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036519264,
+  "NOMBRES": "PAULINA",
+  "APELLIDOS": "BETANCUR ZAPATA",
+  "CORREO": "pabetancur@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa49"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035857915,
+  "NOMBRES": "SIMÒN",
+  "APELLIDOS": "CATAÑO HOYOS",
+  "CORREO": "sicatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa4a"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020114407,
+  "NOMBRES": "JHANNA",
+  "APELLIDOS": "CIFUENTES LONDOÑO",
+  "CORREO": "jhcifuentes@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa4b"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1013345474,
+  "NOMBRES": "MANUELA",
+  "APELLIDOS": "GÓMEZ SALDARRIAGA",
+  "CORREO": "magomez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa4c"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519305,
+  "NOMBRES": "MARÍA CLARA",
+  "APELLIDOS": "GÓMEZ SIERRA",
+  "CORREO": "magomezs@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa4d"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1017185723,
+  "NOMBRES": "MARIAPAULA",
+  "APELLIDOS": "GONZÁLEZ GARCÍA",
+  "CORREO": "magonzalez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa4e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033427439,
+  "NOMBRES": "JERONIMO",
+  "APELLIDOS": "HURTADO BUSTAMANTE",
+  "CORREO": "jehurtado@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa4f"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519363,
+  "NOMBRES": "NICOLÁS",
+  "APELLIDOS": "LONDOÑO ARBOLEDA",
+  "CORREO": "nilondono@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa50"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1023525600,
+  "NOMBRES": "ISABELA",
+  "APELLIDOS": "LUJAN ZAPATA",
+  "CORREO": "islujan@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa51"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1025892882,
+  "NOMBRES": "JUAN PABLO",
+  "APELLIDOS": "MARÍN ARANGO",
+  "CORREO": "jupmarin@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa52"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1015073433,
+  "NOMBRES": "VALERIA",
+  "APELLIDOS": "MÁRQUEZ VARGAS",
+  "CORREO": "vamarquez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa53"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1110046672,
+  "NOMBRES": "ENNERIC ROLANDO",
+  "APELLIDOS": "MENESES ARENAS",
+  "CORREO": "enmeneses@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa54"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1035856882,
+  "NOMBRES": "SIMÓN",
+  "APELLIDOS": "MORENO BETANCUR",
+  "CORREO": "simorenob@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa55"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1020303423,
+  "NOMBRES": "SANTIAGO",
+  "APELLIDOS": "SOSSA RICAURTE",
+  "CORREO": "sasossa@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa56"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519296,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "SOTO CARDONA",
+  "CORREO": "emsoto@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa57"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1033491144,
+  "NOMBRES": "MICHELL",
+  "APELLIDOS": "TABARES SOSSA",
+  "CORREO": "mitabares@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa58"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1025654645,
+  "NOMBRES": "MARÍA JOSE",
+  "APELLIDOS": "TUIRÁN SANCHEZ",
+  "CORREO": "matuiran@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa59"
+  },
+  "TIPO DE DOCUMENTO": "Tarjeta de Identidad",
+  "DOCUMENTO": 1036519383,
+  "NOMBRES": "JOSÉ ALEJANDRO",
+  "APELLIDOS": "ZULETA ZULETA",
+  "CORREO": "jozuletaz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa5a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881349,
+  "NOMBRES": "TOMÁS",
+  "APELLIDOS": "ACEVEDO CARMONA",
+  "CORREO": "toacevedo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa5b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036522287,
+  "NOMBRES": "MARIA DEL MAR",
+  "APELLIDOS": "AGUDELO SEPULVEDA",
+  "CORREO": "magudelo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa5c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036522267,
+  "NOMBRES": "HELENA",
+  "APELLIDOS": "BALANTA SALAZAR",
+  "CORREO": "hebalanta@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa5d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036522154,
+  "NOMBRES": "SILVESTRE",
+  "APELLIDOS": "BASTIDAS JIMENEZ",
+  "CORREO": "sibastidas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa5e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023558729,
+  "NOMBRES": "HELENA",
+  "APELLIDOS": "CADAVID FORONDA",
+  "CORREO": "hecadavid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa5f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023558730,
+  "NOMBRES": "JOAQUIN",
+  "APELLIDOS": "CADAVID FORONDA",
+  "CORREO": "jocadavid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa60"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036522435,
+  "NOMBRES": "AMELIA",
+  "APELLIDOS": "CAMACHO VELASCO",
+  "CORREO": "amcamacho@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa61"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035238188,
+  "NOMBRES": "MÁXIMO",
+  "APELLIDOS": "CATAÑO MADRID",
+  "CORREO": "macatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa62"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036522190,
+  "NOMBRES": "SOFIA",
+  "APELLIDOS": "CIRO LOAIZA",
+  "CORREO": "sociro@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa63"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1044534941,
+  "NOMBRES": "PEDRO",
+  "APELLIDOS": "CORDOBA GÓMEZ",
+  "CORREO": "pecordoba@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa64"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023562006,
+  "NOMBRES": "FÁTIMA",
+  "APELLIDOS": "GARCIA URIBE",
+  "CORREO": "fagarcia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa65"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036322391,
+  "NOMBRES": "FÁTIMA",
+  "APELLIDOS": "HURTADO CADAVID",
+  "CORREO": "fahurtado@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa66"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023562260,
+  "NOMBRES": "HELENA",
+  "APELLIDOS": "OCHOA CARDONA",
+  "CORREO": "heochoac@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa67"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021810348,
+  "NOMBRES": "VICTORIA",
+  "APELLIDOS": "RUIZ MEJIA",
+  "CORREO": "viruiz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa68"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036522468,
+  "NOMBRES": "HERODES",
+  "APELLIDOS": "SIERRA ÁLVAREZ",
+  "CORREO": "hesierra@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa69"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013467014,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "SUAREZ HENAO",
+  "CORREO": "masuarezh@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa6a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023562691,
+  "NOMBRES": "HELENA",
+  "APELLIDOS": "ZULUAGA ZAPATA",
+  "CORREO": "hezuluaga@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa6b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033430131,
+  "NOMBRES": "GUADALUPE",
+  "APELLIDOS": "AGUDELO ACEVEDO",
+  "CORREO": "guacevedo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa6c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1021947867,
+  "NOMBRES": "ALMA",
+  "APELLIDOS": "AGUDELO MENDOZA",
+  "CORREO": "almagudelo@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa6d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035016007,
+  "NOMBRES": "ISMAEL",
+  "APELLIDOS": "ARISTIZABAL GOMEZ",
+  "CORREO": "isaristizabal@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa6e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521867,
+  "NOMBRES": "PAULINA",
+  "APELLIDOS": "CADAVID VILLA",
+  "CORREO": "pacadavid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa6f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521903,
+  "NOMBRES": "MARIA VICTORIA",
+  "APELLIDOS": "CASAS ALZATE",
+  "CORREO": "marcasas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa70"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023558302,
+  "NOMBRES": "ISAIAS",
+  "APELLIDOS": "CATAÑO CADAVID",
+  "CORREO": "iscatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa71"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023558326,
+  "NOMBRES": "GABRIELA",
+  "APELLIDOS": "GOMEZ PINEDA",
+  "CORREO": "gagomez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa72"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1038875317,
+  "NOMBRES": "JUAN JOSE",
+  "APELLIDOS": "GUZMAN SOTO",
+  "CORREO": "juguzman@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa73"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881217,
+  "NOMBRES": "RAFAEL",
+  "APELLIDOS": "JIMENEZ HOYOS",
+  "CORREO": "rajimenez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa74"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881168,
+  "NOMBRES": "SAMANTHA",
+  "APELLIDOS": "LONDOÑO GIL",
+  "CORREO": "salondonog@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa75"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881147,
+  "NOMBRES": "VIOLETA",
+  "APELLIDOS": "LÓPEZ TOBON",
+  "CORREO": "vilopez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa76"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1040578339,
+  "NOMBRES": "MATÍAS",
+  "APELLIDOS": "MONTOYA PÉREZ",
+  "CORREO": "mamontoyap@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa77"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1038875384,
+  "NOMBRES": "EMILIA",
+  "APELLIDOS": "MÚNERA HERNÁNDEZ",
+  "CORREO": "emunera@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa78"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023553108,
+  "NOMBRES": "THIAGO EMILIANO",
+  "APELLIDOS": "RODER LLANES",
+  "CORREO": "throder@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa79"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1031944750,
+  "NOMBRES": "SIMON",
+  "APELLIDOS": "SALAZAR ALVAREZ",
+  "CORREO": "sisalazar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa7a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1125253256,
+  "NOMBRES": "ANTONELLA",
+  "APELLIDOS": "TELECHE MUÑOZ",
+  "CORREO": "anteleche@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa7b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033205082,
+  "NOMBRES": "JEREMY",
+  "APELLIDOS": "THYME LONDOÑO",
+  "CORREO": "jethyme@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa7c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023555190,
+  "NOMBRES": "AMELIA",
+  "APELLIDOS": "VALENCIA LAVERDE",
+  "CORREO": "amvalencia@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa7d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521843,
+  "NOMBRES": "MARIA CELESTE",
+  "APELLIDOS": "VANEGAS MONTOYA",
+  "CORREO": "marvanegas@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa7e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521869,
+  "NOMBRES": "BRIANA",
+  "APELLIDOS": "VILLA MESA",
+  "CORREO": "brvilla@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa7f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020127915,
+  "NOMBRES": "MATEO",
+  "APELLIDOS": "ZAPATA CORTES",
+  "CORREO": "mazapatac@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa80"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881203,
+  "NOMBRES": "NICOLÁS",
+  "APELLIDOS": "ZAPATA MONTOYA",
+  "CORREO": "nizapata@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa81"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020238755,
+  "NOMBRES": "KATHERINE",
+  "APELLIDOS": "ZAPATA TELLEZ",
+  "CORREO": "kazapata@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa82"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881221,
+  "NOMBRES": "EMILIANO",
+  "APELLIDOS": "AREIZA CATAÑO",
+  "CORREO": "emareiza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa83"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1023553322,
+  "NOMBRES": "EMMANUEL",
+  "APELLIDOS": "BUSTAMANTE PALACIO",
+  "CORREO": "embustamantep@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa84"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881243,
+  "NOMBRES": "ANTONELLA",
+  "APELLIDOS": "CADAVID BEDOYA",
+  "CORREO": "antocadavid@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa85"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1097794466,
+  "NOMBRES": "JUAN DIEGO",
+  "APELLIDOS": "CARRASCAL RIVERA",
+  "CORREO": "jucarrascal@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa86"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521939,
+  "NOMBRES": "SAMANTHA",
+  "APELLIDOS": "CASTRILLÓN CANTILLO",
+  "CORREO": "samcastrillon@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa87"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521835,
+  "NOMBRES": "MELANY",
+  "APELLIDOS": "CATAÑO ZAPATA",
+  "CORREO": "mecatano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa88"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881074,
+  "NOMBRES": "MARÍA PAZ",
+  "APELLIDOS": "GONZÁLEZ FORONDA",
+  "CORREO": "margonzalez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa89"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035015529,
+  "NOMBRES": "JUAN MARTIN",
+  "APELLIDOS": "HOYOS CUARTAS",
+  "CORREO": "juhoyos@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa8a"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1129587335,
+  "NOMBRES": "ISAAC",
+  "APELLIDOS": "HOYOS OSORIO",
+  "CORREO": "ishoyoso@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa8b"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881158,
+  "NOMBRES": "ANTONELLA",
+  "APELLIDOS": "HURTADO LONDOÑO",
+  "CORREO": "anhurtado@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa8c"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881214,
+  "NOMBRES": "SAMUEL",
+  "APELLIDOS": "JIMÉNEZ CASTRILLÓN",
+  "CORREO": "samjimenez@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa8d"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521788,
+  "NOMBRES": "LUCIANO",
+  "APELLIDOS": "LOAIZA VANEGAS",
+  "CORREO": "luloaiza@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa8e"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1017942268,
+  "NOMBRES": "JUAN MIGUEL",
+  "APELLIDOS": "LONDOÑO ZAPATA",
+  "CORREO": "julondonoz@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa8f"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521791,
+  "NOMBRES": "JUAN JOSE",
+  "APELLIDOS": "ORTEGA ROJAS",
+  "CORREO": "juortega@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa90"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521994,
+  "NOMBRES": "EMMA",
+  "APELLIDOS": "RAVE BUSTAMANTE",
+  "CORREO": "emrave@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa91"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020239869,
+  "NOMBRES": "SALOME",
+  "APELLIDOS": "RICO ARANGO",
+  "CORREO": "sarico@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa92"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1033430128,
+  "NOMBRES": "MATIAS JOSE",
+  "APELLIDOS": "RIOS OLARTE",
+  "CORREO": "matrios@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa93"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1017942013,
+  "NOMBRES": "GUADALUPE",
+  "APELLIDOS": "SALAZAR HENAO",
+  "CORREO": "gusalazar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa94"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1036521993,
+  "NOMBRES": "JACOB",
+  "APELLIDOS": "SALAZAR MEJIA",
+  "CORREO": "jasalazar@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa95"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1035881237,
+  "NOMBRES": "CELESTE",
+  "APELLIDOS": "SERRANO QUINTERO",
+  "CORREO": "ceserrano@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa96"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1020239410,
+  "NOMBRES": "MATIAS",
+  "APELLIDOS": "SOTO ALZATE",
+  "CORREO": "masoto@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa97"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1097511150,
+  "NOMBRES": "DANTE ANDRE",
+  "APELLIDOS": "VARON SALAS",
+  "CORREO": "davaron@lapresentaciongirardota.edu.co"
+},
+{
+  "_id": {
+    "$oid": "67e9f5f746143ab07337fa98"
+  },
+  "TIPO DE DOCUMENTO": "Registro Civil",
+  "DOCUMENTO": 1013324511,
+  "NOMBRES": "MARTÍN",
+  "APELLIDOS": "ZULUAGA SERNA",
+  "CORREO": "mazuluagas@lapresentaciongirardota.edu.co"
+}]
