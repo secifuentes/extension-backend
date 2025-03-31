@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Estudiante = require('../models/Estudiante');
 
-// Buscar estudiante por tipo de documento y número
+// Buscar estudiante por tipo y número de documento
 router.get('/:tipoDoc/:documento', async (req, res) => {
   const { tipoDoc, documento } = req.params;
 
