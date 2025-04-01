@@ -120,4 +120,25 @@ router.delete('/', async (req, res) => {
   }
 });
 
+// Ruta para consultar inscripciones por tipo y número de documento (estado del estudiante)
+router.get('/estado/:tipoDoc/:documento', async (req, res) => {
+  const { tipoDoc, documento } = req.params;
+
+  try {
+    const inscripciones = await Inscripcion.find({
+      tipoDocumento: new RegExp(`^${tipoDoc}$`, 'i'),
+      documento: documento,
+    });
+
+    if (!inscripciones || inscripciones.length === 0) {
+      return res.status(404).json({ mensaje: 'No se encontraron inscripciones' });
+    }
+
+    res.json(inscripciones);
+  } catch (err) {
+    console.error('❌ Error al consultar inscripciones:', err);
+    res.status(500).json({ mensaje: 'Error del servidor' });
+  }
+});
+
 module.exports = router;
