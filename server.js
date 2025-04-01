@@ -139,6 +139,11 @@ app.use('/api/cursos', cursosRoutes); // 👈 nueva línea para rutas de cursos
 
 app.use('/api/estudiantes', estudiantesRoutes);
 
+// Ruta simple para mantener el servidor activo
+app.get('/ping', (req, res) => {
+  res.status(200).send('pong');
+});
+
 // Nueva ruta para confirmar el pago
 app.post('/api/confirmarPago', async (req, res) => {
   try {
