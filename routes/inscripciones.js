@@ -3,28 +3,56 @@ const router = express.Router();
 const Inscripcion = require('../models/Inscripcion');
 const nodemailer = require('nodemailer');
 
-// Configuración de Nodemailer para el correo de confirmación
+// Configuración de Nodemailer
 const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.MAIL_USER,  // Correo configurado en .env
-      pass: process.env.MAIL_PASS,  // Contraseña configurada en .env (o contraseña de aplicación)
-    },
-  });
+  service: 'gmail',
+  auth: {
+    user: process.env.MAIL_USER,
+    pass: process.env.MAIL_PASS,
+  },
+});
 
-// Función para enviar el correo de confirmación
+// Función para enviar el correo de confirmación con HTML estilizado
 const enviarCorreoConfirmacion = (inscripcion) => {
   const mailOptions = {
-    from: process.env.MAIL_USER,  // Ahora se usa el correo configurado en .env
-    to: inscripcion.correo, // El correo del estudiante
-    subject: 'Confirmación de Inscripción - Curso',
-    text: `
-      ¡Felicidades, ${inscripcion.nombres} ${inscripcion.apellidos}!
+    from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`, // Nombre visible
+    to: inscripcion.correo,
+    subject: `${inscripcion.nombres}, bienvenido al curso "${inscripcion.cursoNombre}" de EXTENSIÓN LA PRESENTACIÓN`,
+    html: `
+      <div style="font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; padding: 30px;">
+        <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); padding: 30px; color: #333;">
+          
+          <h2 style="text-align: center; color: #21145F; font-size: 24px; margin-bottom: 10px;">
+            ¡Hola <span style="color: #21145F;">${inscripcion.nombres}</span>! 👋
+          </h2>
 
-      Tu inscripción al curso de ${inscripcion.cursoNombre} ha sido confirmada.
-      Estamos verificando tu pago y te notificaremos pronto.
+          <p style="text-align: center; font-size: 18px; color: #444; margin-top: 0;">
+            Bienvenido al curso <strong style="color: #1a428a;">"${inscripcion.cursoNombre}"</strong> 💼
+          </p>
 
-      ¡Nos vemos en clase! 🎉
+          <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
+
+          <p style="font-size: 16px; line-height: 1.7; color: #555;">
+            Nos alegra muchísimo tenerte con nosotros en este proceso de formación. 
+            Formas parte ahora de nuestra comunidad de aprendizaje en 
+            <strong style="color: #21145F;">EXTENSIÓN LA PRESENTACIÓN</strong>.
+          </p>
+
+          <div style="margin: 25px 0; padding: 20px; background: #fef8e7; border-left: 5px solid #d4a017; border-radius: 5px; font-size: 15px; color: #5a4e26;">
+            📬 Muy pronto tu docente asignado se comunicará contigo por este medio con todos los detalles del curso. 
+            <br />Mantente atento(a) a tu bandeja de entrada.
+          </div>
+
+          <p style="font-size: 15px; color: #555;">
+            Gracias por elegirnos para seguir aprendiendo. ¡Nos emociona tenerte a bordo!
+          </p>
+
+          <h3 style="text-align: center; color: #21145F; margin-top: 30px; font-size: 20px; letter-spacing: 1px;">
+            EXTENSIÓN LA PRESENTACIÓN
+          </h3>
+          <p style="text-align: center; font-size: 13px; color: #aaa;">Girardota - Antioquia</p>
+        </div>
+      </div>
     `,
   };
 
@@ -40,7 +68,6 @@ const enviarCorreoConfirmacion = (inscripcion) => {
 // POST - Guardar nueva inscripción
 router.post('/', async (req, res) => {
   try {
-    // Log para ver los datos que recibimos
     console.log("Datos recibidos para inscripción: ", req.body);
 
     const nueva = new Inscripcion(req.body);
@@ -62,7 +89,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Ruta para confirmar el pago
+// PUT - Confirmar pago e enviar correo
 router.put('/confirmar-pago/:id', async (req, res) => {
   try {
     const inscripcion = await Inscripcion.findById(req.params.id);
@@ -70,11 +97,9 @@ router.put('/confirmar-pago/:id', async (req, res) => {
       return res.status(404).json({ error: 'Inscripción no encontrada' });
     }
 
-    // Confirmar el pago
     inscripcion.pagoConfirmado = true;
     await inscripcion.save();
 
-    // Enviar correo de confirmación
     enviarCorreoConfirmacion(inscripcion);
 
     res.status(200).json({ mensaje: '✅ Pago confirmado correctamente' });
@@ -83,10 +108,10 @@ router.put('/confirmar-pago/:id', async (req, res) => {
   }
 });
 
-// Ruta para eliminar todas las inscripciones
+// DELETE - Eliminar todas las inscripciones
 router.delete('/', async (req, res) => {
   try {
-    await Inscripcion.deleteMany({});  // Elimina todas las inscripciones de la base de datos
+    await Inscripcion.deleteMany({});
     res.status(200).json({ mensaje: '✅ Todas las inscripciones han sido eliminadas correctamente' });
   } catch (error) {
     console.error('❌ Error al eliminar las inscripciones:', error);
