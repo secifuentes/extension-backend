@@ -22,4 +22,16 @@ router.get('/:tipoDoc/:documento', async (req, res) => {
   }
 });
 
+// ✅ Crear un nuevo estudiante
+router.post('/', async (req, res) => {
+  try {
+    const nuevoEstudiante = new Estudiante(req.body);
+    await nuevoEstudiante.save();
+    res.status(201).json(nuevoEstudiante);
+  } catch (error) {
+    console.error('❌ Error al crear estudiante:', error);
+    res.status(500).json({ message: 'Error al crear estudiante' });
+  }
+});
+
 module.exports = router;
