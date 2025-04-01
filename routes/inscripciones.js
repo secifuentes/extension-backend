@@ -15,9 +15,9 @@ const transporter = nodemailer.createTransport({
 // Función para enviar el correo de confirmación con HTML estilizado
 const enviarCorreoConfirmacion = (inscripcion) => {
   const mailOptions = {
-    from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`, // Nombre visible
+    from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
     to: inscripcion.correo,
-    subject: `${inscripcion.nombres}, bienvenido al curso "${inscripcion.cursoNombre}" de EXTENSIÓN LA PRESENTACIÓN`,
+    subject: `${inscripcion.nombres}, TE DAMOS LA BIENVENIDA AL CURSO "${inscripcion.cursoNombre}" DE EXTENSIÓN LA PRESENTACIÓN`,
     html: `
       <div style="font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; padding: 30px;">
         <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); padding: 30px; color: #333;">
@@ -27,24 +27,25 @@ const enviarCorreoConfirmacion = (inscripcion) => {
           </h2>
 
           <p style="text-align: center; font-size: 18px; color: #444; margin-top: 0;">
-            Bienvenido al curso <strong style="color: #1a428a;">"${inscripcion.cursoNombre}"</strong> 💼
+            Te damos la bienvenida al curso <strong style="color: #1a428a;">"${inscripcion.cursoNombre}"</strong> 💼
           </p>
 
           <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
 
           <p style="font-size: 16px; line-height: 1.7; color: #555;">
-            Nos alegra muchísimo tenerte con nosotros en este proceso de formación. 
-            Formas parte ahora de nuestra comunidad de aprendizaje en 
-            <strong style="color: #21145F;">EXTENSIÓN LA PRESENTACIÓN</strong>.
+            Nos alegra muchísimo tenerte con nosotros en este camino de aprendizaje. 
+            Ahora formas parte de la familia de <strong style="color: #21145F;">EXTENSIÓN LA PRESENTACIÓN</strong>, donde juntos 
+            <strong style="color: #d4a017;">Creamos, Sentimos y Transformamos</strong>.
           </p>
 
           <div style="margin: 25px 0; padding: 20px; background: #fef8e7; border-left: 5px solid #d4a017; border-radius: 5px; font-size: 15px; color: #5a4e26;">
-            📬 Muy pronto tu docente asignado se comunicará contigo por este medio con todos los detalles del curso. 
-            <br />Mantente atento(a) a tu bandeja de entrada.
+            📬 Tu docente asignado se comunicará contigo muy pronto a través de este medio con toda la información necesaria. 
+            <br />Por favor, mantente atento(a) a tu correo.
           </div>
 
           <p style="font-size: 15px; color: #555;">
-            Gracias por elegirnos para seguir aprendiendo. ¡Nos emociona tenerte a bordo!
+            Gracias por elegirnos para seguir creciendo. Este es solo el comienzo de una experiencia maravillosa. 
+            ¡Nos emociona acompañarte!
           </p>
 
           <h3 style="text-align: center; color: #21145F; margin-top: 30px; font-size: 20px; letter-spacing: 1px;">
