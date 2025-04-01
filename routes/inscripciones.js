@@ -120,7 +120,7 @@ router.delete('/', async (req, res) => {
   }
 });
 
-// Ruta para consultar inscripciones por tipo y número de documento (estado del estudiante)
+// GET - Consultar estado del estudiante
 router.get('/estado/:tipoDoc/:documento', async (req, res) => {
   const { tipoDoc, documento } = req.params;
 
@@ -131,13 +131,25 @@ router.get('/estado/:tipoDoc/:documento', async (req, res) => {
     });
 
     if (!inscripciones || inscripciones.length === 0) {
-      return res.status(404).json({ mensaje: 'No se encontraron inscripciones' });
+      return res.status(404).json({ tipo: 'no-encontrado' });
     }
 
-    res.json(inscripciones);
+    const estudiante = {
+      nombres: inscripciones[0].nombres,
+      apellidos: inscripciones[0].apellidos,
+      correo: inscripciones[0].correo,
+      cursos: inscripciones.map(ins => ({
+        cursoNombre: ins.cursoNombre,
+        formaPago: ins.formaPago,
+        pagoConfirmado: ins.pagoConfirmado,
+        fechaInscripcion: ins.fechaInscripcion,
+      })),
+    };
+
+    res.json(estudiante);
   } catch (err) {
     console.error('❌ Error al consultar inscripciones:', err);
-    res.status(500).json({ mensaje: 'Error del servidor' });
+    res.status(500).json({ tipo: 'error' });
   }
 });
 
