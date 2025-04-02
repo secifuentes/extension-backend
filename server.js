@@ -144,6 +144,10 @@ app.get('/ping', (req, res) => {
   res.status(200).send('pong');
 });
 
+app.head('/ping', (req, res) => {
+  res.sendStatus(200);
+});
+
 // Nueva ruta para confirmar el pago
 app.post('/api/confirmarPago', async (req, res) => {
   try {
