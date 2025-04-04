@@ -153,4 +153,21 @@ router.get('/estado/:tipoDoc/:documento', async (req, res) => {
   }
 });
 
+// Eliminar una inscripción por ID
+router.delete('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const eliminado = await Inscripcion.findByIdAndDelete(id);
+    if (!eliminado) {
+      return res.status(404).json({ message: 'Inscripción no encontrada' });
+    }
+
+    res.json({ message: 'Inscripción eliminada correctamente' });
+  } catch (error) {
+    console.error('❌ Error al eliminar inscripción:', error);
+    res.status(500).json({ message: 'Error del servidor al eliminar' });
+  }
+});
+
 module.exports = router;
