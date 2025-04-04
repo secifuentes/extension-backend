@@ -31,14 +31,15 @@ app.use(cors({
     const isAllowed = allowedOrigins.some(o =>
       typeof o === 'string' ? o === origin : o instanceof RegExp && o.test(origin)
     );
-  
+
     if (!origin || isAllowed || origin === 'null') {
       callback(null, true);
     } else {
       console.log('❌ CORS bloqueado para:', origin);
       callback(new Error('No permitido por CORS'));
     }
-  }
+  },
+  credentials: true // 👈 AGREGA ESTA LÍNEA
 }));
 
 app.use(express.json());
