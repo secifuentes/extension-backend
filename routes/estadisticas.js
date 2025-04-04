@@ -1,6 +1,6 @@
-import express from 'express';
-import Inscripcion from '../models/Inscripcion.js';
-import Curso from '../models/Curso.js';
+const express = require('express');
+const Inscripcion = require('../models/Inscripcion');
+const Curso = require('../models/Curso');
 
 const router = express.Router();
 
@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
       estudiantes,
       cursos,
       ingresos,
-      docentes: 0 // Placeholder por ahora
+      docentes: 0 // temporal, hasta que implementes la colección de docentes
     });
   } catch (error) {
     console.error('❌ Error obteniendo estadísticas:', error);
@@ -24,4 +24,4 @@ router.get('/', async (req, res) => {
   }
 });
 
-export default router;
+module.exports = router;
