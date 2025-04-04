@@ -1,5 +1,5 @@
 import express from 'express';
-import Inscripcion from '../models/inscripcion.model.js';
+const Inscripcion = require('../models/Inscripcion');
 import Curso from '../models/curso.model.js';
 import Docente from '../models/docente.model.js'; // solo si tienes esta colección
 
