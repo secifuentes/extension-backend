@@ -1,6 +1,6 @@
 import express from 'express';
-const Inscripcion = require('../models/Inscripcion');
-const Curso = require('../models/Curso');
+import Inscripcion from '../models/Inscripcion.js';
+import Curso from '../models/Curso.js';
 
 const router = express.Router();
 
@@ -9,7 +9,6 @@ router.get('/', async (req, res) => {
     const estudiantes = await Inscripcion.countDocuments();
     const cursos = await Curso.countDocuments();
 
-    // Sumar ingresos solo donde el pago fue confirmado
     const ingresosData = await Inscripcion.find({ pagoConfirmado: true });
     const ingresos = ingresosData.reduce((total, item) => total + (item.valorPagado || 0), 0);
 
@@ -17,7 +16,7 @@ router.get('/', async (req, res) => {
       estudiantes,
       cursos,
       ingresos,
-      docentes: 0 // placeholder por ahora
+      docentes: 0 // Placeholder por ahora
     });
   } catch (error) {
     console.error('❌ Error obteniendo estadísticas:', error);
