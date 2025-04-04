@@ -14,7 +14,9 @@ const InscripcionSchema = new mongoose.Schema({
   esEstudiante: Boolean,
   valorPagado: Number,
   pagoConfirmado: { type: Boolean, default: false },
-  comprobante: String, // 👈 nueva línea para almacenar el base64
+  comprobante: String,
+  acudiente: String, // ✅ agregado
+  telefonoAcudiente: String, // ✅ agregado
   fechaInscripcion: { type: Date, default: Date.now }
 });
 
