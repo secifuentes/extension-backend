@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const estadisticasRoutes = require('./routes/estadisticas'); // 📊 nueva ruta para dashboard
 require('dotenv').config();
 
 // Importar rutas
@@ -138,6 +139,7 @@ app.use('/api/inscripciones', inscripcionesRoutes);
 app.use('/api/cursos', cursosRoutes); // 👈 nueva línea para rutas de cursos
 
 app.use('/api/estudiantes', estudiantesRoutes);
+app.use('/api/estadisticas', estadisticasRoutes); // ✅ conexión para estadísticas
 
 // Ruta simple para mantener el servidor activo
 app.get('/ping', (req, res) => {
