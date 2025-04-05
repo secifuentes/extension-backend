@@ -1,9 +1,19 @@
 const mongoose = require('mongoose');
 
+// Esquema para registrar visitas al sitio
 const visitaSchema = new mongoose.Schema({
-  ip: String,
-  fecha: { type: Date, default: Date.now },
-  pagina: String, // opcional, por si querés registrar qué página visitaron
+  ip: {
+    type: String,
+    required: true
+  },
+  fecha: {
+    type: Date,
+    default: Date.now
+  },
+  pagina: {
+    type: String,
+    default: 'inicio'
+  }
 });
 
 module.exports = mongoose.model('Visita', visitaSchema);

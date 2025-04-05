@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// GET - Estadísticas generales
+// GET - Estadísticas generales (día, mes, total)
 router.get('/estadisticas', async (req, res) => {
   try {
     const hoy = new Date();
@@ -39,6 +39,32 @@ router.get('/estadisticas', async (req, res) => {
   } catch (error) {
     console.error('❌ Error al obtener estadísticas de visitas:', error);
     res.status(500).json({ error: 'Error al obtener estadísticas' });
+  }
+});
+
+// GET - Usuarios activos (en vivo en los últimos 5 minutos)
+router.get('/activos', async (req, res) => {
+  const hace5Min = new Date(Date.now() - 5 * 60 * 1000); // últimos 5 minutos
+
+  try {
+    const visitasActivas = await Visita.aggregate([
+      { $match: { fecha: { $gte: hace5Min } } },
+      {
+        $group: {
+          _id: "$ip" // agrupar por IP
+        }
+      },
+      {
+        $count: "usuariosActivos"
+      }
+    ]);
+
+    const cantidad = visitasActivas.length > 0 ? visitasActivas[0].usuariosActivos : 0;
+
+    res.json({ enLinea: cantidad });
+  } catch (error) {
+    console.error('❌ Error al contar visitas activas:', error);
+    res.status(500).json({ error: 'Error al contar visitas activas' });
   }
 });
 
