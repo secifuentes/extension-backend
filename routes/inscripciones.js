@@ -170,4 +170,19 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// GET - Últimos estudiantes inscritos (sin populate)
+router.get('/ultimos', async (req, res) => {
+  try {
+    const ultimos = await Inscripcion.find()
+      .sort({ fechaInscripcion: -1 })
+      .limit(5)
+      .select('nombres apellidos cursoNombre fechaInscripcion');
+
+    res.json(ultimos);
+  } catch (error) {
+    console.error('❌ Error al obtener últimos inscritos:', error);
+    res.status(500).json({ error: 'Error al obtener últimos inscritos' });
+  }
+});
+
 module.exports = router;
