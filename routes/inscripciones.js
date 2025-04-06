@@ -222,6 +222,7 @@ router.delete('/:id', async (req, res) => {
 router.put('/pagos-mensuales/:id', async (req, res) => {
   const { id } = req.params;
   const { mes, comprobanteBase64 } = req.body;
+  console.log("🛬 Datos recibidos:", req.body);
 
   // Validar que el mes sea 2 o 3 (puedes ampliar en el futuro si hay más)
   if (![2, 3].includes(mes)) {
