@@ -184,12 +184,13 @@ router.get('/estado/:tipoDoc/:documento', async (req, res) => {
       apellidos: inscripciones[0].apellidos,
       correo: inscripciones[0].correo,
       cursos: inscripciones.map(ins => ({
-        _id: ins._id, // necesario para subir comprobante
+        _id: ins._id,
         cursoNombre: ins.cursoNombre,
         formaPago: ins.formaPago,
         pagoConfirmado: ins.pagoConfirmado,
         fechaInscripcion: ins.fechaInscripcion,
-        pagosMensuales: ins.pagosMensuales || [] // 🆕 incluir pagos mensuales
+        valorPagado: ins.valorPagado, // ✅ AGREGA ESTA LÍNEA
+        pagosMensuales: ins.pagosMensuales || []
       })),
     };
 
