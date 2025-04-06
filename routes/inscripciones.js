@@ -221,7 +221,8 @@ router.delete('/:id', async (req, res) => {
 // ✅ PUT - Guardar comprobantes de pago mensual (mes 2 o mes 3)
 router.put('/pagos-mensuales/:id', async (req, res) => {
   const { id } = req.params;
-  const { mes, comprobante } = req.body;
+  const { mes, comprobante } = req.body; // Usa 'comprobante' directamente
+
   console.log("🛬 Datos recibidos:", req.body);
 
   // Validar que el mes sea 2 o 3 (puedes ampliar en el futuro si hay más)
@@ -235,18 +236,8 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
       return res.status(404).json({ error: 'Inscripción no encontrada' });
     }
 
-
-
     // Verificar si ya hay comprobante para ese mes
     const yaExiste = inscripcion.pagosMensuales.find(p => p.mes === mes);
-    console.log('📝 Guardando pago mensual:', {
-      id,
-      mes,
-      yaExiste,
-      base64Inicio: comprobante?.slice(0, 30),
-      base64Length: comprobante?.length,
-    });
-    
     if (yaExiste) {
       return res.status(400).json({ error: `Ya se subió un comprobante para el mes ${mes}` });
     }
@@ -254,7 +245,7 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
     // Agregar nuevo pago mensual
     inscripcion.pagosMensuales.push({
       mes,
-      comprobante,
+      comprobante, // Usa 'comprobante' directamente, no 'comprobanteBase64'
       estado: 'pendiente'
     });
 
