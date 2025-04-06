@@ -214,4 +214,33 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// ✅ PUT - Guardar comprobantes de pago mensual (mes 2 o mes 3)
+router.put('/pagos-mensuales/:id', async (req, res) => {
+  const { id } = req.params;
+  const { mes, comprobanteBase64 } = req.body;
+
+  if (!['mes2', 'mes3'].includes(mes)) {
+    return res.status(400).json({ error: 'Mes inválido (debe ser "mes2" o "mes3")' });
+  }
+
+  try {
+    const inscripcion = await Inscripcion.findById(id);
+    if (!inscripcion) {
+      return res.status(404).json({ error: 'Inscripción no encontrada' });
+    }
+
+    // Actualizar comprobante del mes correspondiente
+    inscripcion.pagosMensuales[mes].comprobante = comprobanteBase64;
+    inscripcion.pagosMensuales[mes].confirmado = false; // el admin lo validará después
+
+    await inscripcion.save();
+
+    res.json({ mensaje: `✅ Comprobante del ${mes} guardado correctamente.` });
+  } catch (error) {
+    console.error('❌ Error al guardar comprobante mensual:', error);
+    res.status(500).json({ error: 'Error al guardar comprobante', detalle: error.message });
+  }
+});
+
+
 module.exports = router;
