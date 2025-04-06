@@ -234,8 +234,17 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
       return res.status(404).json({ error: 'Inscripción no encontrada' });
     }
 
+
+
     // Verificar si ya hay comprobante para ese mes
     const yaExiste = inscripcion.pagosMensuales.find(p => p.mes === mes);
+    console.log('📝 Guardando pago mensual:', {
+      id,
+      mes,
+      yaExiste,
+      base64Inicio: comprobanteBase64?.slice(0, 30),
+      base64Length: comprobanteBase64?.length,
+    });
     if (yaExiste) {
       return res.status(400).json({ error: `Ya se subió un comprobante para el mes ${mes}` });
     }
