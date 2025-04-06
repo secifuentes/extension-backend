@@ -19,63 +19,76 @@ const enviarCorreoConfirmacion = (inscripcion) => {
     to: inscripcion.correo,
     subject: `${inscripcion.nombres}, ¡TE DAMOS LA BIENVENIDA A UNA EXPERIENCIA QUE TRANSFORMA!`,
     html: `
-      <div style="font-family: 'Segoe UI', sans-serif; background-color: #f4f6f9; padding: 40px;">
-        <div style="max-width: 650px; width: 100%; margin: auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 35px; color: #333;">
-          
-          <h2 style="text-align: center; color: #21145F; font-size: 26px; margin-bottom: 20px;">
-            ¡Hola <span style="color: #21145F;">${inscripcion.nombres}</span>!
-          </h2>
-
-          <p style="text-align: center; font-size: 18px; color: #444; margin-bottom: 30px;">
+      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f6f9; padding: 20px 0; font-family: 'Segoe UI', sans-serif;">
+  <tr>
+    <td align="center">
+      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width: 650px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 35px; color: #333;">
+        <tr>
+          <td align="center" style="color: #21145F; font-size: 26px; font-weight: bold; padding-bottom: 20px;">
+            ¡Hola ${inscripcion.nombres}!
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="font-size: 18px; color: #444; padding-bottom: 30px;">
             ¡Tu pago ha sido confirmado! 🎉
-          </p>
-
-          <p style="font-size: 16px; line-height: 1.7;">
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 16px; color: #555; line-height: 1.7;">
             Ya haces parte oficialmente del curso <strong style="color: #1a428a;">“${inscripcion.cursoNombre}”</strong> de <strong>Extensión La Presentación</strong>.
-          </p>
-
-          <p style="font-size: 16px; line-height: 1.7;">
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 16px; color: #555; line-height: 1.7; padding-top: 15px;">
             Nos alegra muchísimo darte la bienvenida a la <strong style="color: #21145F;">Familia Presentación</strong>, un espacio donde el aprendizaje se convierte en una experiencia emocionante, creativa y transformadora.
-          </p>
-
-          <p style="font-size: 16px; line-height: 1.7;">
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size: 16px; color: #555; line-height: 1.7; padding-top: 15px;">
             Muy pronto recibirás en el correo que registraste toda la información clave: la fecha de inicio, el nombre de tu docente y los pasos que siguen.
-          </p>
-
-          <div style="margin: 35px 0; padding: 25px; background-color: #21145F; border-radius: 10px; text-align: center; width: 100%;">
-          <p style="font-size: 18px; color: #ffffff; font-weight: 600; margin: 0;">
-          ¿Te emociona esta nueva etapa?
-          <br />
-          <span style="color: #f4cf00;">¡A nosotros nos emociona tenerte aquí!</span>
-          </p>
-          </div>
-
-          <p style="font-size: 15px; color: #555;">
-            Gracias por elegirnos. Nos emociona crecer contigo.
-          </p>
-
-          <p style="font-size: 15px; color: #555; font-style: italic; margin-top: 25px;">
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="background-color: #21145F; color: #fff; font-size: 18px; font-weight: 600; padding: 25px; border-radius: 10px; margin-top: 30px;">
+            ¿Te emociona esta nueva etapa?<br>
+            <span style="color: #f4cf00;">¡A nosotros nos emociona tenerte aquí!</span>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="font-size: 15px; color: #555; padding-top: 25px;">
+            Gracias por escribir esta historia con nosotros.
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="font-size: 15px; color: #555; font-style: italic; padding-top: 10px;">
             <strong>“Más que cursos, experiencias que inspiran.”</strong>
-          </p>
-
-          <h3 style="text-align: center; color: #21145F; margin-top: 40px; font-size: 20px; letter-spacing: 1px;">
-          EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
-          </h3>
-          
-          <p style="text-align: center; font-size: 13px; color: #aaa;">Girardota – Antioquia</p>
-
-          <div style="text-align: center; margin-top: 30px;">
-            <p style="font-size: 15px; font-weight: bold; color: #444;">Síguenos y descubre más:</p>
-            <p style="font-size: 14px; color: #888;">
-              <a href="https://instagram.com/presentaciongirardota" style="color: #d4a017; text-decoration: none; margin-right: 10px;">Instagram</a> |
-              <a href="https://www.tiktok.com/@presentaciongirardota" style="color: #d4a017; text-decoration: none; margin: 0 10px;">TikTok</a> |
-              <a href="https://www.facebook.com/presentaciondegirardota" style="color: #d4a017; text-decoration: none; margin: 0 10px;">Facebook</a> |
-              <a href="https://www.youtube.com/@Presentaciongirardota" style="color: #d4a017; text-decoration: none; margin-left: 10px;">YouTube</a>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="color: #21145F; font-size: 20px; font-weight: bold; padding-top: 30px;">
+            EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="font-size: 13px; color: #aaa;">
+            Girardota – Antioquia
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding-top: 30px;">
+            <p style="font-size: 15px; font-weight: bold; color: #444; margin: 0;">Síguenos y descubre más:</p>
+            <p style="font-size: 14px; color: #888; margin-top: 5px;">
+              <a href="https://instagram.com/presentaciongirardota" style="color: #d4a017; text-decoration: none;">Instagram</a> |
+              <a href="https://www.tiktok.com/@presentaciongirardota" style="color: #d4a017; text-decoration: none;">TikTok</a> |
+              <a href="https://www.facebook.com/presentaciondegirardota" style="color: #d4a017; text-decoration: none;">Facebook</a> |
+              <a href="https://www.youtube.com/@Presentaciongirardota" style="color: #d4a017; text-decoration: none;">YouTube</a>
             </p>
-          </div>
-
-        </div>
-      </div>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
     `,
   };
 
