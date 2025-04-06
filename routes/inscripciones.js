@@ -242,10 +242,19 @@ router.put('/confirmar-pago/:id', async (req, res) => {
     inscripcion.pagoConfirmado = true;
     await inscripcion.save();
 
+    // 🛡️ Validación antes de enviar correo
+    if (!inscripcion.correo || !inscripcion.nombres || !inscripcion.cursoNombre) {
+      console.error("❌ Faltan campos en la inscripción:", inscripcion);
+      return res.status(400).json({ error: 'Faltan campos para enviar el correo' });
+    }
+
+    console.log("📨 Enviando correo de confirmación a:", inscripcion.correo);
     enviarCorreoConfirmacion(inscripcion);
 
     res.status(200).json({ mensaje: '✅ Pago confirmado correctamente' });
   } catch (error) {
+    console.error("❌ Error al confirmar el pago:", error.message);
+    console.error(error.stack);
     res.status(500).json({ error: 'Error al confirmar el pago', detalle: error.message });
   }
 });
