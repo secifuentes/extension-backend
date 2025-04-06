@@ -20,7 +20,7 @@ const enviarCorreoConfirmacion = (inscripcion) => {
     subject: `${inscripcion.nombres}, ¡TE DAMOS LA BIENVENIDA A UNA EXPERIENCIA QUE TRANSFORMA!`,
     html: `
       <div style="font-family: 'Segoe UI', sans-serif; background-color: #f4f6f9; padding: 40px;">
-        <div style="max-width: 650px; margin: auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 35px; color: #333;">
+        <div style="max-width: 650px; width: 100%; margin: auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 35px; color: #333;">
           
           <h2 style="text-align: center; color: #21145F; font-size: 26px; margin-bottom: 20px;">
             ¡Hola <span style="color: #21145F;">${inscripcion.nombres}</span>!
@@ -42,12 +42,12 @@ const enviarCorreoConfirmacion = (inscripcion) => {
             Muy pronto recibirás en el correo que registraste toda la información clave: la fecha de inicio, el nombre de tu docente y los pasos que siguen.
           </p>
 
-          <div style="margin: 35px 0; padding: 25px; background-color: #21145F; border-radius: 10px; text-align: center;">
-            <p style="font-size: 18px; color: #ffffff; font-weight: 600; margin: 0;">
-              ¿Estás listo(a) para comenzar esta experiencia única?
-              <br />
-              <span style="color: #f4cf00;">¡Porque nosotros ya estamos listos para recibirte!</span>
-            </p>
+          <div style="margin: 35px 0; padding: 25px; background-color: #21145F; border-radius: 10px; text-align: center; width: 100%;">
+          <p style="font-size: 18px; color: #ffffff; font-weight: 600; margin: 0;">
+          ¿Te emociona esta nueva etapa?
+          <br />
+          <span style="color: #f4cf00;">¡A nosotros nos emociona tenerte aquí!</span>
+          </p>
           </div>
 
           <p style="font-size: 15px; color: #555;">
@@ -59,8 +59,9 @@ const enviarCorreoConfirmacion = (inscripcion) => {
           </p>
 
           <h3 style="text-align: center; color: #21145F; margin-top: 40px; font-size: 20px; letter-spacing: 1px;">
-            EXTENSIÓN LA PRESENTACIÓN
+          EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
           </h3>
+          
           <p style="text-align: center; font-size: 13px; color: #aaa;">Girardota – Antioquia</p>
 
           <div style="text-align: center; margin-top: 30px;">
