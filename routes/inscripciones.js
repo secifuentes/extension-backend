@@ -17,43 +17,63 @@ const enviarCorreoConfirmacion = (inscripcion) => {
   const mailOptions = {
     from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
     to: inscripcion.correo,
-    subject: `${inscripcion.nombres}, TE DAMOS LA BIENVENIDA AL CURSO "${inscripcion.cursoNombre}" DE EXTENSIÓN LA PRESENTACIÓN`,
+    subject: `${inscripcion.nombres}, ¡TE DAMOS LA BIENVENIDA A UNA EXPERIENCIA QUE TRANSFORMA!`,
     html: `
       <div style="font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; padding: 30px;">
-        <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); padding: 30px; color: #333;">
-          
-          <h2 style="text-align: center; color: #21145F; font-size: 24px; margin-bottom: 10px;">
-            ¡Hola <span style="color: #21145F;">${inscripcion.nombres}</span>! 👋
-          </h2>
+  <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); padding: 30px; color: #333;">
+    
+    <h2 style="text-align: center; color: #21145F; font-size: 24px; margin-bottom: 10px;">
+      ¡Hola <span style="color: #21145F;">[Nombre del estudiante]</span>!
+    </h2>
 
-          <p style="text-align: center; font-size: 18px; color: #444; margin-top: 0;">
-            Te damos la bienvenida al curso <strong style="color: #1a428a;">"${inscripcion.cursoNombre}"</strong> 💼
-          </p>
+    <p style="text-align: center; font-size: 18px; color: #444; margin-top: 0;">
+      ¡Tu pago ha sido confirmado!
+    </p>
 
-          <hr style="border: none; border-top: 1px solid #e0e0e0; margin: 20px 0;" />
+    <p style="font-size: 16px; line-height: 1.7; color: #555;">
+      Ya haces parte oficialmente del curso <strong style="color: #1a428a;">“[Nombre del curso]”</strong> de <strong>Extensión La Presentación</strong>.
+    </p>
 
-          <p style="font-size: 16px; line-height: 1.7; color: #555;">
-            Nos alegra muchísimo tenerte con nosotros en este camino de aprendizaje. 
-            Ahora formas parte de la familia de <strong style="color: #21145F;">EXTENSIÓN LA PRESENTACIÓN</strong>, donde juntos 
-            <strong style="color: #d4a017;">Creamos, Sentimos y Transformamos</strong>.
-          </p>
+    <p style="font-size: 16px; line-height: 1.7; color: #555;">
+      Nos alegra muchísimo darte la bienvenida a la <strong style="color: #21145F;">Familia Presentación</strong>, un espacio donde el aprendizaje se convierte en una experiencia emocionante, creativa y transformadora.
+    </p>
 
-          <div style="margin: 25px 0; padding: 20px; background: #fef8e7; border-left: 5px solid #d4a017; border-radius: 5px; font-size: 15px; color: #5a4e26;">
-            📬 Tu docente asignado se comunicará contigo muy pronto a través de este medio con toda la información necesaria. 
-            <br />Por favor, mantente atento(a) a tu correo.
-          </div>
+    <p style="font-size: 16px; line-height: 1.7; color: #555;">
+      Muy pronto recibirás en el correo que registraste toda la información clave: la fecha de inicio, el nombre de tu docente y los pasos que siguen.
+      Queremos que te sientas acompañado(a) desde el primer momento.
+    </p>
 
-          <p style="font-size: 15px; color: #555;">
-            Gracias por elegirnos para seguir creciendo. Este es solo el comienzo de una experiencia maravillosa. 
-            ¡Nos emociona acompañarte!
-          </p>
+    <p style="font-size: 16px; line-height: 1.7; color: #555;">
+      Aquí no solo aprenderás…<br />
+      Aquí vas a vivir una experiencia que te inspira, te reta y te conecta con tu mejor versión.
+    </p>
 
-          <h3 style="text-align: center; color: #21145F; margin-top: 30px; font-size: 20px; letter-spacing: 1px;">
-            EXTENSIÓN LA PRESENTACIÓN
-          </h3>
-          <p style="text-align: center; font-size: 13px; color: #aaa;">Girardota - Antioquia</p>
-        </div>
-      </div>
+    <div style="background-color: #fef8e7; border-left: 5px solid #d4a017; padding: 15px; margin: 20px 0; border-radius: 5px; font-size: 15px; color: #5a4e26;">
+      ¿Estás listo(a) para comenzar esta experiencia única?<br />
+      ¡Porque nosotros ya estamos listos para recibirte!
+    </div>
+
+    <p style="font-size: 15px; color: #555;">
+      Gracias por elegirnos. Nos emociona crecer contigo.
+    </p>
+
+    <h3 style="text-align: center; color: #21145F; margin-top: 30px; font-size: 20px; letter-spacing: 1px;">
+      EXTENSIÓN LA PRESENTACIÓN
+    </h3>
+    <p style="text-align: center; font-size: 13px; color: #aaa;">Girardota – Antioquia</p>
+
+    <div style="text-align: center; margin-top: 20px;">
+      <p style="font-size: 14px; font-weight: bold; color: #444;">Síguenos y descubre más:</p>
+      <p style="font-size: 14px; color: #888;">
+        <a href="https://instagram.com/presentaciongirardota" style="color: #d4a017; text-decoration: none; margin-right: 10px;">Instagram</a> |
+        <a href="https://www.tiktok.com/@presentaciongirardota" style="color: #d4a017; text-decoration: none; margin: 0 10px;">TikTok</a> |
+        <a href="https://www.facebook.com/presentaciondegirardota" style="color: #d4a017; text-decoration: none; margin: 0 10px;">Facebook</a> |
+        <a href="https://www.youtube.com/@Presentaciongirardota" style="color: #d4a017; text-decoration: none; margin-left: 10px;">YouTube</a>
+      </p>
+    </div>
+
+  </div>
+</div>
     `,
   };
 
@@ -62,6 +82,65 @@ const enviarCorreoConfirmacion = (inscripcion) => {
       console.log('❌ Error al enviar el correo:', error);
     } else {
       console.log('✅ Correo de confirmación enviado: ' + info.response);
+    }
+  });
+};
+
+const enviarCorreoPagoMensual = (inscripcion, mes) => {
+  const mailOptions = {
+    from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
+    to: inscripcion.correo,
+    subject: `${inscripcion.nombres}, ¡HEMOS CONFIRMADO TU PAGO DEL MES ${mes}!`,
+    html: `
+      <div style="font-family: 'Segoe UI', sans-serif; background-color: #f9f9f9; padding: 30px;">
+        <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); padding: 30px; color: #333;">
+
+          <h2 style="text-align: center; color: #21145F; font-size: 24px; margin-bottom: 10px;">
+            ¡Hola <span style="color: #21145F;">${inscripcion.nombres}</span>!
+          </h2>
+
+          <p style="text-align: center; font-size: 18px; color: #444;">
+            ¡Hemos confirmado tu pago del mes ${mes}!
+          </p>
+
+          <p style="font-size: 16px; line-height: 1.7; color: #555;">
+            Gracias por continuar tu proceso con nosotros. Tu compromiso nos inspira y nos llena de alegría seguir acompañándote.
+          </p>
+
+          <p style="font-size: 16px; line-height: 1.7; color: #555;">
+            En la <strong style="color: #21145F;">Familia Presentación</strong>, vivimos el aprendizaje como una experiencia cercana, creativa y transformadora.
+            Seguimos contigo, paso a paso, creando, sintiendo y transformando.
+          </p>
+
+          <p style="margin-top: 20px; font-size: 15px; font-style: italic; color: #444;">
+            <strong>Más que cursos, experiencias que inspiran.</strong>
+          </p>
+
+          <h3 style="text-align: center; color: #21145F; margin-top: 30px; font-size: 20px; letter-spacing: 1px;">
+            EXTENSIÓN LA PRESENTACIÓN
+          </h3>
+          <p style="text-align: center; font-size: 13px; color: #aaa;">Girardota – Antioquia</p>
+
+          <div style="text-align: center; margin-top: 20px;">
+            <p style="font-size: 14px; font-weight: bold; color: #444;">Síguenos y descubre más:</p>
+            <p style="font-size: 14px; color: #888;">
+              <a href="https://instagram.com/presentaciongirardota" style="color: #d4a017; text-decoration: none; margin-right: 10px;">Instagram</a> |
+              <a href="https://www.tiktok.com/@presentaciongirardota" style="color: #d4a017; text-decoration: none; margin: 0 10px;">TikTok</a> |
+              <a href="https://www.facebook.com/presentaciondegirardota" style="color: #d4a017; text-decoration: none; margin: 0 10px;">Facebook</a> |
+              <a href="https://www.youtube.com/@Presentaciongirardota" style="color: #d4a017; text-decoration: none; margin-left: 10px;">YouTube</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    `,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log('❌ Error al enviar correo mensual:', error);
+    } else {
+      console.log('✅ Correo de confirmación mensual enviado:', info.response);
     }
   });
 };
@@ -266,6 +345,35 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
   } catch (error) {
     console.error('❌ Error al guardar comprobante mensual:', error);
     res.status(500).json({ error: 'Error al guardar comprobante', detalle: error.message });
+  }
+});
+
+// ✅ PUT - Confirmar pago mensual
+router.put('/pagos-mensuales/:id/confirmar', async (req, res) => {
+  const { id } = req.params;
+  const { mes } = req.body;
+
+  try {
+    const inscripcion = await Inscripcion.findById(id);
+    if (!inscripcion) {
+      return res.status(404).json({ error: 'Inscripción no encontrada' });
+    }
+
+    const pago = inscripcion.pagosMensuales.find(p => p.mes === mes);
+    if (!pago) {
+      return res.status(404).json({ error: `No hay comprobante cargado para el mes ${mes}` });
+    }
+
+    pago.estado = 'verificado';
+    await inscripcion.save();
+
+    // 📬 Enviar correo de confirmación mensual
+    enviarCorreoPagoMensual(inscripcion, mes);
+
+    res.json({ mensaje: `✅ Pago del mes ${mes} confirmado correctamente` });
+  } catch (error) {
+    console.error('❌ Error al confirmar pago mensual:', error);
+    res.status(500).json({ error: 'Error al confirmar pago mensual', detalle: error.message });
   }
 });
 
