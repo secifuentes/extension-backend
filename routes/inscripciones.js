@@ -220,71 +220,36 @@ router.get('/', async (req, res) => {
 
 router.put('/confirmar-pago/:id', async (req, res) => {
   try {
+    console.log('🛠 Confirmando pago para ID:', req.params.id);
+
     const inscripcion = await Inscripcion.findById(req.params.id);
+
     if (!inscripcion) {
+      console.warn('❌ Inscripción no encontrada');
       return res.status(404).json({ error: 'Inscripción no encontrada' });
     }
 
     inscripcion.pagoConfirmado = true;
     await inscripcion.save();
 
-    enviarCorreoConfirmacion(inscripcion);
+    if (inscripcion.correo && inscripcion.nombres && inscripcion.cursoNombre) {
+      console.log('📤 Enviando correo a:', inscripcion.correo);
 
-    res.status(200).json({ mensaje: '✅ Pago confirmado correctamente' });
-  } catch (error) {
-    res.status(500).json({ error: 'Error al confirmar el pago', detalle: error.message });
-  }
-});
-
-router.delete('/', async (req, res) => {
-  try {
-    await Inscripcion.deleteMany({});
-    res.status(200).json({ mensaje: '✅ Todas las inscripciones han sido eliminadas correctamente' });
-  } catch (error) {
-    console.error('❌ Error al eliminar las inscripciones:', error);
-    res.status(500).json({ error: '❌ Error al eliminar las inscripciones', detalle: error.message });
-  }
-});
-
-router.get('/estado/:tipoDoc/:documento', async (req, res) => {
-  const { tipoDoc, documento } = req.params;
-
-  try {
-    const inscripciones = await Inscripcion.find({
-      tipoDocumento: new RegExp(`^${tipoDoc}$`, 'i'),
-      documento: documento,
-    });
-
-    if (!inscripciones || inscripciones.length === 0) {
-      return res.status(404).json({ tipo: 'no-encontrado' });
+      try {
+        enviarCorreoConfirmacion(inscripcion);
+      } catch (errorCorreo) {
+        console.error('❌ Error al enviar correo:', errorCorreo);
+        // No detenemos la ejecución si falla el correo
+      }
+    } else {
+      console.warn('⚠️ Datos incompletos para enviar correo:', inscripcion);
     }
 
-    const estudiante = {
-      nombres: inscripciones[0].nombres,
-      apellidos: inscripciones[0].apellidos,
-      correo: inscripciones[0].correo,
-      cursos: inscripciones.map(ins => ({
-        _id: ins._id,
-        cursoNombre: ins.cursoNombre,
-        formaPago: ins.formaPago,
-        pagoConfirmado: ins.pagoConfirmado,
-        fechaInscripcion: ins.fechaInscripcion,
-        valorPagado: ins.valorPagado, // ✅ AGREGA ESTA LÍNEA
-        pagosMensuales: (ins.pagosMensuales || []).reduce((acc, pago) => {
-          acc[`mes${pago.mes}`] = {
-            comprobante: pago.comprobante,
-            confirmado: pago.estado === 'verificado'
-          };
-          return acc;
-        }, {}),
-        esEstudiante: ins.esEstudiante
-      })),
-    };
+    res.status(200).json({ mensaje: '✅ Pago confirmado correctamente' });
 
-    res.json(estudiante);
-  } catch (err) {
-    console.error('❌ Error al consultar inscripciones:', err);
-    res.status(500).json({ tipo: 'error' });
+  } catch (error) {
+    console.error('❌ Error general en confirmar-pago:', error);
+    res.status(500).json({ error: 'Error al confirmar el pago', detalle: error.message });
   }
 });
 
