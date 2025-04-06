@@ -20,7 +20,7 @@ const enviarCorreoConfirmacion = (inscripcion) => {
     subject: `${inscripcion.nombres}, ¡TE DAMOS LA BIENVENIDA A UNA EXPERIENCIA QUE TRANSFORMA!`,
     html: `
       <div style="font-family: 'Segoe UI', sans-serif; background-color: #f4f6f9; padding: 40px;">
-        <div style="max-width: 650px; width: 100%; margin: auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 35px; color: #333;">
+        <div style="max-width: 650px; width: 100%; margin: auto; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 35px; color: #333; box-sizing: border-box;">
           
           <h2 style="text-align: center; color: #21145F; font-size: 26px; margin-bottom: 20px;">
             ¡Hola <span style="color: #21145F;">${inscripcion.nombres}</span>!
@@ -50,18 +50,23 @@ const enviarCorreoConfirmacion = (inscripcion) => {
             </p>
           </div>
 
-          <p style="font-size: 15px; color: #555;">
-            Gracias por elegirnos. Nos emociona crecer contigo.
+          <p style="text-align: center; font-size: 15px; color: #555;">
+            Gracias por ser parte de esta experiencia. 💜
           </p>
 
-          <p style="font-size: 15px; color: #555; font-style: italic; margin-top: 25px;">
+          <p style="text-align: center; font-size: 15px; color: #555; font-style: italic; margin-top: 25px;">
             <strong>“Más que cursos, experiencias que inspiran.”</strong>
           </p>
 
           <h3 style="text-align: center; color: #21145F; margin-top: 40px; font-size: 20px; letter-spacing: 1px;">
-            EXTENSIÓN LA PRESENTACIÓN
+            EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
           </h3>
           <p style="text-align: center; font-size: 13px; color: #aaa;">Girardota – Antioquia</p>
+
+          <div style="text-align: center; font-size: 13px; color: #888; margin-top: 10px;">
+            <p><a href="https://lapresentaciongirardota.edu.co" style="color: #1a428a; text-decoration: none;">lapresentaciongirardota.edu.co</a></p>
+            <p><a href="https://extensionlapresentacion.com" style="color: #1a428a; text-decoration: none;">extensionlapresentacion.com</a></p>
+          </div>
 
           <div style="text-align: center; margin-top: 30px;">
             <p style="font-size: 15px; font-weight: bold; color: #444;">Síguenos y descubre más:</p>
