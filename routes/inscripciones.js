@@ -190,7 +190,13 @@ router.get('/estado/:tipoDoc/:documento', async (req, res) => {
         pagoConfirmado: ins.pagoConfirmado,
         fechaInscripcion: ins.fechaInscripcion,
         valorPagado: ins.valorPagado, // ✅ AGREGA ESTA LÍNEA
-        pagosMensuales: ins.pagosMensuales || [],
+        pagosMensuales: (ins.pagosMensuales || []).reduce((acc, pago) => {
+          acc[`mes${pago.mes}`] = {
+            comprobante: pago.comprobante,
+            confirmado: pago.estado === 'verificado'
+          };
+          return acc;
+        }, {}),
         esEstudiante: ins.esEstudiante
       })),
     };
