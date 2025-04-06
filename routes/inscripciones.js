@@ -102,10 +102,24 @@ router.post('/', async (req, res) => {
   try {
     console.log("Datos recibidos para inscripción: ", req.body);
 
+    // 🛡️ Validar si ya existe inscripción con ese documento y curso
+    const yaExiste = await Inscripcion.findOne({
+      documento: req.body.documento,
+      cursoId: req.body.cursoId,
+    });
+
+    if (yaExiste) {
+      return res.status(409).json({ mensaje: '⚠️ Ya estás inscrito en este curso' });
+    }
+
+    // ✅ Crear la nueva inscripción
     const nueva = new Inscripcion(req.body);
     await nueva.save();
 
-    notificarAdmin(nueva); // ✉️ Nuevo: notifica al admin
+    // Notificar al admin (si tienes la función notificarAdmin configurada)
+    if (typeof notificarAdmin === 'function') {
+      notificarAdmin(nueva);
+    }
 
     res.status(201).json({ mensaje: '✅ Inscripción guardada correctamente' });
   } catch (error) {

@@ -20,5 +20,8 @@ const InscripcionSchema = new mongoose.Schema({
   fechaInscripcion: { type: Date, default: Date.now }
 });
 
+// 🛡️ Índice único para evitar inscripciones duplicadas al mismo curso
+InscripcionSchema.index({ documento: 1, cursoId: 1 }, { unique: true });
+
 // Exportar el modelo
 module.exports = mongoose.model('Inscripcion', InscripcionSchema);
