@@ -15,8 +15,21 @@ const InscripcionSchema = new mongoose.Schema({
   valorPagado: Number,
   pagoConfirmado: { type: Boolean, default: false },
   comprobante: String,
-  acudiente: String, // ✅ agregado
-  telefonoAcudiente: String, // ✅ agregado
+  acudiente: String,
+  telefonoAcudiente: String,
+
+  // 🆕 Pagos mensuales adicionales
+  pagosMensuales: {
+    mes2: {
+      comprobante: String,
+      confirmado: { type: Boolean, default: false }
+    },
+    mes3: {
+      comprobante: String,
+      confirmado: { type: Boolean, default: false }
+    }
+  },
+
   fechaInscripcion: { type: Date, default: Date.now }
 });
 
