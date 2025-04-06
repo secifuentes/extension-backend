@@ -219,8 +219,9 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
   const { id } = req.params;
   const { mes, comprobanteBase64 } = req.body;
 
-  if (!['mes2', 'mes3'].includes(mes)) {
-    return res.status(400).json({ error: 'Mes inválido (debe ser "mes2" o "mes3")' });
+  // Validar que el mes sea 2 o 3 (puedes ampliar en el futuro si hay más)
+  if (![2, 3].includes(mes)) {
+    return res.status(400).json({ error: 'Mes inválido (solo se permite 2 o 3)' });
   }
 
   try {
@@ -229,18 +230,28 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
       return res.status(404).json({ error: 'Inscripción no encontrada' });
     }
 
-    // Actualizar comprobante del mes correspondiente
-    inscripcion.pagosMensuales[mes].comprobante = comprobanteBase64;
-    inscripcion.pagosMensuales[mes].confirmado = false; // el admin lo validará después
+    // Verificar si ya hay comprobante para ese mes
+    const yaExiste = inscripcion.pagosMensuales.find(p => p.mes === mes);
+    if (yaExiste) {
+      return res.status(400).json({ error: `Ya se subió un comprobante para el mes ${mes}` });
+    }
+
+    // Agregar nuevo pago mensual
+    inscripcion.pagosMensuales.push({
+      mes,
+      comprobante: comprobanteBase64,
+      estado: 'pendiente'
+    });
 
     await inscripcion.save();
 
-    res.json({ mensaje: `✅ Comprobante del ${mes} guardado correctamente.` });
+    res.json({ mensaje: `✅ Comprobante del mes ${mes} guardado correctamente.` });
   } catch (error) {
     console.error('❌ Error al guardar comprobante mensual:', error);
     res.status(500).json({ error: 'Error al guardar comprobante', detalle: error.message });
   }
 });
+
 
 
 module.exports = router;

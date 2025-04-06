@@ -1,6 +1,24 @@
 const mongoose = require('mongoose');
 
-// Definir el esquema de inscripción
+// Sub-esquema para pagos mensuales
+const PagoMensualSchema = new mongoose.Schema({
+  mes: {
+    type: Number,
+    enum: [2, 3], // puedes agregar más si luego hay más meses
+    required: true
+  },
+  comprobante: {
+    type: String,
+    required: true
+  },
+  estado: {
+    type: String,
+    enum: ['pendiente', 'verificado'],
+    default: 'pendiente'
+  }
+}, { _id: false }); // No necesitamos _id en subdocumentos
+
+// Esquema de inscripción completo
 const InscripcionSchema = new mongoose.Schema({
   nombres: String,
   apellidos: String,
@@ -13,25 +31,17 @@ const InscripcionSchema = new mongoose.Schema({
   cursoNombre: String,
   esEstudiante: Boolean,
 
-  formaPago: String, // ✅ <-- ESTA LÍNEA ES CLAVE
+  formaPago: String, // mensual | trimestral
 
   valorPagado: Number,
   pagoConfirmado: { type: Boolean, default: false },
-  comprobante: String,
+  comprobante: String, // comprobante del primer pago o curso completo
+
   acudiente: String,
   telefonoAcudiente: String,
 
-  // 🆕 Pagos mensuales adicionales
-  pagosMensuales: {
-    mes2: {
-      comprobante: String,
-      confirmado: { type: Boolean, default: false }
-    },
-    mes3: {
-      comprobante: String,
-      confirmado: { type: Boolean, default: false }
-    }
-  },
+  // 🆕 Nueva estructura de pagos mensuales
+  pagosMensuales: [PagoMensualSchema],
 
   fechaInscripcion: { type: Date, default: Date.now }
 });
