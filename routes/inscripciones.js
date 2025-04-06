@@ -190,7 +190,8 @@ router.get('/estado/:tipoDoc/:documento', async (req, res) => {
         pagoConfirmado: ins.pagoConfirmado,
         fechaInscripcion: ins.fechaInscripcion,
         valorPagado: ins.valorPagado, // ✅ AGREGA ESTA LÍNEA
-        pagosMensuales: ins.pagosMensuales || []
+        pagosMensuales: ins.pagosMensuales || [],
+        esEstudiante: ins.esEstudiante
       })),
     };
 
