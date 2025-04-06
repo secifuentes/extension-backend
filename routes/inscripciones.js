@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Función para enviar el correo de confirmación con HTML estilizado
+// ✉️ Función para enviar el correo al estudiante
 const enviarCorreoConfirmacion = (inscripcion) => {
   const mailOptions = {
     from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
@@ -66,6 +66,37 @@ const enviarCorreoConfirmacion = (inscripcion) => {
   });
 };
 
+// 📬 Función para notificar al administrador
+const notificarAdmin = (inscripcion) => {
+  const mailOptions = {
+    from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
+    to: 'admin@tucorreo.com', // 🔁 Cambia esto al correo real del admin
+    subject: `📥 Nueva inscripción: ${inscripcion.nombres} al curso "${inscripcion.cursoNombre}"`,
+    html: `
+      <div style="font-family: Arial, sans-serif; padding: 30px; background-color: #f4f4f4;">
+        <div style="max-width: 600px; margin: auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+          <h2 style="color: #21145F;">📋 Nueva inscripción recibida</h2>
+          <p><strong>Nombre completo:</strong> ${inscripcion.nombres} ${inscripcion.apellidos}</p>
+          <p><strong>Correo electrónico:</strong> ${inscripcion.correo}</p>
+          <p><strong>Curso inscrito:</strong> <span style="color: #1a428a;">${inscripcion.cursoNombre}</span></p>
+          <p><strong>Forma de pago:</strong> ${inscripcion.formaPago}</p>
+          <p><strong>Fecha de inscripción:</strong> ${new Date(inscripcion.fechaInscripcion).toLocaleString()}</p>
+          <hr />
+          <p style="color: #666;">Este mensaje fue generado automáticamente por el sistema de inscripción.</p>
+        </div>
+      </div>
+    `,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.log('❌ Error al notificar al admin:', error);
+    } else {
+      console.log('📨 Notificación enviada al admin:', info.response);
+    }
+  });
+};
+
 // POST - Guardar nueva inscripción
 router.post('/', async (req, res) => {
   try {
@@ -73,6 +104,9 @@ router.post('/', async (req, res) => {
 
     const nueva = new Inscripcion(req.body);
     await nueva.save();
+
+    notificarAdmin(nueva); // ✉️ Nuevo: notifica al admin
+
     res.status(201).json({ mensaje: '✅ Inscripción guardada correctamente' });
   } catch (error) {
     console.error('❌ Error al guardar inscripción:', error);
@@ -80,7 +114,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// GET - Obtener todas las inscripciones
+// Resto de rutas (sin cambios)
 router.get('/', async (req, res) => {
   try {
     const inscripciones = await Inscripcion.find().sort({ fechaInscripcion: -1 });
@@ -90,7 +124,6 @@ router.get('/', async (req, res) => {
   }
 });
 
-// PUT - Confirmar pago e enviar correo
 router.put('/confirmar-pago/:id', async (req, res) => {
   try {
     const inscripcion = await Inscripcion.findById(req.params.id);
@@ -109,7 +142,6 @@ router.put('/confirmar-pago/:id', async (req, res) => {
   }
 });
 
-// DELETE - Eliminar todas las inscripciones
 router.delete('/', async (req, res) => {
   try {
     await Inscripcion.deleteMany({});
@@ -120,7 +152,6 @@ router.delete('/', async (req, res) => {
   }
 });
 
-// GET - Consultar estado del estudiante
 router.get('/estado/:tipoDoc/:documento', async (req, res) => {
   const { tipoDoc, documento } = req.params;
 
@@ -153,7 +184,6 @@ router.get('/estado/:tipoDoc/:documento', async (req, res) => {
   }
 });
 
-// Eliminar una inscripción por ID
 router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
