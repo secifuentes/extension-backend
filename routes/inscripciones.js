@@ -221,7 +221,7 @@ router.delete('/:id', async (req, res) => {
 // ✅ PUT - Guardar comprobantes de pago mensual (mes 2 o mes 3)
 router.put('/pagos-mensuales/:id', async (req, res) => {
   const { id } = req.params;
-  const { mes, comprobanteBase64 } = req.body;
+  const { mes, comprobante } = req.body;
   console.log("🛬 Datos recibidos:", req.body);
 
   // Validar que el mes sea 2 o 3 (puedes ampliar en el futuro si hay más)
@@ -253,7 +253,7 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
     // Agregar nuevo pago mensual
     inscripcion.pagosMensuales.push({
       mes,
-      comprobante: comprobanteBase64,
+      comprobante,
       estado: 'pendiente'
     });
 
