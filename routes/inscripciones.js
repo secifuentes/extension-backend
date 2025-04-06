@@ -242,6 +242,12 @@ router.put('/confirmar-pago/:id', async (req, res) => {
     inscripcion.pagoConfirmado = true;
     await inscripcion.save();
 
+    console.log("📤 Enviando confirmación de pago para:", {
+      correo: inscripcion.correo,
+      nombres: inscripcion.nombres,
+      cursoNombre: inscripcion.cursoNombre,
+    });
+
     // 🛡️ Validación antes de enviar correo
     if (!inscripcion.correo || !inscripcion.nombres || !inscripcion.cursoNombre) {
       console.error("❌ Faltan campos en la inscripción:", inscripcion);
