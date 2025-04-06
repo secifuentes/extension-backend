@@ -12,6 +12,9 @@ const InscripcionSchema = new mongoose.Schema({
   cursoId: String,
   cursoNombre: String,
   esEstudiante: Boolean,
+
+  formaPago: String, // ✅ <-- ESTA LÍNEA ES CLAVE
+
   valorPagado: Number,
   pagoConfirmado: { type: Boolean, default: false },
   comprobante: String,
