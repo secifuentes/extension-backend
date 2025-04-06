@@ -222,8 +222,13 @@ router.delete('/:id', async (req, res) => {
 router.put('/pagos-mensuales/:id', async (req, res) => {
   const { id } = req.params;
   const { mes, comprobante } = req.body; // Usa 'comprobante' directamente
+  if (!mes || !comprobante) {
+    console.error('🚨 Datos faltantes:', { mes, comprobante });
+    return res.status(400).json({ error: 'Faltan datos: mes o comprobante' });
+  }
 
   console.log("🛬 Datos recibidos:", req.body);
+  console.log("🔍 DEBUG - mes:", mes, "comprobante:", comprobante?.slice(0, 30));
 
   // Validar que el mes sea 2 o 3 (puedes ampliar en el futuro si hay más)
   if (![2, 3].includes(mes)) {
