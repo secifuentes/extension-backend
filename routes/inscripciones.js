@@ -230,7 +230,15 @@ router.put('/confirmar-pago/:id', async (req, res) => {
     }
 
     inscripcion.pagoConfirmado = true;
-    await inscripcion.save();
+
+// ✅ Limpieza de pagosMensuales incompletos
+if (Array.isArray(inscripcion.pagosMensuales)) {
+  inscripcion.pagosMensuales = inscripcion.pagosMensuales.filter(
+    (p) => p.comprobante && p.mes
+  );
+}
+
+await inscripcion.save();
 
     if (inscripcion.correo && inscripcion.nombres && inscripcion.cursoNombre) {
       console.log('📤 Enviando correo a:', inscripcion.correo);
