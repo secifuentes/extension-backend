@@ -243,9 +243,10 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
       id,
       mes,
       yaExiste,
-      base64Inicio: comprobanteBase64?.slice(0, 30),
-      base64Length: comprobanteBase64?.length,
+      base64Inicio: comprobante?.slice(0, 30),
+      base64Length: comprobante?.length,
     });
+    
     if (yaExiste) {
       return res.status(400).json({ error: `Ya se subió un comprobante para el mes ${mes}` });
     }
