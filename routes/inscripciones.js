@@ -235,33 +235,37 @@ router.get('/', async (req, res) => {
 router.put('/confirmar-pago/:id', async (req, res) => {
   try {
     const inscripcion = await Inscripcion.findById(req.params.id);
+
     if (!inscripcion) {
+      console.error('⚠️ Inscripción no encontrada con ID:', req.params.id);
       return res.status(404).json({ error: 'Inscripción no encontrada' });
+    }
+
+    // Validar campos obligatorios antes de continuar
+    if (!inscripcion.correo || !inscripcion.nombres || !inscripcion.cursoNombre) {
+      console.error('❌ Faltan datos esenciales para el correo:', {
+        correo: inscripcion.correo,
+        nombres: inscripcion.nombres,
+        cursoNombre: inscripcion.cursoNombre,
+      });
+      return res.status(400).json({ error: 'Faltan datos para enviar el correo de confirmación' });
     }
 
     inscripcion.pagoConfirmado = true;
     await inscripcion.save();
 
-    console.log("📤 Enviando confirmación de pago para:", {
-      correo: inscripcion.correo,
-      nombres: inscripcion.nombres,
-      cursoNombre: inscripcion.cursoNombre,
-    });
-
-    // 🛡️ Validación antes de enviar correo
-    if (!inscripcion.correo || !inscripcion.nombres || !inscripcion.cursoNombre) {
-      console.error("❌ Faltan campos en la inscripción:", inscripcion);
-      return res.status(400).json({ error: 'Faltan campos para enviar el correo' });
+    try {
+      enviarCorreoConfirmacion(inscripcion); // 📨 Enviamos el correo
+    } catch (correoError) {
+      console.error('❌ Error enviando el correo:', correoError);
+      return res.status(500).json({ error: 'Error al enviar el correo de confirmación' });
     }
 
-    console.log("📨 Enviando correo de confirmación a:", inscripcion.correo);
-    enviarCorreoConfirmacion(inscripcion);
+    res.status(200).json({ mensaje: '✅ Pago confirmado y correo enviado correctamente' });
 
-    res.status(200).json({ mensaje: '✅ Pago confirmado correctamente' });
   } catch (error) {
-    console.error("❌ Error al confirmar el pago:", error.message);
-    console.error(error.stack);
-    res.status(500).json({ error: 'Error al confirmar el pago', detalle: error.message });
+    console.error('❌ Error general al confirmar el pago:', error);
+    res.status(500).json({ error: 'Error interno al confirmar pago', detalle: error.message });
   }
 });
 
