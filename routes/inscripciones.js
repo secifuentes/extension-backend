@@ -70,7 +70,7 @@ const enviarCorreoConfirmacion = (inscripcion) => {
 const notificarAdmin = (inscripcion) => {
   const mailOptions = {
     from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
-    to: 'admin@tucorreo.com', // 🔁 Cambia esto al correo real del admin
+    to: 'extension@lapresentaciongirardota.edu.co', // 🔁 Cambia esto al correo real del admin
     subject: `📥 Nueva inscripción: ${inscripcion.nombres} al curso "${inscripcion.cursoNombre}"`,
     html: `
       <div style="font-family: Arial, sans-serif; padding: 30px; background-color: #f4f4f4;">
