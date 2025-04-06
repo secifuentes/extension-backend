@@ -19,77 +19,79 @@ const enviarCorreoConfirmacion = (inscripcion) => {
     to: inscripcion.correo,
     subject: `${inscripcion.nombres}, ¡TE DAMOS LA BIENVENIDA A UNA EXPERIENCIA QUE TRANSFORMA!`,
     html: `
-      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f6f9; padding: 20px 0; font-family: 'Segoe UI', sans-serif;">
-  <tr>
-    <td align="center">
-      <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width: 650px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 35px; color: #333;">
-        <tr>
-          <td align="center" style="color: #21145F; font-size: 26px; font-weight: bold; padding-bottom: 20px;">
-            ¡Hola ${inscripcion.nombres}!
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="font-size: 18px; color: #444; padding-bottom: 30px;">
-            ¡Tu pago ha sido confirmado! 🎉
-          </td>
-        </tr>
-        <tr>
-          <td style="font-size: 16px; color: #555; line-height: 1.7;">
-            Ya haces parte oficialmente del curso <strong style="color: #1a428a;">“${inscripcion.cursoNombre}”</strong> de <strong>Extensión La Presentación</strong>.
-          </td>
-        </tr>
-        <tr>
-          <td style="font-size: 16px; color: #555; line-height: 1.7; padding-top: 15px;">
-            Nos alegra muchísimo darte la bienvenida a la <strong style="color: #21145F;">Familia Presentación</strong>, un espacio donde el aprendizaje se convierte en una experiencia emocionante, creativa y transformadora.
-          </td>
-        </tr>
-        <tr>
-          <td style="font-size: 16px; color: #555; line-height: 1.7; padding-top: 15px;">
-            Muy pronto recibirás en el correo que registraste toda la información clave: la fecha de inicio, el nombre de tu docente y los pasos que siguen.
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="background-color: #21145F; color: #fff; font-size: 18px; font-weight: 600; padding: 25px; border-radius: 10px; margin-top: 30px;">
-            ¿Te emociona esta nueva etapa?<br>
-            <span style="color: #f4cf00;">¡A nosotros nos emociona tenerte aquí!</span>
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="font-size: 15px; color: #555; padding-top: 25px;">
-            Gracias por escribir esta historia con nosotros.
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="font-size: 15px; color: #555; font-style: italic; padding-top: 10px;">
-            <strong>“Más que cursos, experiencias que inspiran.”</strong>
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="color: #21145F; font-size: 20px; font-weight: bold; padding-top: 30px;">
-            EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="font-size: 13px; color: #aaa;">
-            Girardota – Antioquia
-          </td>
-        </tr>
-        <tr>
-          <td align="center" style="padding-top: 30px;">
-            <p style="font-size: 15px; font-weight: bold; color: #444; margin: 0;">Síguenos y descubre más:</p>
-            <p style="font-size: 14px; color: #888; margin-top: 5px;">
-              <a href="https://instagram.com/presentaciongirardota" style="color: #d4a017; text-decoration: none;">Instagram</a> |
-              <a href="https://www.tiktok.com/@presentaciongirardota" style="color: #d4a017; text-decoration: none;">TikTok</a> |
-              <a href="https://www.facebook.com/presentaciondegirardota" style="color: #d4a017; text-decoration: none;">Facebook</a> |
-              <a href="https://www.youtube.com/@Presentaciongirardota" style="color: #d4a017; text-decoration: none;">YouTube</a>
-            </p>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-    `,
+  <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f4f6f9; padding: 20px 0; font-family: 'Segoe UI', sans-serif;">
+    <tr>
+      <td align="center">
+        <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width: 650px; background-color: #ffffff; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06); padding: 35px; color: #333;">
+          <tr>
+            <td align="center" style="color: #21145F; font-size: 26px; font-weight: bold; padding-bottom: 20px;">
+              ¡Hola ${inscripcion.nombres}!
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="font-size: 18px; color: #444; padding-bottom: 30px;">
+              ¡Tu pago ha sido confirmado! 🎉
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 16px; color: #555; line-height: 1.7;">
+              Ya haces parte oficialmente del curso <strong style="color: #1a428a;">“${inscripcion.cursoNombre}”</strong> de <strong>Extensión La Presentación</strong>.
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 16px; color: #555; line-height: 1.7; padding-top: 15px;">
+              Nos alegra muchísimo darte la bienvenida a la <strong style="color: #21145F;">Familia Presentación</strong>, un espacio donde el aprendizaje se convierte en una experiencia emocionante, creativa y transformadora.
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size: 16px; color: #555; line-height: 1.7; padding-top: 15px;">
+              Muy pronto recibirás en el correo que registraste toda la información clave: la fecha de inicio, el nombre de tu docente y los pasos que siguen.
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding: 25px; background-color: #21145F; border-radius: 10px; margin-top: 30px;">
+              <p style="font-size: 18px; color: #ffffff; font-weight: 600; margin: 0;">
+                ¿Te emociona esta nueva etapa?<br />
+                <span style="color: #f4cf00;">¡A nosotros nos emociona tenerte aquí!</span>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="font-size: 15px; color: #555; padding-top: 25px;">
+              Gracias por escribir esta historia con nosotros.
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="font-size: 15px; color: #555; font-style: italic; padding-top: 10px;">
+              <strong>“Más que cursos, experiencias que inspiran.”</strong>
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="color: #21145F; font-size: 20px; font-weight: bold; padding-top: 30px;">
+              EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="font-size: 13px; color: #aaa;">
+              Girardota – Antioquia
+            </td>
+          </tr>
+          <tr>
+            <td align="center" style="padding-top: 30px;">
+              <p style="font-size: 15px; font-weight: bold; color: #444; margin: 0;">Síguenos y descubre más:</p>
+              <p style="font-size: 14px; color: #888; margin-top: 5px;">
+                <a href="https://instagram.com/presentaciongirardota" style="color: #d4a017; text-decoration: none;">Instagram</a> |
+                <a href="https://www.tiktok.com/@presentaciongirardota" style="color: #d4a017; text-decoration: none;">TikTok</a> |
+                <a href="https://www.facebook.com/presentaciondegirardota" style="color: #d4a017; text-decoration: none;">Facebook</a> |
+                <a href="https://www.youtube.com/@Presentaciongirardota" style="color: #d4a017; text-decoration: none;">YouTube</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+`,
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
@@ -243,19 +245,14 @@ router.put('/confirmar-pago/:id', async (req, res) => {
     await inscripcion.save();
 
     // Solo intenta enviar el correo si los datos clave existen
-    if (inscripcion.correo && inscripcion.nombres && inscripcion.cursoNombre) {
-      try {
-        enviarCorreoConfirmacion(inscripcion);
-      } catch (err) {
-        console.error('❌ Error al enviar correo de confirmación:', err);
-        // No detiene el proceso si el correo falla
-      }
-    } else {
-      console.warn('⚠️ Datos incompletos para enviar correo:', {
+    if (!inscripcion.correo || !inscripcion.nombres || !inscripcion.cursoNombre) {
+      console.warn('⚠️ Datos faltantes para correo:', {
         correo: inscripcion.correo,
         nombres: inscripcion.nombres,
         curso: inscripcion.cursoNombre
       });
+    } else {
+      enviarCorreoConfirmacion(inscripcion);
     }
 
     res.status(200).json({ mensaje: '✅ Pago confirmado correctamente' });
