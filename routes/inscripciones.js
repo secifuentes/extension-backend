@@ -20,68 +20,74 @@ const enviarCorreoConfirmacion = (inscripcion) => {
     subject: `${inscripcion.nombres}, ¡TE DAMOS LA BIENVENIDA A UNA EXPERIENCIA QUE TRANSFORMA!`,
     html: `
       <div style="margin:0;padding:0;background-color:#f4f6f9;font-family:'Segoe UI',sans-serif;">
-        <div style="max-width:600px;width:100%;margin:0 auto;background:#ffffff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);padding:30px;box-sizing:border-box;">
-          
-          <!-- Encabezado -->
-          <h2 style="text-align:center;color:#21145F;font-size:26px;margin-bottom:20px;">
-            ¡Hola <span style="color:#21145F;">${inscripcion.nombres}</span>!
-          </h2>
-          <p style="text-align:center;font-size:18px;color:#444;margin-bottom:30px;">
-            ¡Tu pago ha sido confirmado! 🎉
-          </p>
+  <div style="max-width:600px;width:100%;margin:0 auto;background:#ffffff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);padding:30px;box-sizing:border-box;">
 
-          <!-- Mensaje de bienvenida -->
-          <p style="font-size:16px;line-height:1.7;color:#555;">
-            Ya haces parte oficialmente del curso <strong style="color:#1a428a;">“${inscripcion.cursoNombre}”</strong> de <strong>Extensión La Presentación</strong>.
-          </p>
-          <p style="font-size:16px;line-height:1.7;color:#555;">
-            Nos alegra muchísimo darte la bienvenida a la <strong style="color:#21145F;">Familia Presentación</strong>, un espacio donde el aprendizaje se convierte en una experiencia emocionante, creativa y transformadora.
-          </p>
-          <p style="font-size:16px;line-height:1.7;color:#555;">
-            Muy pronto recibirás en el correo que registraste toda la información clave: la fecha de inicio, el nombre de tu docente y los pasos que siguen.
-          </p>
+    <!-- Logo -->
+    <div style="text-align:center;margin-bottom:20px;">
+      <img src="https://www.extensionlapresentacion.com/logo_extensionce.png" alt="Logo Extensión La Presentación" style="max-width:180px;" />
+    </div>
 
-          <!-- Banner emocional -->
-          <div style="margin:35px 0;padding:25px;background-color:#21145F;border-radius:10px;text-align:center;">
-            <p style="font-size:18px;color:#ffffff;font-weight:600;margin:0;">
-              ¿Te emociona esta nueva etapa?<br />
-              <span style="color:#4da6ff;">¡A nosotros nos emociona tenerte aquí!</span>
-            </p>
-          </div>
+    <!-- Encabezado -->
+    <h2 style="text-align:center;color:#21145F;font-size:26px;margin-bottom:20px;">
+      ¡Hola <span style="color:#21145F;">${inscripcion.nombres}</span>!
+    </h2>
+    <p style="text-align:center;font-size:18px;color:#444;margin-bottom:30px;">
+      ¡Tu pago ha sido confirmado! 🎉
+    </p>
 
-          <!-- Botón -->
-          <div style="text-align:center;margin-bottom:30px;">
-            <a href="https://extensionlapresentacion.com" target="_blank" style="display:inline-block;padding:14px 30px;background-color:#1a428a;color:#fff;text-decoration:none;border-radius:50px;font-size:16px;">
-              Ver detalles del curso
-            </a>
-          </div>
+    <!-- Mensaje de bienvenida -->
+    <p style="font-size:16px;line-height:1.7;color:#555;">
+      Ya haces parte oficialmente del curso <strong style="color:#1a428a;">“${inscripcion.cursoNombre}”</strong> de <strong>Extensión La Presentación</strong>.
+    </p>
+    <p style="font-size:16px;line-height:1.7;color:#555;">
+      Nos alegra muchísimo darte la bienvenida a la <strong style="color:#21145F;">Familia Presentación</strong>, un espacio donde el aprendizaje se convierte en una experiencia emocionante, creativa y transformadora.
+    </p>
+    <p style="font-size:16px;line-height:1.7;color:#555;">
+      Muy pronto recibirás en el correo que registraste toda la información clave: la fecha de inicio, el nombre de tu docente y los pasos que siguen.
+    </p>
 
-          <!-- Cierre -->
-          <p style="text-align:center;font-size:15px;color:#555;margin:0;">
-            Gracias por ser parte de esta experiencia. 💙
-          </p>
-          <p style="text-align:center;font-size:15px;color:#555;font-style:italic;margin-top:20px;">
-            <strong>“Más que cursos, experiencias que inspiran.”</strong>
-          </p>
+    <!-- Banner emocional -->
+    <div style="margin:35px 0;padding:25px;background-color:#21145F;border-radius:10px;text-align:center;">
+      <p style="font-size:18px;color:#ffffff;font-weight:600;margin:0;">
+        ¿Te emociona esta nueva etapa?<br />
+        <span style="color:#4da6ff;">¡A nosotros nos emociona tenerte aquí!</span>
+      </p>
+    </div>
 
-          <!-- Firma -->
-          <h3 style="text-align:center;color:#21145F;margin-top:40px;font-size:20px;letter-spacing:1px;">
-            EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
-          </h3>
-          <p style="text-align:center;font-size:13px;color:#aaa;">Girardota – Antioquia</p>
+    <!-- Botón -->
+    <div style="text-align:center;margin-bottom:30px;">
+      <a href="https://extensionlapresentacion.com" target="_blank" style="display:inline-block;padding:14px 30px;background-color:#1a428a;color:#fff;text-decoration:none;border-radius:50px;font-size:16px;">
+        Ver detalles del curso
+      </a>
+    </div>
 
-          <!-- Redes Sociales -->
-          <div style="text-align:center;margin-top:30px;">
-            <p style="font-size:15px;font-weight:bold;color:#444;">Síguenos en nuestras redes sociales:</p>
-            <p style="font-size:14px;color:#888;line-height:2;margin:10px 0;word-break:break-word;">
-              <a href="https://instagram.com/presentaciongirardota" style="color:#d4a017;text-decoration:none;">Instagram</a> |
-              <a href="https://www.tiktok.com/@presentaciongirardota" style="color:#d4a017;text-decoration:none;">TikTok</a> |
-              <a href="https://www.facebook.com/presentaciondegirardota" style="color:#d4a017;text-decoration:none;">Facebook</a> |
-              <a href="https://www.youtube.com/@Presentaciongirardota" style="color:#d4a017;text-decoration:none;">YouTube</a>
-            </p>
-          </div>
-        </div>
-      </div>
+    <!-- Cierre -->
+    <p style="text-align:center;font-size:15px;color:#555;margin:0;">
+      Gracias por ser parte de esta experiencia. 💙
+    </p>
+    <p style="text-align:center;font-size:15px;color:#555;font-style:italic;margin-top:20px;">
+      <strong>“Más que cursos, experiencias que inspiran.”</strong>
+    </p>
+
+    <!-- Firma -->
+    <h3 style="text-align:center;color:#21145F;margin-top:40px;font-size:20px;letter-spacing:1px;">
+      EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
+    </h3>
+    <p style="text-align:center;font-size:13px;color:#aaa;">Girardota – Antioquia</p>
+
+    <!-- Redes Sociales -->
+    <div style="text-align:center;margin-top:30px;">
+      <p style="font-size:15px;font-weight:bold;color:#444;">Síguenos en nuestras redes sociales:</p>
+      <p style="font-size:14px;color:#888;line-height:2;margin:10px 0;word-break:break-word;">
+        <a href="https://instagram.com/presentaciongirardota" style="color:#d4a017;text-decoration:none;">Instagram</a> |
+        <a href="https://www.tiktok.com/@presentaciongirardota" style="color:#d4a017;text-decoration:none;">TikTok</a> |
+        <a href="https://www.facebook.com/presentaciondegirardota" style="color:#d4a017;text-decoration:none;">Facebook</a> |
+        <a href="https://www.youtube.com/@Presentaciongirardota" style="color:#d4a017;text-decoration:none;">YouTube</a>
+      </p>
+    </div>
+
+  </div>
+</div>
     `,
   };
 
