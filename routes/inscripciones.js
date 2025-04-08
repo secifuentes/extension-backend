@@ -24,7 +24,7 @@ const enviarCorreoConfirmacion = (inscripcion) => {
 
     <!-- Logo -->
     <div style="text-align:center;margin-bottom:20px;">
-      <img src="https://www.extensionlapresentacion.com/logo_extensionce.png" alt="Logo Extensión La Presentación" style="max-width:180px;" />
+      <img src="https://www.extensionlapresentacion.com/logo_extensionce.jpg" alt="Logo Extensión La Presentación" style="max-width:180px;" />
     </div>
 
     <!-- Encabezado -->
