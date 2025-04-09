@@ -3,21 +3,27 @@ const router = express.Router();
 const Estudiante = require('../models/Estudiante');
 
 // Buscar estudiante por tipo y número de documento
-router.get('/:tipoDoc/:documento', async (req, res) => {
-  const { tipoDoc, documento } = req.params;
+router.get('/:tipo/:documento', async (req, res) => {
+  const { tipo, documento } = req.params;
 
   try {
+    const tiposEquivalentes =
+      tipo === 'Tarjeta de Identidad' || tipo === 'Registro Civil'
+        ? ['Registro Civil', 'Tarjeta de Identidad']
+        : [tipo];
+
     const estudiante = await Estudiante.findOne({
-      tipoDocumento: new RegExp(`^${tipoDoc.trim()}$`, 'i'),
-      documento: documento.trim(),
+      tipoDocumento: { $in: tiposEquivalentes },
+      documento
     });
+
     if (!estudiante) {
-      return res.status(404).json({ message: 'Estudiante no encontrado' });
+      return res.status(404).json({ message: 'No encontrado' });
     }
 
     res.json(estudiante);
-  } catch (err) {
-    console.error('❌ Error al buscar estudiante:', err);
+  } catch (error) {
+    console.error('❌ Error al buscar estudiante:', error);
     res.status(500).json({ message: 'Error del servidor' });
   }
 });
