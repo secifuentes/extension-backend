@@ -419,5 +419,27 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
   }
 });
 
+// ✅ PUT - Editar información del inscrito
+router.put('/:id', async (req, res) => {
+  const { id } = req.params;
+  const { nombres, apellidos, correo, telefono } = req.body;
+
+  try {
+    const actualizado = await Inscripcion.findByIdAndUpdate(
+      id,
+      { nombres, apellidos, correo, telefono },
+      { new: true }
+    );
+
+    if (!actualizado) {
+      return res.status(404).json({ mensaje: 'Inscripción no encontrada' });
+    }
+
+    res.json({ mensaje: '✅ Inscripción actualizada correctamente', datos: actualizado });
+  } catch (error) {
+    console.error('❌ Error al actualizar inscripción:', error);
+    res.status(500).json({ error: 'Error al actualizar inscripción', detalle: error.message });
+  }
+});
 
 module.exports = router;
