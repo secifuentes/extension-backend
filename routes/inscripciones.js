@@ -367,6 +367,40 @@ router.put('/pagos-mensuales/:id/confirmar', async (req, res) => {
   }
 });
 
+// GET - Consultar estado de inscripción por tipo de documento y número
+router.get('/estado/:tipo/:documento', async (req, res) => {
+  const { tipo, documento } = req.params;
+
+  try {
+    const inscripciones = await Inscripcion.find({ tipoDoc: tipo, documento });
+
+    if (!inscripciones || inscripciones.length === 0) {
+      return res.status(404).json({ tipo: 'no-encontrado' });
+    }
+
+    // Agrupar la info básica + cursos relacionados
+    const estudiante = {
+      nombres: inscripciones[0].nombres,
+      apellidos: inscripciones[0].apellidos,
+      correo: inscripciones[0].correo,
+      cursos: inscripciones.map((i) => ({
+        _id: i._id,
+        cursoNombre: i.cursoNombre,
+        formaPago: i.formaPago,
+        pagoConfirmado: i.pagoConfirmado,
+        valorPagado: i.valorPagado,
+        fechaInscripcion: i.fechaInscripcion,
+        esEstudiante: i.esEstudiante,
+        pagosMensuales: i.pagosMensuales || [],
+      })),
+    };
+
+    res.json(estudiante);
+  } catch (error) {
+    console.error('❌ Error en /estado:', error);
+    res.status(500).json({ tipo: 'error', detalle: error.message });
+  }
+});
 
 
 module.exports = router;
