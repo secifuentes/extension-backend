@@ -371,19 +371,36 @@ router.put('/pagos-mensuales/:id/confirmar', async (req, res) => {
 router.get('/estado/:tipo/:documento', async (req, res) => {
   const { tipo, documento } = req.params;
 
-  try {
-    const inscripciones = await Inscripcion.find({ tipoDoc: tipo, documento });
+  console.log('🔍 Consulta recibida:', { tipo, documento });
 
-    if (!inscripciones || inscripciones.length === 0) {
+  try {
+    const inscripciones = await Inscripcion.find();
+
+    // Mostrar el primero como ejemplo
+    if (inscripciones.length > 0) {
+      console.log('📄 Ejemplo:', {
+        tipoDoc: inscripciones[0].tipoDoc,
+        documento: inscripciones[0].documento,
+      });
+    } else {
+      console.log('📭 No hay inscripciones en la BD');
+    }
+
+    const coincidencias = inscripciones.filter(i =>
+      i.tipoDoc === tipo && i.documento === documento
+    );
+
+    console.log('✅ Coincidencias:', coincidencias.length);
+
+    if (coincidencias.length === 0) {
       return res.status(404).json({ tipo: 'no-encontrado' });
     }
 
-    // Agrupar la info básica + cursos relacionados
     const estudiante = {
-      nombres: inscripciones[0].nombres,
-      apellidos: inscripciones[0].apellidos,
-      correo: inscripciones[0].correo,
-      cursos: inscripciones.map((i) => ({
+      nombres: coincidencias[0].nombres,
+      apellidos: coincidencias[0].apellidos,
+      correo: coincidencias[0].correo,
+      cursos: coincidencias.map((i) => ({
         _id: i._id,
         cursoNombre: i.cursoNombre,
         formaPago: i.formaPago,
