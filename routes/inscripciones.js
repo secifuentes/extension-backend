@@ -379,7 +379,7 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
     // Mostrar el primero como ejemplo
     if (inscripciones.length > 0) {
       console.log('📄 Ejemplo:', {
-        tipoDoc: inscripciones[0].tipoDoc,
+        tipoDocumento: inscripciones[0].tipoDocumento,
         documento: inscripciones[0].documento,
       });
     } else {
@@ -387,7 +387,7 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
     }
 
     const coincidencias = inscripciones.filter(i =>
-      i.tipoDoc === tipo && i.documento === documento
+      i.tipoDocumento === tipo && i.documento === documento
     );
 
     console.log('✅ Coincidencias:', coincidencias.length);
