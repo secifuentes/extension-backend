@@ -362,13 +362,6 @@ if (index !== -1) {
   });
 }
 
-    // Agregar nuevo pago mensual
-    inscripcion.pagosMensuales.push({
-      mes,
-      comprobante, // Usa 'comprobante' directamente, no 'comprobanteBase64'
-      estado: 'pendiente'
-    });
-
     await inscripcion.save();
 
     res.json({ mensaje: `✅ Comprobante del mes ${mes} guardado correctamente.` });
