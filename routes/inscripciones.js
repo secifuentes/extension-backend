@@ -279,17 +279,27 @@ await inscripcion.save();
 });
 
 // ✅ Ruta para rechazar comprobante y enviar correo de rechazo
+// ✅ Ruta para rechazar comprobante y enviar correo de rechazo
 router.put('/rechazar-comprobante/:id', async (req, res) => {
   try {
+    const { mes } = req.body;
     const inscripcion = await Inscripcion.findById(req.params.id);
 
     if (!inscripcion) {
       return res.status(404).json({ error: 'Inscripción no encontrada' });
     }
 
-    enviarCorreoRechazo(inscripcion);
+    // 🛠 Buscar y actualizar el estado del pago mensual
+    const pago = inscripcion.pagosMensuales.find(p => p.mes === mes);
+    if (pago) {
+      pago.estado = 'rechazado';
+      await inscripcion.save();
+    }
 
-    res.json({ mensaje: '📨 Correo de rechazo enviado al estudiante' });
+    // 📩 Enviar correo de rechazo con referencia al mes
+    enviarCorreoRechazo(inscripcion, mes);
+
+    res.json({ mensaje: '📨 Comprobante rechazado y correo enviado' });
   } catch (error) {
     console.error('❌ Error al rechazar comprobante:', error);
     res.status(500).json({ error: 'Error al procesar el rechazo' });
