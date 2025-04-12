@@ -277,6 +277,24 @@ await inscripcion.save();
   }
 });
 
+// ✅ Ruta para rechazar comprobante y enviar correo de rechazo
+router.put('/rechazar-comprobante/:id', async (req, res) => {
+  try {
+    const inscripcion = await Inscripcion.findById(req.params.id);
+
+    if (!inscripcion) {
+      return res.status(404).json({ error: 'Inscripción no encontrada' });
+    }
+
+    enviarCorreoRechazo(inscripcion);
+
+    res.json({ mensaje: '📨 Correo de rechazo enviado al estudiante' });
+  } catch (error) {
+    console.error('❌ Error al rechazar comprobante:', error);
+    res.status(500).json({ error: 'Error al procesar el rechazo' });
+  }
+});
+
 router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
@@ -441,5 +459,77 @@ router.put('/:id', async (req, res) => {
     res.status(500).json({ error: 'Error al actualizar inscripción', detalle: error.message });
   }
 });
+
+// Función para enviar correo cuando el comprobante fue rechazado
+const enviarCorreoRechazo = (inscripcion) => {
+  const esImagen = inscripcion.comprobante?.startsWith('iVBOR') || inscripcion.comprobante?.startsWith('/9j/');
+  const tipoDocAbreviado = mapearTipoDoc(inscripcion.tipoDocumento); // Lo creamos abajo
+  const linkEstado = `https://www.extensionlapresentacion.com/estado-inscripcion?tipoDoc=${tipoDocAbreviado}&documento=${inscripcion.documento}`;
+
+  const comprobanteHTML = esImagen
+    ? `<img src="data:image/png;base64,${inscripcion.comprobante}" alt="Comprobante enviado" style="max-width:100%;border-radius:10px;margin:20px auto;border:1px solid #ccc;" />`
+    : `<a href="data:application/pdf;base64,${inscripcion.comprobante}" target="_blank" style="display:inline-block;padding:10px 20px;background:#1a428a;color:white;text-decoration:none;border-radius:8px;">📎 Ver comprobante PDF</a>`;
+
+  const mailOptions = {
+    from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
+    to: inscripcion.correo,
+    subject: `${inscripcion.nombres}, tu comprobante fue rechazado. ¡Actualízalo!`,
+    html: `
+      <div style="font-family: 'Segoe UI', sans-serif; background-color: #f4f6f9; padding: 30px;">
+        <div style="max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
+          
+          <div style="text-align:center;">
+            <img src="https://www.extensionlapresentacion.com/logo_extensionce.jpg" style="max-width:180px;" />
+          </div>
+
+          <h2 style="color:#c00000;text-align:center;margin:25px 0;">Tu comprobante fue rechazado ❌</h2>
+          
+          <p style="font-size:16px;line-height:1.6;color:#333;">
+            Hola <strong>${inscripcion.nombres}</strong>, hemos revisado tu comprobante de pago para el curso <strong>${inscripcion.cursoNombre}</strong> y encontramos que no es válido.
+          </p>
+
+          <p style="font-size:16px;line-height:1.6;color:#333;">
+            Este fue el comprobante que enviaste:
+          </p>
+
+          ${comprobanteHTML}
+
+          <div style="margin:30px 0;text-align:center;">
+            <a href="${linkEstado}" target="_blank" style="display:inline-block;padding:12px 25px;background-color:#1a428a;color:#fff;border-radius:40px;text-decoration:none;font-size:16px;">
+              Actualizar comprobante
+            </a>
+          </div>
+
+          <p style="text-align:center;font-size:15px;color:#c00000;">
+            ⚠️ Si no lo actualizas en un plazo de <strong>48 horas</strong>, tu inscripción será eliminada.
+          </p>
+
+          <h3 style="text-align:center;color:#21145F;margin-top:40px;">EQUIPO DE EXTENSIÓN LA PRESENTACIÓN</h3>
+          <p style="text-align:center;font-size:13px;color:#aaa;">Girardota – Antioquia</p>
+        </div>
+      </div>
+    `
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('❌ Error al enviar correo de rechazo:', error);
+    } else {
+      console.log('📨 Correo de rechazo enviado:', info.response);
+    }
+  });
+};
+
+// Función para abreviar tipo de documento
+const mapearTipoDoc = (completo) => {
+  const map = {
+    'Registro Civil': 'rc',
+    'Tarjeta de Identidad': 'ti',
+    'Cédula de Ciudadanía': 'cc',
+    'Cédula de Extranjería': 'ce',
+    'Pasaporte': 'pa',
+  };
+  return map[completo] || 'cc'; // por defecto 'cc'
+};
 
 module.exports = router;
