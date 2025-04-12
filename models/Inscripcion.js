@@ -11,11 +11,12 @@ const PagoMensualSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  estado: {
+  comprobante: String,
+  comprobanteEstado: {
     type: String,
-    enum: ['pendiente', 'verificado'],
-    default: 'pendiente'
-  }
+    enum: ['pendiente', 'verificado', 'rechazado'],
+    default: 'pendiente',
+},
 }, { _id: false }); // No necesitamos _id en subdocumentos
 
 // Esquema de inscripción completo
@@ -36,6 +37,11 @@ const InscripcionSchema = new mongoose.Schema({
   valorPagado: Number,
   pagoConfirmado: { type: Boolean, default: false },
   comprobante: String, // comprobante del primer pago o curso completo
+  comprobanteEstado: {
+    type: String,
+    enum: ['pendiente', 'verificado', 'rechazado'],
+    default: 'pendiente',
+  },
 
   acudiente: String,
   telefonoAcudiente: String,

@@ -289,14 +289,25 @@ router.put('/rechazar-comprobante/:id', async (req, res) => {
       return res.status(404).json({ error: 'Inscripción no encontrada' });
     }
 
-    // 🛠 Buscar y actualizar el estado del pago mensual
-    const pago = inscripcion.pagosMensuales.find(p => p.mes === mes);
-    if (pago) {
-      pago.estado = 'rechazado';
-      await inscripcion.save();
+    if (mes) {
+      // Rechazo mensual
+      const pago = inscripcion.pagosMensuales.find(p => p.mes === mes);
+      if (pago) {
+        pago.estado = 'rechazado';
+      }
+
+      if (!mes) {
+        // Rechazo del comprobante general
+        inscripcion.comprobanteEstado = 'rechazado';
+        await inscripcion.save();
+      }
+
+    } else {
+      // Rechazo del comprobante general
+      inscripcion.comprobanteEstado = 'rechazado';
     }
 
-    // 📩 Enviar correo de rechazo con referencia al mes
+    await inscripcion.save();
     enviarCorreoRechazo(inscripcion, mes);
 
     res.json({ mensaje: '📨 Comprobante rechazado y correo enviado' });
@@ -325,18 +336,10 @@ router.delete('/:id', async (req, res) => {
 // ✅ PUT - Guardar comprobantes de pago mensual (mes 2 o mes 3)
 router.put('/pagos-mensuales/:id', async (req, res) => {
   const { id } = req.params;
-  const { mes, comprobante } = req.body; // Usa 'comprobante' directamente
-  if (!mes || !comprobante) {
-    console.error('🚨 Datos faltantes:', { mes, comprobante });
-    return res.status(400).json({ error: 'Faltan datos: mes o comprobante' });
-  }
+  const { mes, comprobante } = req.body;
 
-  console.log("🛬 Datos recibidos:", req.body);
-  console.log("🔍 DEBUG - mes:", mes, "comprobante:", comprobante?.slice(0, 30));
-
-  // Validar que el mes sea 2 o 3 (puedes ampliar en el futuro si hay más)
-  if (![2, 3].includes(mes)) {
-    return res.status(400).json({ error: 'Mes inválido (solo se permite 2 o 3)' });
+  if (!comprobante) {
+    return res.status(400).json({ error: 'Falta el comprobante' });
   }
 
   try {
@@ -345,28 +348,33 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
       return res.status(404).json({ error: 'Inscripción no encontrada' });
     }
 
-    // Verificar si ya hay comprobante para ese mes
-    // ✅ Si ya existe uno para ese mes, lo reemplazamos
-const index = inscripcion.pagosMensuales.findIndex(p => p.mes === mes);
-if (index !== -1) {
-  inscripcion.pagosMensuales[index] = {
-    mes,
-    comprobante,
-    estado: 'pendiente'
-  };
-} else {
-  inscripcion.pagosMensuales.push({
-    mes,
-    comprobante,
-    estado: 'pendiente'
-  });
-}
+    if (mes) {
+      // 🔁 Mensual
+      const index = inscripcion.pagosMensuales.findIndex(p => p.mes === mes);
+      if (index !== -1) {
+        inscripcion.pagosMensuales[index] = {
+          mes,
+          comprobante,
+          estado: 'pendiente',
+        };
+      } else {
+        inscripcion.pagosMensuales.push({
+          mes,
+          comprobante,
+          estado: 'pendiente',
+        });
+      }
+    } else {
+      // ✅ Comprobante general (curso completo)
+      inscripcion.comprobante = comprobante;
+      inscripcion.comprobanteEstado = 'pendiente';
+    }
 
     await inscripcion.save();
 
-    res.json({ mensaje: `✅ Comprobante del mes ${mes} guardado correctamente.` });
+    res.json({ mensaje: `✅ Comprobante ${mes ? `del mes ${mes}` : 'actualizado'} correctamente.` });
   } catch (error) {
-    console.error('❌ Error al guardar comprobante mensual:', error);
+    console.error('❌ Error al guardar comprobante:', error);
     res.status(500).json({ error: 'Error al guardar comprobante', detalle: error.message });
   }
 });
@@ -455,14 +463,26 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
 // ✅ PUT - Editar información del inscrito
 router.put('/:id', async (req, res) => {
   const { id } = req.params;
-  const { nombres, apellidos, correo, telefono } = req.body;
+  const {
+    nombres,
+    apellidos,
+    correo,
+    telefono,
+    comprobante,           // 👈 esto es nuevo
+    comprobanteEstado      // 👈 esto también
+  } = req.body;
 
   try {
-    const actualizado = await Inscripcion.findByIdAndUpdate(
-      id,
-      { nombres, apellidos, correo, telefono },
-      { new: true }
-    );
+    const actualizacion = {};
+
+    if (nombres) actualizacion.nombres = nombres;
+    if (apellidos) actualizacion.apellidos = apellidos;
+    if (correo) actualizacion.correo = correo;
+    if (telefono) actualizacion.telefono = telefono;
+    if (comprobante) actualizacion.comprobante = comprobante;
+    if (comprobanteEstado) actualizacion.comprobanteEstado = comprobanteEstado;
+
+    const actualizado = await Inscripcion.findByIdAndUpdate(id, actualizacion, { new: true });
 
     if (!actualizado) {
       return res.status(404).json({ mensaje: 'Inscripción no encontrada' });
