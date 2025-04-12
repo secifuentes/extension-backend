@@ -508,7 +508,10 @@ const enviarCorreoRechazo = (inscripcion, mes = null) => {
           </div>
 
           <p style="text-align:center;font-size:15px;color:#c00000;">
-            ⚠️ Es muy importante que lo hagas dentro de las próximas 48 horas.
+          ⚠️ Es muy importante que lo hagas dentro de las próximas 48 horas.
+          </p>
+          <p style="text-align:center;font-size:15px;color:#c00000;">
+          De lo contrario, tu inscripción será eliminada automáticamente y tendrás que empezar el proceso desde cero.
           </p>
           <p style="text-align:center;font-size:15px;color:#555;">
             ¿Tienes dudas? Escríbenos a 
