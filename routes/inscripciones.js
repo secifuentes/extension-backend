@@ -464,7 +464,7 @@ router.put('/:id', async (req, res) => {
 // Función para enviar correo cuando el comprobante fue rechazado
 const enviarCorreoRechazo = (inscripcion, mes = null) => {
   const tipoDocAbreviado = mapearTipoDoc(inscripcion.tipoDocumento);
-  const linkEstado = `https://www.extensionlapresentacion.com/estado-inscripcion?tipoDoc=${tipoDocAbreviado}&documento=${inscripcion.documento}`;
+  const linkEstado = `https://www.extensionlapresentacion.com/estado?tipo=${tipoDocAbreviado}&documento=${inscripcion.documento}`;
 
   const asuntoCorreo = mes 
     ? `${inscripcion.nombres.toUpperCase()}, TU COMPROBANTE DEL MES ${mes} FUE RECHAZADO — ¡ACTUALÍZALO!`
@@ -484,20 +484,17 @@ const enviarCorreoRechazo = (inscripcion, mes = null) => {
           </div>
 
           <!-- Encabezado -->
-          <h2 style="text-align:center;color:#c00000;font-size:26px;margin-bottom:20px;">
-            ¡Hola <span style="color:#c00000;">${inscripcion.nombres}</span>!
-          </h2>
-          <p style="text-align:center;font-size:18px;color:#c00000;margin-bottom:30px;">
-            Tu comprobante fue rechazado ❌
-          </p>
+          <h2 style="text-align:center;color:#c00000;font-size:24px;margin-bottom:15px;">¡Hola ${inscripcion.nombres.toUpperCase()}!</h2>
+          <p style="text-align:center;font-size:18px;color:#c00000;margin-bottom:25px;">Tu comprobante fue rechazado ❌</p>
 
           <!-- Cuerpo -->
-          <p style="font-size:16px;line-height:1.7;color:#555;">
+          <p style="font-size:16px;color:#555;line-height:1.6;">
             Gracias por inscribirte en el curso <strong style="color:#1a428a;">“${inscripcion.cursoNombre}”</strong>. 
             Hemos revisado el comprobante de pago que enviaste y, lamentablemente, <strong>no pudimos validarlo</strong>.
           </p>
-          <p style="font-size:16px;line-height:1.7;color:#555;">
-            Solo necesitas <strong>actualizarlo</strong> desde el siguiente enlace:
+
+          <p style="font-size:16px;color:#555;line-height:1.6;">
+            Solo necesitas <strong>actualizarlo</strong> desde el siguiente botón:
           </p>
 
           <!-- Botón -->
@@ -507,29 +504,21 @@ const enviarCorreoRechazo = (inscripcion, mes = null) => {
             </a>
           </div>
 
+          <!-- Recordatorio -->
           <p style="text-align:center;font-size:15px;color:#c00000;">
-          ⚠️ Es muy importante que lo hagas dentro de las próximas 48 horas.
+            ⚠️ Es muy importante que lo hagas dentro de las próximas <strong>48 horas</strong>, de lo contrario tu inscripción será eliminada y deberás comenzar de nuevo.
           </p>
-          <p style="text-align:center;font-size:15px;color:#c00000;">
-          De lo contrario, tu inscripción será eliminada automáticamente y tendrás que empezar el proceso desde cero.
-          </p>
-          <p style="text-align:center;font-size:15px;color:#555;">
+
+          <!-- Cierre -->
+          <p style="text-align:center;font-size:15px;color:#555;margin:30px 0 0;">
             ¿Tienes dudas? Escríbenos a 
             <a href="mailto:extension@lapresentaciongirardota.edu.co" style="color:#1a428a;font-weight:bold;">
               extension@lapresentaciongirardota.edu.co
             </a>
           </p>
 
-          <!-- Cierre -->
-          <p style="text-align:center;font-size:15px;color:#555;margin-top:40px;">
-            Gracias por hacer parte de esta experiencia. 💙
-          </p>
-          <p style="text-align:center;font-size:15px;color:#555;font-style:italic;margin-top:10px;">
-            <strong>“Más que cursos, experiencias que inspiran.”</strong>
-          </p>
-
           <!-- Firma -->
-          <h3 style="text-align:center;color:#21145F;margin-top:30px;font-size:20px;letter-spacing:1px;">
+          <h3 style="text-align:center;color:#21145F;margin-top:40px;font-size:20px;letter-spacing:1px;">
             EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
           </h3>
           <p style="text-align:center;font-size:13px;color:#aaa;">Girardota – Antioquia</p>
@@ -537,14 +526,13 @@ const enviarCorreoRechazo = (inscripcion, mes = null) => {
           <!-- Redes Sociales -->
           <div style="text-align:center;margin-top:30px;">
             <p style="font-size:15px;font-weight:bold;color:#444;">Síguenos en nuestras redes sociales:</p>
-            <p style="font-size:14px;color:#888;line-height:2;margin:10px 0;word-break:break-word;">
+            <p style="font-size:14px;color:#888;line-height:2;margin:10px 0;">
               <a href="https://instagram.com/presentaciongirardota" style="color:#d4a017;text-decoration:none;">Instagram</a> |
               <a href="https://www.tiktok.com/@presentaciongirardota" style="color:#d4a017;text-decoration:none;">TikTok</a> |
               <a href="https://www.facebook.com/presentaciondegirardota" style="color:#d4a017;text-decoration:none;">Facebook</a> |
               <a href="https://www.youtube.com/@Presentaciongirardota" style="color:#d4a017;text-decoration:none;">YouTube</a>
             </p>
           </div>
-
         </div>
       </div>
     `
