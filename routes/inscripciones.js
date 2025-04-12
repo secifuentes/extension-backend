@@ -3,6 +3,7 @@ const router = express.Router();
 const Inscripcion = require('../models/Inscripcion');
 const nodemailer = require('nodemailer');
 
+
 // Configuración de Nodemailer
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -461,104 +462,79 @@ router.put('/:id', async (req, res) => {
 });
 
 // Función para enviar correo cuando el comprobante fue rechazado
-const enviarCorreoRechazo = (inscripcion) => {
+const enviarCorreoRechazo = (inscripcion, mes = null) => {
   const tipoDocAbreviado = mapearTipoDoc(inscripcion.tipoDocumento);
   const linkEstado = `https://www.extensionlapresentacion.com/estado-inscripcion?tipoDoc=${tipoDocAbreviado}&documento=${inscripcion.documento}`;
 
-  const tieneComprobante = inscripcion.comprobante && inscripcion.comprobante.trim().length > 0;
+  let comprobanteBase64 = '';
+  if (mes) {
+    const pago = inscripcion.pagosMensuales?.find(p => p.mes === mes);
+    comprobanteBase64 = pago?.comprobante || '';
+  } else {
+    comprobanteBase64 = inscripcion.comprobante || '';
+  }
 
-  const comprobanteHTML = tieneComprobante ? `
+  const comprobanteHTML = comprobanteBase64.startsWith('JVBER') || comprobanteBase64.startsWith('data:application/pdf') ? `
     <p style="text-align:center;color:#666;font-size:14px;margin-bottom:10px;">
       Este fue el comprobante enviado:
     </p>
     <div style="text-align:center;margin-top:10px;">
-      <a href="data:application/pdf;base64,${inscripcion.comprobante}" 
-         target="_blank" 
-         style="display:inline-block;padding:12px 20px;background:#1a428a;color:#fff;text-decoration:none;border-radius:8px;font-size:14px;">
-        📎 Ver comprobante enviado
-      </a>
+      <iframe 
+        src="data:application/pdf;base64,${comprobanteBase64}" 
+        style="width:100%;max-width:500px;height:500px;border:none;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.1);">
+      </iframe>
+    </div>
+  ` : comprobanteBase64 ? `
+    <p style="text-align:center;color:#666;font-size:14px;margin-bottom:10px;">
+      Este fue el comprobante enviado:
+    </p>
+    <div style="text-align:center;margin-top:10px;">
+      <img 
+        src="data:image/jpeg;base64,${comprobanteBase64}" 
+        style="max-width:100%;border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.1);" />
     </div>
   ` : '';
+
+  const asuntoCorreo = mes 
+    ? `${inscripcion.nombres.toUpperCase()}, TU COMPROBANTE DEL MES ${mes} FUE RECHAZADO — ¡ACTUALÍZALO!`
+    : `${inscripcion.nombres.toUpperCase()}, TU COMPROBANTE FUE RECHAZADO — ¡ACTUALÍZALO!`;
 
   const mailOptions = {
     from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
     to: inscripcion.correo,
-    subject: `${inscripcion.nombres.toUpperCase()}, TU COMPROBANTE FUE RECHAZADO — ¡ACTUALÍZALO!`,
+    subject: asuntoCorreo,
     html: `
-      <div style="margin:0;padding:0;background-color:#f4f6f9;font-family:'Segoe UI',sans-serif;">
-        <div style="max-width:600px;width:100%;margin:0 auto;background:#ffffff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);padding:30px;box-sizing:border-box;">
+      <div style="background-color:#f4f6f9;font-family:'Segoe UI',sans-serif;padding:30px;">
+        <div style="max-width:600px;margin:auto;background:#fff;border-radius:12px;padding:30px;">
+          <h2 style="text-align:center;color:#c00000;">¡Hola ${inscripcion.nombres.toUpperCase()}!</h2>
+          <p style="text-align:center;font-size:18px;color:#c00000;">Tu comprobante fue rechazado ❌</p>
 
-          <!-- Logo -->
-          <div style="text-align:center;margin-bottom:20px;">
-            <img src="https://www.extensionlapresentacion.com/logo_extensionce.jpg" alt="Logo Extensión La Presentación" style="max-width:180px;" />
-          </div>
-
-          <!-- Encabezado -->
-          <h2 style="text-align:center;color:#c00000;font-size:26px;margin-bottom:20px;">
-            ¡Hola <span style="color:#21145F;">${inscripcion.nombres.toUpperCase()}</span>!
-          </h2>
-          <p style="text-align:center;font-size:18px;color:#c00000;margin-bottom:30px;">
-            Tu comprobante fue rechazado ❌
-          </p>
-
-          <!-- Mensaje -->
-          <p style="font-size:16px;line-height:1.7;color:#555;">
+          <p style="font-size:16px;color:#555;">
             Gracias por inscribirte en el curso <strong style="color:#1a428a;">“${inscripcion.cursoNombre}”</strong>. 
             Hemos revisado el comprobante de pago que enviaste y, lamentablemente, <strong>no pudimos validarlo</strong>.
           </p>
 
-          <p style="font-size:16px;line-height:1.7;color:#555;">
-            No te preocupes, esto puede pasar. Solo necesitas <strong>actualizarlo</strong> desde el siguiente enlace:
+          <p style="font-size:16px;color:#555;">
+            Solo necesitas <strong>actualizarlo</strong> desde el siguiente enlace:
           </p>
 
-          <!-- Botón principal -->
           <div style="text-align:center;margin:30px 0;">
-            <a href="${linkEstado}" target="_blank" style="display:inline-block;padding:14px 30px;background-color:#1a428a;color:#fff;text-decoration:none;border-radius:50px;font-size:16px;">
+            <a href="${linkEstado}" target="_blank" style="padding:14px 30px;background-color:#1a428a;color:#fff;text-decoration:none;border-radius:50px;font-size:16px;">
               Actualizar comprobante
             </a>
           </div>
 
-          <!-- Comprobante (solo si existe) -->
           ${comprobanteHTML}
 
-          <!-- Advertencia -->
-          <div style="margin:30px 0;text-align:center;">
-            <p style="font-size:15px;color:#c00000;line-height:1.6;">
-              ⚠️ <strong>Es muy importante que lo hagas dentro de las próximas 48 horas.</strong><br/>
-              De lo contrario, tu inscripción será <strong>eliminada automáticamente del sistema</strong> y deberás <strong>realizar nuevamente el proceso desde cero</strong>.
-            </p>
-          </div>
-
-          <!-- Contacto -->
-          <p style="text-align:center;font-size:15px;color:#555;margin-top:30px;">
-            ¿Tienes dudas? Escríbenos a <a href="mailto:extension@lapresentaciongirardota.edu.co" style="color:#1a428a;text-decoration:none;font-weight:bold;">
+          <p style="text-align:center;font-size:15px;color:#c00000;">
+            ⚠️ Es muy importante que lo hagas dentro de las próximas 48 horas.
+          </p>
+          <p style="text-align:center;font-size:15px;color:#555;">
+            ¿Tienes dudas? Escríbenos a 
+            <a href="mailto:extension@lapresentaciongirardota.edu.co" style="color:#1a428a;font-weight:bold;">
               extension@lapresentaciongirardota.edu.co
             </a>
           </p>
-
-          <!-- Firma -->
-          <p style="text-align:center;font-size:15px;color:#555;margin-top:20px;">
-            Gracias por tu interés en hacer parte de esta experiencia formativa. 💙
-          </p>
-          <p style="text-align:center;font-size:15px;color:#555;font-style:italic;margin-top:20px;">
-            <strong>“Más que cursos, experiencias que inspiran.”</strong>
-          </p>
-
-          <h3 style="text-align:center;color:#21145F;margin-top:40px;font-size:20px;letter-spacing:1px;">
-            EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
-          </h3>
-          <p style="text-align:center;font-size:13px;color:#aaa;">Girardota – Antioquia</p>
-
-          <!-- Redes Sociales -->
-          <div style="text-align:center;margin-top:30px;">
-            <p style="font-size:15px;font-weight:bold;color:#444;">Síguenos en nuestras redes sociales:</p>
-            <p style="font-size:14px;color:#888;line-height:2;margin:10px 0;word-break:break-word;">
-              <a href="https://instagram.com/presentaciongirardota" style="color:#d4a017;text-decoration:none;">Instagram</a> |
-              <a href="https://www.tiktok.com/@presentaciongirardota" style="color:#d4a017;text-decoration:none;">TikTok</a> |
-              <a href="https://www.facebook.com/presentaciondegirardota" style="color:#d4a017;text-decoration:none;">Facebook</a> |
-              <a href="https://www.youtube.com/@Presentaciongirardota" style="color:#d4a017;text-decoration:none;">YouTube</a>
-            </p>
-          </div>
         </div>
       </div>
     `
@@ -584,5 +560,42 @@ const mapearTipoDoc = (completo) => {
   };
   return map[completo] || 'cc'; // por defecto 'cc'
 };
+
+
+// ✅ Ruta pública para visualizar el comprobante en una ventana
+router.get('/ver-comprobante/:id/:mes', async (req, res) => {
+  const { id, mes } = req.params;
+
+  try {
+    const inscripcion = await Inscripcion.findById(id);
+    if (!inscripcion) {
+      return res.status(404).send('Inscripción no encontrada');
+    }
+
+    const pago = inscripcion.pagosMensuales.find(p => p.mes == mes);
+
+    if (!pago || !pago.comprobante) {
+      return res.status(404).send('Comprobante no encontrado');
+    }
+
+    const html = `
+      <html>
+        <head>
+          <title>Comprobante del Mes ${mes}</title>
+        </head>
+        <body style="margin:0;padding:0;">
+          <iframe 
+            src="data:application/pdf;base64,${pago.comprobante}" 
+            style="width:100vw;height:100vh;border:none;">
+          </iframe>
+        </body>
+      </html>
+    `;
+    res.send(html);
+  } catch (error) {
+    console.error('❌ Error al mostrar comprobante:', error);
+    res.status(500).send('Error al mostrar comprobante');
+  }
+});
 
 module.exports = router;
