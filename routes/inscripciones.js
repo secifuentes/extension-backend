@@ -465,15 +465,20 @@ const enviarCorreoRechazo = (inscripcion) => {
   const tipoDocAbreviado = mapearTipoDoc(inscripcion.tipoDocumento);
   const linkEstado = `https://www.extensionlapresentacion.com/estado-inscripcion?tipoDoc=${tipoDocAbreviado}&documento=${inscripcion.documento}`;
 
-  const comprobanteHTML = `
+  const tieneComprobante = inscripcion.comprobante && inscripcion.comprobante.trim().length > 0;
+
+  const comprobanteHTML = tieneComprobante ? `
+    <p style="text-align:center;color:#666;font-size:14px;margin-bottom:10px;">
+      Este fue el comprobante enviado:
+    </p>
     <div style="text-align:center;margin-top:10px;">
-      <a href="data:application/octet-stream;base64,${inscripcion.comprobante}" 
+      <a href="data:application/pdf;base64,${inscripcion.comprobante}" 
          target="_blank" 
          style="display:inline-block;padding:12px 20px;background:#1a428a;color:#fff;text-decoration:none;border-radius:8px;font-size:14px;">
         📎 Ver comprobante enviado
       </a>
     </div>
-  `;
+  ` : '';
 
   const mailOptions = {
     from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
@@ -513,10 +518,7 @@ const enviarCorreoRechazo = (inscripcion) => {
             </a>
           </div>
 
-          <!-- Comprobante -->
-          <p style="text-align:center;color:#666;font-size:14px;margin-bottom:10px;">
-            Este fue el comprobante enviado:
-          </p>
+          <!-- Comprobante (solo si existe) -->
           ${comprobanteHTML}
 
           <!-- Advertencia -->
