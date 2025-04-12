@@ -464,7 +464,7 @@ router.put('/:id', async (req, res) => {
 // Función para enviar correo cuando el comprobante fue rechazado
 const enviarCorreoRechazo = (inscripcion, mes = null) => {
   const tipoDocAbreviado = mapearTipoDoc(inscripcion.tipoDocumento);
-  const linkEstado = `https://www.extensionlapresentacion.com/estado?tipo=${tipoDocAbreviado}&documento=${inscripcion.documento}`;
+  const linkEstado = `https://www.extensionlapresentacion.com/estado-inscripcion?tipo=${tipoDocAbreviado}&doc=${inscripcion.documento}`;
 
   const asuntoCorreo = mes 
     ? `${inscripcion.nombres.toUpperCase()}, TU COMPROBANTE DEL MES ${mes} FUE RECHAZADO — ¡ACTUALÍZALO!`
