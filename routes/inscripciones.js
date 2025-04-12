@@ -462,10 +462,9 @@ router.put('/:id', async (req, res) => {
 
 // Función para enviar correo cuando el comprobante fue rechazado
 const enviarCorreoRechazo = (inscripcion) => {
-  const esImagen = inscripcion.comprobante?.startsWith('iVBOR') || inscripcion.comprobante?.startsWith('/9j/');
-  const tipoDocAbreviado = mapearTipoDoc(inscripcion.tipoDocumento); // Lo creamos abajo
+  const tipoDocAbreviado = mapearTipoDoc(inscripcion.tipoDocumento);
   const linkEstado = `https://www.extensionlapresentacion.com/estado-inscripcion?tipoDoc=${tipoDocAbreviado}&documento=${inscripcion.documento}`;
-
+  const esImagen = inscripcion.comprobante?.startsWith('iVBOR') || inscripcion.comprobante?.startsWith('/9j/');
   const comprobanteHTML = esImagen
     ? `<img src="data:image/png;base64,${inscripcion.comprobante}" alt="Comprobante enviado" style="max-width:100%;border-radius:10px;margin:20px auto;border:1px solid #ccc;" />`
     : `<a href="data:application/pdf;base64,${inscripcion.comprobante}" target="_blank" style="display:inline-block;padding:10px 20px;background:#1a428a;color:white;text-decoration:none;border-radius:8px;">📎 Ver comprobante PDF</a>`;
@@ -473,39 +472,76 @@ const enviarCorreoRechazo = (inscripcion) => {
   const mailOptions = {
     from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
     to: inscripcion.correo,
-    subject: `${inscripcion.nombres}, tu comprobante fue rechazado. ¡Actualízalo!`,
+    subject: `${inscripcion.nombres.toUpperCase()}, TU COMPROBANTE FUE RECHAZADO — ¡ACTUALÍZALO!`,
     html: `
-      <div style="font-family: 'Segoe UI', sans-serif; background-color: #f4f6f9; padding: 30px;">
-        <div style="max-width: 600px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 6px 18px rgba(0,0,0,0.06);">
-          
-          <div style="text-align:center;">
-            <img src="https://www.extensionlapresentacion.com/logo_extensionce.jpg" style="max-width:180px;" />
+      <div style="margin:0;padding:0;background-color:#f4f6f9;font-family:'Segoe UI',sans-serif;">
+        <div style="max-width:600px;width:100%;margin:0 auto;background:#ffffff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);padding:30px;box-sizing:border-box;">
+
+          <!-- Logo -->
+          <div style="text-align:center;margin-bottom:20px;">
+            <img src="https://www.extensionlapresentacion.com/logo_extensionce.jpg" alt="Logo Extensión La Presentación" style="max-width:180px;" />
           </div>
 
-          <h2 style="color:#c00000;text-align:center;margin:25px 0;">Tu comprobante fue rechazado ❌</h2>
-          
-          <p style="font-size:16px;line-height:1.6;color:#333;">
-            Hola <strong>${inscripcion.nombres}</strong>, hemos revisado tu comprobante de pago para el curso <strong>${inscripcion.cursoNombre}</strong> y encontramos que no es válido.
+          <!-- Encabezado -->
+          <h2 style="text-align:center;color:#c00000;font-size:26px;margin-bottom:20px;">
+            ¡Hola <span style="color:#21145F;">${inscripcion.nombres.toUpperCase()}</span>!
+          </h2>
+          <p style="text-align:center;font-size:18px;color:#c00000;margin-bottom:30px;">
+            Tu comprobante fue rechazado ❌
           </p>
 
-          <p style="font-size:16px;line-height:1.6;color:#333;">
-            Este fue el comprobante que enviaste:
+          <!-- Mensaje de alerta -->
+          <p style="font-size:16px;line-height:1.7;color:#555;">
+            Gracias por inscribirte en el curso <strong style="color:#1a428a;">“${inscripcion.cursoNombre}”</strong>.
+            Hemos revisado el comprobante de pago que enviaste y, lamentablemente, <strong>no pudimos validarlo</strong>.
           </p>
 
-          ${comprobanteHTML}
+          <p style="font-size:16px;line-height:1.7;color:#555;">
+            No te preocupes, esto puede pasar. Solo necesitas <strong>actualizarlo</strong> desde el siguiente enlace:
+          </p>
 
-          <div style="margin:30px 0;text-align:center;">
-            <a href="${linkEstado}" target="_blank" style="display:inline-block;padding:12px 25px;background-color:#1a428a;color:#fff;border-radius:40px;text-decoration:none;font-size:16px;">
+          <!-- Botón -->
+          <div style="text-align:center;margin:30px 0;">
+            <a href="${linkEstado}" target="_blank" style="display:inline-block;padding:14px 30px;background-color:#1a428a;color:#fff;text-decoration:none;border-radius:50px;font-size:16px;">
               Actualizar comprobante
             </a>
           </div>
 
-          <p style="text-align:center;font-size:15px;color:#c00000;">
-            ⚠️ Si no lo actualizas en un plazo de <strong>48 horas</strong>, tu inscripción será eliminada.
+          <!-- Comprobante actual -->
+          <p style="text-align:center;color:#666;font-size:14px;margin-bottom:10px;">Este fue el comprobante enviado:</p>
+          ${comprobanteHTML}
+
+          <!-- Advertencia -->
+          <div style="margin:30px 0;text-align:center;">
+            <p style="font-size:15px;color:#c00000;line-height:1.6;">
+              ⚠️ <strong>Es muy importante que lo hagas dentro de las próximas 48 horas.</strong><br/>
+              De lo contrario, tu inscripción será <strong>eliminada automáticamente del sistema</strong> y deberás <strong>realizar nuevamente el proceso desde cero</strong>.
+            </p>
+          </div>
+
+          <!-- Firma -->
+          <p style="text-align:center;font-size:15px;color:#555;margin:0;">
+            Gracias por tu interés en hacer parte de esta experiencia formativa. 💙
+          </p>
+          <p style="text-align:center;font-size:15px;color:#555;font-style:italic;margin-top:20px;">
+            <strong>“Más que cursos, experiencias que inspiran.”</strong>
           </p>
 
-          <h3 style="text-align:center;color:#21145F;margin-top:40px;">EQUIPO DE EXTENSIÓN LA PRESENTACIÓN</h3>
+          <h3 style="text-align:center;color:#21145F;margin-top:40px;font-size:20px;letter-spacing:1px;">
+            EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
+          </h3>
           <p style="text-align:center;font-size:13px;color:#aaa;">Girardota – Antioquia</p>
+
+          <!-- Redes Sociales -->
+          <div style="text-align:center;margin-top:30px;">
+            <p style="font-size:15px;font-weight:bold;color:#444;">Síguenos en nuestras redes sociales:</p>
+            <p style="font-size:14px;color:#888;line-height:2;margin:10px 0;word-break:break-word;">
+              <a href="https://instagram.com/presentaciongirardota" style="color:#d4a017;text-decoration:none;">Instagram</a> |
+              <a href="https://www.tiktok.com/@presentaciongirardota" style="color:#d4a017;text-decoration:none;">TikTok</a> |
+              <a href="https://www.facebook.com/presentaciondegirardota" style="color:#d4a017;text-decoration:none;">Facebook</a> |
+              <a href="https://www.youtube.com/@Presentaciongirardota" style="color:#d4a017;text-decoration:none;">YouTube</a>
+            </p>
+          </div>
         </div>
       </div>
     `
