@@ -464,10 +464,16 @@ router.put('/:id', async (req, res) => {
 const enviarCorreoRechazo = (inscripcion) => {
   const tipoDocAbreviado = mapearTipoDoc(inscripcion.tipoDocumento);
   const linkEstado = `https://www.extensionlapresentacion.com/estado-inscripcion?tipoDoc=${tipoDocAbreviado}&documento=${inscripcion.documento}`;
-  const esImagen = inscripcion.comprobante?.startsWith('iVBOR') || inscripcion.comprobante?.startsWith('/9j/');
-  const comprobanteHTML = esImagen
-    ? `<img src="data:image/png;base64,${inscripcion.comprobante}" alt="Comprobante enviado" style="max-width:100%;border-radius:10px;margin:20px auto;border:1px solid #ccc;" />`
-    : `<a href="data:application/pdf;base64,${inscripcion.comprobante}" target="_blank" style="display:inline-block;padding:10px 20px;background:#1a428a;color:white;text-decoration:none;border-radius:8px;">📎 Ver comprobante PDF</a>`;
+
+  const comprobanteHTML = `
+    <div style="text-align:center;margin-top:10px;">
+      <a href="data:application/octet-stream;base64,${inscripcion.comprobante}" 
+         target="_blank" 
+         style="display:inline-block;padding:12px 20px;background:#1a428a;color:#fff;text-decoration:none;border-radius:8px;font-size:14px;">
+        📎 Ver comprobante enviado
+      </a>
+    </div>
+  `;
 
   const mailOptions = {
     from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
@@ -490,9 +496,9 @@ const enviarCorreoRechazo = (inscripcion) => {
             Tu comprobante fue rechazado ❌
           </p>
 
-          <!-- Mensaje de alerta -->
+          <!-- Mensaje -->
           <p style="font-size:16px;line-height:1.7;color:#555;">
-            Gracias por inscribirte en el curso <strong style="color:#1a428a;">“${inscripcion.cursoNombre}”</strong>.
+            Gracias por inscribirte en el curso <strong style="color:#1a428a;">“${inscripcion.cursoNombre}”</strong>. 
             Hemos revisado el comprobante de pago que enviaste y, lamentablemente, <strong>no pudimos validarlo</strong>.
           </p>
 
@@ -500,15 +506,17 @@ const enviarCorreoRechazo = (inscripcion) => {
             No te preocupes, esto puede pasar. Solo necesitas <strong>actualizarlo</strong> desde el siguiente enlace:
           </p>
 
-          <!-- Botón -->
+          <!-- Botón principal -->
           <div style="text-align:center;margin:30px 0;">
             <a href="${linkEstado}" target="_blank" style="display:inline-block;padding:14px 30px;background-color:#1a428a;color:#fff;text-decoration:none;border-radius:50px;font-size:16px;">
               Actualizar comprobante
             </a>
           </div>
 
-          <!-- Comprobante actual -->
-          <p style="text-align:center;color:#666;font-size:14px;margin-bottom:10px;">Este fue el comprobante enviado:</p>
+          <!-- Comprobante -->
+          <p style="text-align:center;color:#666;font-size:14px;margin-bottom:10px;">
+            Este fue el comprobante enviado:
+          </p>
           ${comprobanteHTML}
 
           <!-- Advertencia -->
@@ -519,8 +527,15 @@ const enviarCorreoRechazo = (inscripcion) => {
             </p>
           </div>
 
+          <!-- Contacto -->
+          <p style="text-align:center;font-size:15px;color:#555;margin-top:30px;">
+            ¿Tienes dudas? Escríbenos a <a href="mailto:extension@lapresentaciongirardota.edu.co" style="color:#1a428a;text-decoration:none;font-weight:bold;">
+              extension@lapresentaciongirardota.edu.co
+            </a>
+          </p>
+
           <!-- Firma -->
-          <p style="text-align:center;font-size:15px;color:#555;margin:0;">
+          <p style="text-align:center;font-size:15px;color:#555;margin-top:20px;">
             Gracias por tu interés en hacer parte de esta experiencia formativa. 💙
           </p>
           <p style="text-align:center;font-size:15px;color:#555;font-style:italic;margin-top:20px;">
