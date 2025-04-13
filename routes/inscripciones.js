@@ -247,6 +247,7 @@ router.put('/confirmar-pago/:id', async (req, res) => {
     }
 
     inscripcion.pagoConfirmado = true;
+    inscripcion.comprobanteEstado = 'verificado'; // 👈 Agrega esto
 
 // ✅ Limpieza de pagosMensuales incompletos
 if (Array.isArray(inscripcion.pagosMensuales)) {
@@ -450,7 +451,7 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
         fechaInscripcion: i.fechaInscripcion,
         esEstudiante: i.esEstudiante,
         pagosMensuales: i.pagosMensuales || [],
-        comprobanteEstado: i.comprobanteEstado || 'pendiente', // 👈 AGREGA ESTA LÍNEA
+        comprobanteEstado: i.pagoConfirmado ? 'verificado' : (i.comprobanteEstado || 'pendiente'),
         comprobante: i.comprobante || null,                    // 👈 Y ESTA TAMBIÉN
       })),
     };
