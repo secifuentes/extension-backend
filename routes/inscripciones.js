@@ -412,7 +412,7 @@ router.put('/pagos-mensuales/:id/confirmar', async (req, res) => {
 });
 
 // GET - Consultar estado de inscripción por tipo de documento y número
-rrouter.get('/estado/:tipo/:documento', async (req, res) => {
+router.get('/estado/:tipo/:documento', async (req, res) => {
   const { tipo, documento } = req.params;
 
   console.log('🔍 Consulta recibida:', { tipo, documento });
