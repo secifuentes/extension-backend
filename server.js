@@ -11,6 +11,8 @@ const inscripcionesRoutes = require('./routes/inscripciones');
 const cursosRoutes = require('./routes/cursos'); // 👈 nueva línea
 const Inscripcion = require('./models/Inscripcion');
 const estudiantesRoutes = require('./routes/estudiantes');
+const cron = require('node-cron');
+const moment = require('moment-timezone');
 
 const app = express();
 
@@ -195,6 +197,35 @@ app.post('/api/confirmarPago', async (req, res) => {
 
 // Puerto del servidor
 const PORT = process.env.PORT || 5050;
+
+// 🕑 Tarea programada para correr todos los días a las 00:00 hora de Colombia (UTC-5)
+cron.schedule('0 0 * * *', async () => {
+  // Obtener la fecha y hora actual en Colombia
+  const hace48Horas = moment().tz('America/Bogota').subtract(48, 'hours').toDate();
+
+  try {
+    // Buscar todas las inscripciones con comprobantes rechazados que no hayan sido actualizadas en las últimas 48 horas
+    const inscripcionesAEliminar = await Inscripcion.find({
+      comprobanteEstado: 'rechazado',
+      updatedAt: { $lt: hace48Horas }, // Verifica si el comprobante fue rechazado hace más de 48 horas
+    });
+
+    if (inscripcionesAEliminar.length > 0) {
+      // Eliminar las inscripciones que cumplen con la condición
+      await Inscripcion.deleteMany({
+        _id: { $in: inscripcionesAEliminar.map(i => i._id) }
+      });
+
+      console.log(`✅ ${inscripcionesAEliminar.length} inscripciones eliminadas por vencimiento de plazo.`);
+    } else {
+      console.log('✅ No hay inscripciones para eliminar.');
+    }
+  } catch (error) {
+    console.error('❌ Error al eliminar inscripciones vencidas:', error);
+  }
+}, {
+  timezone: 'America/Bogota' // Configura la zona horaria de Colombia
+});
 
 app.listen(PORT, () => {
   const environment = process.env.NODE_ENV === 'production' ? 'Producción (Heroku)' : 'Desarrollo (Localhost)';
