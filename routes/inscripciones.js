@@ -419,7 +419,7 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
     // 👇 Consulta precisa
     const coincidencias = await Inscripcion.find({
       tipoDocumento: tipo,
-      documento: documento
+      documento: { $regex: `^${documento.trim()}$`, $options: 'i' } // busca exacto ignorando espacios
     });
 
     if (coincidencias.length === 0) {
