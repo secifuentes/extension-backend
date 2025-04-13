@@ -412,15 +412,20 @@ router.put('/pagos-mensuales/:id/confirmar', async (req, res) => {
 });
 
 // GET - Consultar estado de inscripción por tipo de documento y número
-router.get('/estado/:tipo/:documento', async (req, res) => {
+rrouter.get('/estado/:tipo/:documento', async (req, res) => {
   const { tipo, documento } = req.params;
 
+  console.log('🔍 Consulta recibida:', { tipo, documento });
+
   try {
-    // 👇 Consulta precisa
-    const coincidencias = await Inscripcion.find({
-      tipoDocumento: tipo,
-      documento: { $regex: `^${documento.trim()}$`, $options: 'i' } // busca exacto ignorando espacios
-    });
+    const inscripciones = await Inscripcion.find();
+
+    const normalizar = (valor) => valor?.toString().trim().replace(/\s+/g, '');
+
+    const coincidencias = inscripciones.filter(i =>
+      i.tipoDocumento === tipo &&
+      normalizar(i.documento) === normalizar(documento)
+    );
 
     if (coincidencias.length === 0) {
       return res.status(404).json({ tipo: 'no-encontrado' });
@@ -439,9 +444,7 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
         fechaInscripcion: i.fechaInscripcion,
         esEstudiante: i.esEstudiante,
         pagosMensuales: i.pagosMensuales || [],
-        comprobanteEstado: i.pagoConfirmado
-          ? 'verificado'
-          : i.comprobanteEstado || 'pendiente',
+        comprobanteEstado: i.pagoConfirmado ? 'verificado' : (i.comprobanteEstado || 'pendiente'),
         comprobante: i.comprobante || null,
       })),
     };
