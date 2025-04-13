@@ -450,9 +450,8 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
         fechaInscripcion: i.fechaInscripcion,
         esEstudiante: i.esEstudiante,
         pagosMensuales: i.pagosMensuales || [],
-        // 👇 AGREGA ESTA LÍNEA:
-        comprobanteEstado: i.comprobanteEstado,
-        comprobante: i.comprobante,
+        comprobanteEstado: i.comprobanteEstado || 'pendiente', // 👈 AGREGA ESTA LÍNEA
+        comprobante: i.comprobante || null,                    // 👈 Y ESTA TAMBIÉN
       })),
     };
 
