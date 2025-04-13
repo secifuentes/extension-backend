@@ -415,26 +415,12 @@ router.put('/pagos-mensuales/:id/confirmar', async (req, res) => {
 router.get('/estado/:tipo/:documento', async (req, res) => {
   const { tipo, documento } = req.params;
 
-  console.log('🔍 Consulta recibida:', { tipo, documento });
-
   try {
-    const inscripciones = await Inscripcion.find();
-
-    // Mostrar el primero como ejemplo
-    if (inscripciones.length > 0) {
-      console.log('📄 Ejemplo:', {
-        tipoDocumento: inscripciones[0].tipoDocumento,
-        documento: inscripciones[0].documento,
-      });
-    } else {
-      console.log('📭 No hay inscripciones en la BD');
-    }
-
-    const coincidencias = inscripciones.filter(i =>
-      i.tipoDocumento === tipo && i.documento === documento
-    );
-
-    console.log('✅ Coincidencias:', coincidencias.length);
+    // 👇 Consulta precisa
+    const coincidencias = await Inscripcion.find({
+      tipoDocumento: tipo,
+      documento: documento
+    });
 
     if (coincidencias.length === 0) {
       return res.status(404).json({ tipo: 'no-encontrado' });
@@ -453,8 +439,10 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
         fechaInscripcion: i.fechaInscripcion,
         esEstudiante: i.esEstudiante,
         pagosMensuales: i.pagosMensuales || [],
-        comprobanteEstado: i.pagoConfirmado ? 'verificado' : (i.comprobanteEstado || 'pendiente'),
-        comprobante: i.comprobante || null,                    // 👈 Y ESTA TAMBIÉN
+        comprobanteEstado: i.pagoConfirmado
+          ? 'verificado'
+          : i.comprobanteEstado || 'pendiente',
+        comprobante: i.comprobante || null,
       })),
     };
 
