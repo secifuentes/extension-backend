@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Visita = require('../models/Visita');
+const moment = require('moment-timezone');
 
 // POST - Registrar visita
 router.post('/', async (req, res) => {
@@ -20,15 +21,13 @@ router.post('/', async (req, res) => {
 // GET - Estadísticas generales (día, mes, total)
 router.get('/estadisticas', async (req, res) => {
   try {
-    const hoy = new Date();
-    hoy.setHours(0, 0, 0, 0);
+    const ahora = moment().tz('America/Bogota');
 
-    const mes = new Date();
-    mes.setDate(1);
-    mes.setHours(0, 0, 0, 0);
+    const inicioDelDia = ahora.clone().startOf('day').toDate(); // 🕛 00:00 hora Colombia
+    const inicioDelMes = ahora.clone().startOf('month').toDate(); // 📆 1er día del mes
 
-    const visitasHoy = await Visita.countDocuments({ fecha: { $gte: hoy } });
-    const visitasMes = await Visita.countDocuments({ fecha: { $gte: mes } });
+    const visitasHoy = await Visita.countDocuments({ fecha: { $gte: inicioDelDia } });
+    const visitasMes = await Visita.countDocuments({ fecha: { $gte: inicioDelMes } });
     const totalVisitas = await Visita.countDocuments();
 
     res.json({
