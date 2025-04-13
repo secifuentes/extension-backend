@@ -43,7 +43,7 @@ router.get('/estadisticas', async (req, res) => {
 
 // GET - Usuarios activos (en vivo en los últimos 5 minutos)
 router.get('/activos', async (req, res) => {
-  const hace5Min = new Date(Date.now() - 5 * 60 * 1000); // últimos 5 minutos
+  const hace5Min = moment().tz('America/Bogota').subtract(5, 'minutes').toDate(); // 🇨🇴 hace 5 minutos en hora Colombia
 
   try {
     const visitasActivas = await Visita.aggregate([
