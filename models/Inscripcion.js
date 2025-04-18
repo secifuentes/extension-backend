@@ -11,13 +11,12 @@ const PagoMensualSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  comprobante: String,
   comprobanteEstado: {
     type: String,
     enum: ['pendiente', 'verificado', 'rechazado'],
     default: 'pendiente',
-},
-}, { _id: false }); // No necesitamos _id en subdocumentos
+  },
+}, { _id: false });
 
 // Esquema de inscripción completo
 const InscripcionSchema = new mongoose.Schema({
@@ -32,7 +31,11 @@ const InscripcionSchema = new mongoose.Schema({
   cursoNombre: String,
   esEstudiante: Boolean,
 
-  formaPago: String, // mensual | trimestral
+  formaPago: {
+    type: String,
+    enum: ['mensual', 'trimestral'],
+    required: true
+  },
 
   valorPagado: Number,
   pagoConfirmado: { type: Boolean, default: false },

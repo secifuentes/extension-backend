@@ -201,6 +201,47 @@ router.post('/', async (req, res) => {
   try {
     console.log("Datos recibidos para inscripción: ", req.body);
 
+    // 🧠 Validación del comprobante
+const { formaPago, comprobante } = req.body;
+
+const {
+  nombres,
+  apellidos,
+  documento,
+  tipoDocumento,
+  correo,
+  telefono,
+  cursoId,
+  cursoNombre,
+  valorPagado
+} = req.body;
+
+if (
+  !nombres ||
+  !apellidos ||
+  !documento ||
+  !tipoDocumento ||
+  !correo ||
+  !telefono ||
+  !cursoId ||
+  !cursoNombre ||
+  !valorPagado ||
+  !formaPago ||
+  !comprobante
+) {
+  return res.status(400).json({
+    error: 'Todos los campos son obligatorios',
+    detalle: 'Faltan datos en el formulario. Asegúrate de haberlo completado correctamente.',
+  });
+}
+
+if (!formaPago || !comprobante) {
+  return res.status(400).json({
+    error: 'Todos los campos son obligatorios',
+    detalle: 'Falta el comprobante o la forma de pago',
+  });
+}
+
     // 🛡️ Validar si ya existe inscripción con ese documento y curso
     const yaExiste = await Inscripcion.findOne({
       documento: req.body.documento,
