@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Estudiante = require('../models/Estudiante');
 
-// Buscar estudiante por tipo y número de documento (flexible con tipos de documento)
+// Buscar estudiante por tipo y número de documento (con soporte para equivalencias)
 router.get('/:tipoDoc/:documento', async (req, res) => {
   const { tipoDoc, documento } = req.params;
 
@@ -10,13 +10,13 @@ router.get('/:tipoDoc/:documento', async (req, res) => {
     const docNormalizado = tipoDoc.trim();
     const documentoLimpio = documento.trim();
 
-    // Intento 1: Búsqueda exacta
+    // Búsqueda exacta
     let estudiante = await Estudiante.findOne({
       tipoDocumento: new RegExp(`^${docNormalizado}$`, 'i'),
       documento: documentoLimpio,
     });
 
-    // Intento 2: Buscar por equivalentes si no se encontró
+    // Si no se encontró, probar equivalencias
     if (!estudiante) {
       const equivalentes = {
         'Tarjeta de Identidad': ['Registro Civil'],
@@ -25,9 +25,9 @@ router.get('/:tipoDoc/:documento', async (req, res) => {
 
       const alternativas = equivalentes[docNormalizado] || [];
 
-      for (const alt of alternativas) {
+      for (const alternativa of alternativas) {
         estudiante = await Estudiante.findOne({
-          tipoDocumento: new RegExp(`^${alt}$`, 'i'),
+          tipoDocumento: new RegExp(`^${alternativa}$`, 'i'),
           documento: documentoLimpio,
         });
         if (estudiante) break;
@@ -45,7 +45,7 @@ router.get('/:tipoDoc/:documento', async (req, res) => {
   }
 });
 
-// ✅ Crear un nuevo estudiante
+// Crear un nuevo estudiante
 router.post('/', async (req, res) => {
   try {
     const nuevoEstudiante = new Estudiante(req.body);
