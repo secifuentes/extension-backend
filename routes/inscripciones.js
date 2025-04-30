@@ -402,5 +402,50 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
   }
 });
 
+const Estudiante = require('../models/Estudiante'); // Asegúrate de tener esta línea arriba
+
+// ✅ Buscar estudiante con soporte flexible de tipo de documento
+router.get('/buscar-estudiante/:tipoDoc/:documento', async (req, res) => {
+  const { tipoDoc, documento } = req.params;
+
+  try {
+    const docNormalizado = tipoDoc.trim();
+    const documentoLimpio = documento.trim();
+
+    // 1️⃣ Búsqueda exacta
+    let estudiante = await Estudiante.findOne({
+      tipoDocumento: new RegExp(`^${docNormalizado}$`, 'i'),
+      documento: documentoLimpio,
+    });
+
+    // 2️⃣ Si no se encuentra, probar equivalentes
+    if (!estudiante) {
+      const equivalentes = {
+        'Tarjeta de Identidad': ['Registro Civil'],
+        'Registro Civil': ['Tarjeta de Identidad'],
+      };
+
+      const alternativas = equivalentes[docNormalizado] || [];
+
+      for (const alternativa of alternativas) {
+        estudiante = await Estudiante.findOne({
+          tipoDocumento: new RegExp(`^${alternativa}$`, 'i'),
+          documento: documentoLimpio,
+        });
+        if (estudiante) break;
+      }
+    }
+
+    if (!estudiante) {
+      return res.status(404).json({ mensaje: 'Estudiante no encontrado' });
+    }
+
+    res.json(estudiante);
+  } catch (error) {
+    console.error('❌ Error en búsqueda de estudiante:', error);
+    res.status(500).json({ mensaje: 'Error en el servidor' });
+  }
+});
+
 
 module.exports = router;
