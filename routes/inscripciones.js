@@ -190,6 +190,8 @@ const enviarCorreoActualizacion = (inscripcion, cursoAnterior) => {
   });
 };
 
+
+
 const enviarCorreoPagoMensual = (inscripcion, mes) => {
   let mensajePersonalizado = '';
 
