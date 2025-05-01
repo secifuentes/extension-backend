@@ -17,6 +17,7 @@ const enviarCorreoConfirmacion = (inscripcion) => {
   const mailOptions = {
     from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
     to: inscripcion.correo,
+    bcc: 'secifuentes@lapresentaciongirardota.edu.co',
     subject: `${inscripcion.nombres}, ¡TE DAMOS LA BIENVENIDA A UNA EXPERIENCIA QUE TRANSFORMA!`,
     html: `
       <div style="margin:0;padding:0;background-color:#f4f6f9;font-family:'Segoe UI',sans-serif;">
