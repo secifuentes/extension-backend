@@ -13,7 +13,10 @@ const CursoSchema = new mongoose.Schema({
   beneficios: String,
   edad: String,
   reserva: String,
-  horario: String,
+  horarios: {
+    type: [String],
+    default: []
+  },
 
   slug: { type: String, required: true, unique: true }, // ✅ este campo
 }, { timestamps: true });

@@ -38,6 +38,17 @@ router.get('/con-inscritos', async (req, res) => {
   }
 });
 
+// 🔍 Obtener todos los cursos (sin contar inscritos)
+router.get('/', async (req, res) => {
+  try {
+    const cursos = await Curso.find().sort({ nombre: 1 }); // Orden alfabético opcional
+    res.json(cursos);
+  } catch (error) {
+    console.error('❌ Error al obtener cursos:', error);
+    res.status(500).json({ error: 'Error al obtener cursos' });
+  }
+});
+
 // ✅ Crear un nuevo curso con slug automático
 router.post('/', async (req, res) => {
   try {
