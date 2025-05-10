@@ -557,7 +557,6 @@ router.put('/:id', async (req, res) => {
     inscripcion.apellidos = nuevosDatos.apellidos;
     inscripcion.correo = nuevosDatos.correo;
     inscripcion.telefono = nuevosDatos.telefono;
-    inscripcion.horarioSeleccionado = nuevosDatos.horarioSeleccionado;
 
     if (nuevosDatos.cursoNombre) {
       inscripcion.cursoNombre = nuevosDatos.cursoNombre;
