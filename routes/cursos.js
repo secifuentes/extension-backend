@@ -13,9 +13,9 @@ const generarSlug = (nombre) =>
     .replace(/\-\-+/g, '-');
 
 // 📌 Obtener todos los cursos con cantidad de inscritos
-router.get('/con-inscritos', async (req, res) => {
+rrouter.get('/con-inscritos', async (req, res) => {
   try {
-    const cursos = await Curso.find().select('nombre precio imagen slug horarios horario modalidad duracion ubicacion');
+    const cursos = await Curso.find().lean(); // 🔥 trae todos los campos, incluidos horarios
 
     const conteo = await Inscripcion.aggregate([
       { $group: { _id: "$cursoId", total: { $sum: 1 } } }
@@ -27,7 +27,7 @@ router.get('/con-inscritos', async (req, res) => {
     });
 
     const cursosConInscritos = cursos.map(curso => ({
-      ...curso.toObject(),
+      ...curso,
       inscritos: conteoMap[curso._id.toString()] || 0
     }));
 
