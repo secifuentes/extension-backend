@@ -81,22 +81,19 @@ router.put('/:id', async (req, res) => {
   try {
     const data = req.body;
 
-    console.log("📥 Body recibido en PUT /api/cursos/:id:", data);
-
-    if (!data.nombre) {
-      return res.status(400).json({ error: 'El campo "nombre" es obligatorio.' });
+    // Si cambia el nombre, actualizar slug
+    if (data.nombre) {
+      data.slug = generarSlug(data.nombre);
     }
 
-    // Validación: asegurar que 'horarios' sea array si existe
-    if ('horarios' in data && !Array.isArray(data.horarios)) {
-      return res.status(400).json({ error: 'El campo "horarios" debe ser un arreglo.' });
+    // Asegurar que "horarios" sea un array
+    if (typeof data.horarios === 'string') {
+      data.horarios = [data.horarios];
     }
-
-    data.slug = generarSlug(data.nombre);
 
     const cursoActualizado = await Curso.findByIdAndUpdate(
       req.params.id,
-      data,
+      { $set: data },
       { new: true }
     );
 
