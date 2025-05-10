@@ -15,7 +15,7 @@ const generarSlug = (nombre) =>
 // 📌 Obtener todos los cursos con cantidad de inscritos
 router.get('/con-inscritos', async (req, res) => {
   try {
-    const cursos = await Curso.find().select('+horarios +horario');
+    const cursos = await Curso.find().select('nombre precio imagen slug horarios horario modalidad duracion ubicacion');
 
     const conteo = await Inscripcion.aggregate([
       { $group: { _id: "$cursoId", total: { $sum: 1 } } }
