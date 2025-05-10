@@ -107,6 +107,20 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// 📍 Obtener curso por ID
+router.get('/:id', async (req, res) => {
+  try {
+    const curso = await Curso.findById(req.params.id);
+    if (!curso) {
+      return res.status(404).json({ error: 'Curso no encontrado' });
+    }
+    res.json(curso);
+  } catch (error) {
+    console.error('❌ Error al obtener curso por ID:', error);
+    res.status(500).json({ error: 'Error al obtener el curso' });
+  }
+});
+
 // 🧩 Obtener un curso por su slug
 router.get('/slug/:slug', async (req, res) => {
   try {
