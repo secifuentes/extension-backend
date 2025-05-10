@@ -13,9 +13,11 @@ const generarSlug = (nombre) =>
     .replace(/\-\-+/g, '-');
 
 // 📌 Obtener todos los cursos con cantidad de inscritos
+// 📌 Obtener todos los cursos con cantidad de inscritos
 router.get('/con-inscritos', async (req, res) => {
   try {
-    const cursos = await Curso.find();
+    // ✅ Traer campos relevantes incluyendo horarios
+    const cursos = await Curso.find().select('nombre precio imagen slug horarios horario');
 
     const conteo = await Inscripcion.aggregate([
       { $group: { _id: "$cursoId", total: { $sum: 1 } } }
