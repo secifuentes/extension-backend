@@ -76,20 +76,27 @@ router.delete('/eliminar-todos', async (req, res) => {
 });
 
 // ✏️ Actualizar curso por ID
+// ✏️ Actualizar curso por ID (incluyendo horarios)
 router.put('/:id', async (req, res) => {
   try {
-    const { nombre, ...resto } = req.body;
+    const data = req.body;
 
-    // Si se cambió el nombre, regenerar el slug
-    const dataActualizada = {
-      ...resto,
-      nombre,
-      slug: generarSlug(nombre),
-    };
+    console.log("📥 Body recibido en PUT /api/cursos/:id:", data);
+
+    if (!data.nombre) {
+      return res.status(400).json({ error: 'El campo "nombre" es obligatorio.' });
+    }
+
+    // Validación: asegurar que 'horarios' sea array si existe
+    if ('horarios' in data && !Array.isArray(data.horarios)) {
+      return res.status(400).json({ error: 'El campo "horarios" debe ser un arreglo.' });
+    }
+
+    data.slug = generarSlug(data.nombre);
 
     const cursoActualizado = await Curso.findByIdAndUpdate(
       req.params.id,
-      dataActualizada,
+      data,
       { new: true }
     );
 
