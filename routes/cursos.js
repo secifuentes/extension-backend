@@ -1,90 +1,134 @@
 const express = require('express');
 const router = express.Router();
+const Curso = require('../models/Curso');
 const Inscripcion = require('../models/Inscripcion');
-const nodemailer = require('nodemailer');
-require('dotenv').config();
 
-// 🚀 Configurar Nodemailer
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASS,
-  },
+// 🧠 Función para generar slug automáticamente desde el nombre
+const generarSlug = (nombre) =>
+  nombre
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // quitar tildes
+    .replace(/\s+/g, '-')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\-\-+/g, '-');
+
+// 📌 Obtener todos los cursos con cantidad de inscritos
+router.get('/con-inscritos', async (req, res) => {
+  try {
+    const cursos = await Curso.find().select('+horarios +horario');
+
+    const conteo = await Inscripcion.aggregate([
+      { $group: { _id: "$cursoId", total: { $sum: 1 } } }
+    ]);
+
+    const conteoMap = {};
+    conteo.forEach(item => {
+      conteoMap[item._id] = item.total;
+    });
+
+    const cursosConInscritos = cursos.map(curso => ({
+      ...curso.toObject(),
+      inscritos: conteoMap[curso._id.toString()] || 0
+    }));
+
+    res.json(cursosConInscritos);
+  } catch (err) {
+    console.error('❌ Error en /con-inscritos:', err);
+    res.status(500).json({ error: 'Error al obtener cursos con inscritos' });
+  }
 });
 
-// 📦 Plantilla institucional (estilo, logo, márgenes)
-const wrapInTemplate = (contenido, nombre, curso, horario) => `
-  <div style="margin:0;padding:0;background-color:#f4f6f9;font-family:'Segoe UI',sans-serif;">
-    <div style="max-width:600px;width:100%;margin:0 auto;background:#ffffff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);padding:30px;box-sizing:border-box;">
-      
-      <!-- Logo -->
-      <div style="text-align:center;margin-bottom:20px;">
-        <img src="https://www.extensionlapresentacion.com/logo_extensionce.jpg" alt="Logo Extensión La Presentación" style="max-width:180px;" />
-      </div>
-
-      <!-- Encabezado -->
-      <h2 style="text-align:center;color:#21145F;font-size:26px;margin-bottom:30px;">
-        ¡Hola <span style="color:#21145F;">${nombre}</span>!
-      </h2>
-
-      <!-- Contenido personalizado -->
-      <div style="font-size:16px;line-height:1.7;color:#555;margin-bottom:20px;">
-        ${contenido
-          .replace(/{{nombre}}/gi, nombre)
-          .replace(/{{curso}}/gi, curso)
-          .replace(/{{horario}}/gi, horario || 'el horario asignado')}
-      </div>
-
-      <!-- Firma -->
-      <h3 style="text-align:center;color:#21145F;margin-top:40px;font-size:18px;">
-        EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
-      </h3>
-      <p style="text-align:center;font-size:13px;color:#aaa;">Girardota – Antioquia</p>
-
-      <!-- Redes sociales -->
-      <div style="text-align:center;margin-top:25px;">
-        <p style="font-size:15px;font-weight:bold;color:#444;">Síguenos en nuestras redes sociales:</p>
-        <p style="font-size:14px;color:#888;line-height:2;margin:10px 0;">
-          <a href="https://instagram.com/presentaciongirardota" style="color:#d4a017;text-decoration:none;">Instagram</a> |
-          <a href="https://www.tiktok.com/@presentaciongirardota" style="color:#d4a017;text-decoration:none;">TikTok</a> |
-          <a href="https://www.facebook.com/presentaciondegirardota" style="color:#d4a017;text-decoration:none;">Facebook</a> |
-          <a href="https://www.youtube.com/@Presentaciongirardota" style="color:#d4a017;text-decoration:none;">YouTube</a>
-        </p>
-      </div>
-    </div>
-  </div>
-`;
-
-// 📤 Enviar correos personalizados
-router.post('/enviar', async (req, res) => {
-  const { seleccionados, asunto, mensajeHtml } = req.body;
-
-  if (!seleccionados || !Array.isArray(seleccionados)) {
-    return res.status(400).json({ message: 'Debes enviar un array de IDs de inscripciones.' });
-  }
-
+// 🔍 Obtener todos los cursos (sin contar inscritos)
+router.get('/', async (req, res) => {
   try {
-    const estudiantes = await Inscripcion.find({ _id: { $in: seleccionados } });
+    const cursos = await Curso.find().sort({ nombre: 1 }); // Orden alfabético opcional
+    res.json(cursos);
+  } catch (error) {
+    console.error('❌ Error al obtener cursos:', error);
+    res.status(500).json({ error: 'Error al obtener cursos' });
+  }
+});
 
-    for (const est of estudiantes) {
-      const mensajeFinal = wrapInTemplate(mensajeHtml, est.nombres, est.cursoNombre, est.horario);
+// ✅ Crear un nuevo curso con slug automático
+router.post('/', async (req, res) => {
+  try {
+    const data = req.body;
+    data.slug = generarSlug(data.nombre); // 👈 genera slug automáticamente
 
-      await transporter.sendMail({
-        from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
-        to: est.correo,
-        bcc: 'extension@lapresentaciongirardota.edu.co',
-        subject: asunto
-          .replace(/{{nombre}}/gi, est.nombres)
-          .replace(/{{curso}}/gi, est.cursoNombre),
-        html: mensajeFinal,
-      });
+    const nuevoCurso = new Curso(data);
+    await nuevoCurso.save();
+    res.status(201).json(nuevoCurso);
+  } catch (error) {
+    console.error('❌ Error al crear curso:', error);
+    res.status(500).json({ error: 'No se pudo crear el curso' });
+  }
+});
+
+// 🗑️ Endpoint temporal para eliminar todos los cursos
+router.delete('/eliminar-todos', async (req, res) => {
+  try {
+    await Curso.deleteMany({});
+    res.status(200).json({ mensaje: '✅ Todos los cursos han sido eliminados' });
+  } catch (error) {
+    console.error('❌ Error al eliminar cursos:', error);
+    res.status(500).json({ error: 'Error al eliminar los cursos' });
+  }
+});
+
+// ✏️ Actualizar curso por ID
+// ✏️ Actualizar curso por ID (incluyendo horarios)
+router.put('/:id', async (req, res) => {
+  try {
+    const data = req.body;
+
+    // Si cambia el nombre, actualizar slug
+    if (data.nombre) {
+      data.slug = generarSlug(data.nombre);
     }
 
-    res.status(200).json({ message: `✅ Correos enviados a ${estudiantes.length} estudiantes.` });
+    // Asegurar que "horarios" sea un array
+    if (typeof data.horarios === 'string') {
+      data.horarios = [data.horarios];
+    }
+
+    const cursoActualizado = await Curso.findByIdAndUpdate(
+      req.params.id,
+      { $set: data },
+      { new: true }
+    );
+
+    res.json(cursoActualizado);
   } catch (error) {
-    console.error('❌ Error al enviar correos:', error);
-    res.status(500).json({ error: 'Error al enviar correos' });
+    console.error('❌ Error al actualizar curso:', error);
+    res.status(500).json({ error: 'No se pudo actualizar el curso' });
+  }
+});
+
+// 📍 Obtener curso por ID
+router.get('/:id', async (req, res) => {
+  try {
+    const curso = await Curso.findById(req.params.id);
+    if (!curso) {
+      return res.status(404).json({ error: 'Curso no encontrado' });
+    }
+    res.json(curso);
+  } catch (error) {
+    console.error('❌ Error al obtener curso por ID:', error);
+    res.status(500).json({ error: 'Error al obtener el curso' });
+  }
+});
+
+// 🧩 Obtener un curso por su slug
+router.get('/slug/:slug', async (req, res) => {
+  try {
+    const curso = await Curso.findOne({ slug: req.params.slug });
+    if (!curso) {
+      return res.status(404).json({ error: 'Curso no encontrado' });
+    }
+    res.json(curso);
+  } catch (error) {
+    console.error('❌ Error al buscar curso por slug:', error);
+    res.status(500).json({ error: 'Error del servidor' });
   }
 });
 
