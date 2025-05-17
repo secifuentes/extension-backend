@@ -4,7 +4,7 @@ const Inscripcion = require('../models/Inscripcion');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-// Configurar transportador de nodemailer
+// Configurar nodemailer
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -13,32 +13,49 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Ruta para enviar correo personalizado a múltiples estudiantes
-router.post('/enviar', async (req, res) => {
-  const { inscripcionesIds, asunto, mensajeHtml } = req.body;
+// 📘 Obtener estudiantes confirmados por curso
+router.get('/estudiantes-por-curso/:cursoNombre', async (req, res) => {
+  try {
+    const estudiantes = await Inscripcion.find({
+      cursoNombre: req.params.cursoNombre,
+      pagoConfirmado: true,
+    });
+    res.json(estudiantes);
+  } catch (error) {
+    console.error('❌ Error al obtener estudiantes:', error);
+    res.status(500).json({ error: 'Error al obtener estudiantes' });
+  }
+});
 
-  if (!inscripcionesIds || !Array.isArray(inscripcionesIds)) {
+// 📤 Enviar correos personalizados
+router.post('/enviar', async (req, res) => {
+  const { seleccionados, asunto, mensajeHtml } = req.body;
+
+  if (!seleccionados || !Array.isArray(seleccionados)) {
     return res.status(400).json({ message: 'Debes enviar un array de IDs de inscripciones.' });
   }
 
   try {
-    const inscripciones = await Inscripcion.find({ _id: { $in: inscripcionesIds } });
+    const estudiantes = await Inscripcion.find({ _id: { $in: seleccionados } });
 
-    for (const inscripcion of inscripciones) {
-      const mailOptions = {
+    for (const est of estudiantes) {
+      const mensajeFinal = mensajeHtml
+        .replace('{{nombre}}', est.nombres)
+        .replace('{{curso}}', est.cursoNombre)
+        .replace('{{horario}}', est.horario || 'el horario asignado');
+
+      await transporter.sendMail({
         from: process.env.MAIL_USER,
-        to: inscripcion.correo,
-        subject: asunto || `Curso de ${inscripcion.cursoNombre} - Información importante`,
-        html: mensajeHtml.replace('{{nombre}}', inscripcion.nombres).replace('{{curso}}', inscripcion.cursoNombre).replace('{{horario}}', inscripcion.horario || 'el horario asignado'),
-      };
-
-      await transporter.sendMail(mailOptions);
+        to: est.correo,
+        subject: asunto || `📢 Información de tu curso: ${est.cursoNombre}`,
+        html: mensajeFinal,
+      });
     }
 
-    res.status(200).json({ message: `Correos enviados a ${inscripciones.length} estudiantes.` });
+    res.status(200).json({ message: `✅ Correos enviados a ${estudiantes.length} estudiantes.` });
   } catch (error) {
     console.error('❌ Error al enviar correos:', error);
-    res.status(500).json({ message: 'Error al enviar los correos.' });
+    res.status(500).json({ error: 'Error al enviar correos' });
   }
 });
 
