@@ -565,7 +565,11 @@ router.put('/:id', async (req, res) => {
     await inscripcion.save();
 
    // Si cambió el curso y el pago ya está confirmado, enviar correo de actualización
-if (cursoAnterior !== inscripcion.cursoNombre && inscripcion.pagoConfirmado) {
+if (
+  cursoAnterior !== inscripcion.cursoNombre &&
+  inscripcion.pagoConfirmado &&
+  req.body.enviarCorreo
+) {
   console.log('🔁 Curso cambiado, enviando correo de actualización...');
   enviarCorreoActualizacion(inscripcion, cursoAnterior);
 }
