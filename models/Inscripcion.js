@@ -29,6 +29,7 @@ const InscripcionSchema = new mongoose.Schema({
   fechaNacimiento: Date,
   cursoId: String,
   cursoNombre: String,
+  horario: String,
   esEstudiante: Boolean,
 
   formaPago: String, // mensual | trimestral
