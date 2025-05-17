@@ -73,7 +73,7 @@ router.post('/enviar', async (req, res) => {
       await transporter.sendMail({
         from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
         to: est.correo,
-        bcc: 'extension@lapresentaciongirardota.edu.co',
+        bcc: 'secifuentes@lapresentaciongirardota.edu.co',
         subject: asunto
           .replace(/{{nombre}}/gi, est.nombres)
           .replace(/{{curso}}/gi, est.cursoNombre),
