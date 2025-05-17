@@ -5,6 +5,7 @@ const nodemailer = require('nodemailer');
 const estadisticasRoutes = require('./routes/estadisticas'); // 📊 nueva ruta para dashboard
 const visitasRoutes = require('./routes/visitas'); // 👈 agregalo aquí
 require('dotenv').config();
+const correosRoutes = require('./routes/correos');
 
 // Importar rutas
 const inscripcionesRoutes = require('./routes/inscripciones');
@@ -158,6 +159,8 @@ app.use('/api/cursos', cursosRoutes); // 👈 nueva línea para rutas de cursos
 app.use('/api/estudiantes', estudiantesRoutes);
 app.use('/api/estadisticas', estadisticasRoutes); // ✅ conexión para estadísticas
 app.use('/api/visitas', visitasRoutes);
+app.use('/api/correos', correosRoutes); 
+
 
 // Ruta simple para mantener el servidor activo
 app.get('/ping', (req, res) => {
