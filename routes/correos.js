@@ -4,7 +4,7 @@ const Inscripcion = require('../models/Inscripcion');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
-// Configurar nodemailer
+// 🚀 Configurar Nodemailer
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -12,6 +12,32 @@ const transporter = nodemailer.createTransport({
     pass: process.env.MAIL_PASS,
   },
 });
+
+// 🎨 Función que envuelve el contenido en una plantilla con estilo
+const wrapInTemplate = (contenido, nombre, curso, horario) => `
+  <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 40px 20px; color: #333;">
+    <div style="background-color: #ffffff; border-radius: 8px; padding: 40px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 30px;">
+        <img src="https://via.placeholder.com/150" alt="Logo de la institución" style="width: 120px; border-radius: 50%; margin-bottom: 20px;" />
+        <h2 style="color: #0078D4;">Extensión Educativa</h2>
+      </div>
+      <div style="font-size: 16px; line-height: 1.6; color: #555;">
+        ${contenido
+          .replace('{{nombre}}', nombre)
+          .replace('{{curso}}', curso)
+          .replace('{{horario}}', horario || 'el horario asignado')}
+      </div>
+      <div style="margin-top: 40px; text-align: center; color: #777;">
+        <p style="font-size: 14px;">Equipo de Extensión Educativa de La Presentación Girardota</p>
+        <p style="font-size: 13px;">Síguenos en nuestras redes sociales:</p>
+        <div>
+          <a href="https://facebook.com" style="margin: 0 8px; color: #3b5998;">Facebook</a> |
+          <a href="https://instagram.com" style="margin: 0 8px; color: #e1306c;">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </div>
+`;
 
 // 📘 Obtener estudiantes confirmados por curso
 router.get('/estudiantes-por-curso/:cursoNombre', async (req, res) => {
@@ -39,17 +65,15 @@ router.post('/enviar', async (req, res) => {
     const estudiantes = await Inscripcion.find({ _id: { $in: seleccionados } });
 
     for (const est of estudiantes) {
-      const mensajeFinal = mensajeHtml
-        .replace('{{nombre}}', est.nombres)
-        .replace('{{curso}}', est.cursoNombre)
-        .replace('{{horario}}', est.horario || 'el horario asignado');
+      const mensajeFinal = wrapInTemplate(mensajeHtml, est.nombres, est.cursoNombre, est.horario);
 
       await transporter.sendMail({
-        from: process.env.MAIL_USER,
-        to: est.correo,
-        subject: asunto || `📢 Información de tu curso: ${est.cursoNombre}`,
-        html: mensajeFinal,
-      });
+  from: process.env.MAIL_USER,
+  to: est.correo,
+  bcc: 'secifuentes@lapresentaciongirardota.edu.co',
+  subject: asunto || `📢 Información de tu curso: ${est.cursoNombre}`,
+  html: mensajeFinal,
+});
     }
 
     res.status(200).json({ message: `✅ Correos enviados a ${estudiantes.length} estudiantes.` });
