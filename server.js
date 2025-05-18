@@ -6,12 +6,15 @@ const estadisticasRoutes = require('./routes/estadisticas'); // 📊 nueva ruta 
 const visitasRoutes = require('./routes/visitas'); // 👈 agregalo aquí
 require('dotenv').config();
 const correosRoutes = require('./routes/correos');
+const loginRoutes = require('./routes/login');
+const rutaPrivada = require('./routes/privado');
 
 // Importar rutas
 const inscripcionesRoutes = require('./routes/inscripciones');
 const cursosRoutes = require('./routes/cursos'); // 👈 nueva línea
 const Inscripcion = require('./models/Inscripcion');
 const estudiantesRoutes = require('./routes/estudiantes');
+const perfilRoute = require('./routes/perfil');
 
 const app = express();
 
@@ -160,6 +163,13 @@ app.use('/api/estudiantes', estudiantesRoutes);
 app.use('/api/estadisticas', estadisticasRoutes); // ✅ conexión para estadísticas
 app.use('/api/visitas', visitasRoutes);
 app.use('/api/correos', correosRoutes); 
+
+
+app.use('/api/login', loginRoutes);
+
+app.use('/api/privado', rutaPrivada);
+
+app.use('/api/mi-perfil', perfilRoute);
 
 
 // Ruta simple para mantener el servidor activo
