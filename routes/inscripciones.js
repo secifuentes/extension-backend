@@ -581,4 +581,42 @@ if (
   }
 });
 
+const User = require('../models/User');
+
+// 📘 Obtener datos de inscripción por usuario (para el panel del estudiante)
+router.get('/usuario/:userId', async (req, res) => {
+  try {
+    const usuario = await User.findById(req.params.userId);
+    if (!usuario) {
+      return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+    }
+
+    const inscripciones = await Inscripcion.find({ correo: usuario.email }).sort({ fechaInscripcion: -1 });
+
+    if (!inscripciones || inscripciones.length === 0) {
+      return res.status(404).json({ mensaje: 'No se encontraron inscripciones para este usuario' });
+    }
+
+    // Agrupar la información para el panel
+    const resumen = {
+      nombre: usuario.nombre,
+      email: usuario.email,
+      documento: usuario.documento,
+      cursos: inscripciones.map((i) => ({
+        curso: i.cursoNombre,
+        modalidad: i.modalidad || 'Presencial',
+        inicio: i.fechaInicio || 'Por confirmar',
+        pagoConfirmado: i.pagoConfirmado,
+        pagosMensuales: i.pagosMensuales || [],
+        materiales: i.materiales || [],
+      })),
+    };
+
+    res.json(resumen);
+  } catch (err) {
+    console.error("❌ Error al buscar inscripciones por usuario:", err);
+    res.status(500).json({ mensaje: "Error del servidor" });
+  }
+});
+
 module.exports = router;

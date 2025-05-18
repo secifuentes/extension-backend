@@ -13,6 +13,8 @@ const cursosRoutes = require('./routes/cursos'); // 👈 nueva línea
 const Inscripcion = require('./models/Inscripcion');
 const estudiantesRoutes = require('./routes/estudiantes');
 
+const authRoutes = require("./routes/auth");
+
 const app = express();
 
 // Configurar body-parser para permitir cuerpos más grandes
@@ -23,6 +25,7 @@ app.use(express.urlencoded({ limit: '10mb', extended: true })); // Para datos ur
 const allowedOrigins = [
   'http://localhost:5173',
   'https://extension-presentacion.vercel.app',
+  'http://localhost:3000',
   'https://www.extensionlapresentacion.com',
 
   /^https:\/\/.*\.vercel\.app$/, // 🟢 acepta previews de Vercel
@@ -161,6 +164,7 @@ app.use('/api/estadisticas', estadisticasRoutes); // ✅ conexión para estadís
 app.use('/api/visitas', visitasRoutes);
 app.use('/api/correos', correosRoutes); 
 
+app.use("/api/auth", authRoutes);
 
 // Ruta simple para mantener el servidor activo
 app.get('/ping', (req, res) => {
@@ -198,6 +202,26 @@ app.post('/api/confirmarPago', async (req, res) => {
 
 // Puerto del servidor
 const PORT = process.env.PORT || 5050;
+
+//temporal
+const User = require('./models/User');
+
+(async () => {
+  const existe = await User.findOne({ email: "ana@example.com" });
+  if (!existe) {
+    const nuevoUsuario = new User({
+      nombre: "Ana Torres",
+      email: "ana@example.com",
+      documento: "11223344",
+      password: "clave1234",
+      rol: "estudiante"
+    });
+    await nuevoUsuario.save();
+    console.log("✅ Usuario de prueba creado correctamente");
+  } else {
+    console.log("⚠️ El usuario ya existe");
+  }
+})();
 
 app.listen(PORT, () => {
   const environment = process.env.NODE_ENV === 'production' ? 'Producción (Heroku)' : 'Desarrollo (Localhost)';
