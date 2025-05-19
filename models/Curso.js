@@ -17,8 +17,15 @@ const CursoSchema = new mongoose.Schema({
     type: [String],
     default: []
   },
+  slug: { type: String, required: true, unique: true },
 
-  slug: { type: String, required: true, unique: true }, // ✅ este campo
+  // 🔧 Nuevo campo: docente
+  docente: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User", // asegúrate que tu modelo de usuario se llama "User"
+    required: false // Temporalmente no obligatorio hasta que lo asignemos
+  }
+
 }, { timestamps: true });
 
 module.exports = mongoose.model('Curso', CursoSchema);

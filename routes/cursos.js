@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Curso = require('../models/Curso');
 const Inscripcion = require('../models/Inscripcion');
+const mongoose = require("mongoose");
 
 // 🧠 Función para generar slug automáticamente desde el nombre
 const generarSlug = (nombre) =>
@@ -104,7 +105,19 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// 📍 Obtener curso por ID
+/// ✅ Obtener cursos asignados a un docente por su ID (primero)
+router.get('/docente/:id', async (req, res) => {
+  try {
+    const docenteId = new mongoose.Types.ObjectId(req.params.id);
+    const cursos = await Curso.find({ docente: docenteId }).sort({ nombre: 1 });
+    res.json(cursos);
+  } catch (error) {
+    console.error('❌ Error al obtener cursos del docente:', error);
+    res.status(500).json({ error: 'Error al obtener cursos del docente' });
+  }
+});
+
+// 📍 Obtener curso por ID (después)
 router.get('/:id', async (req, res) => {
   try {
     const curso = await Curso.findById(req.params.id);
@@ -131,5 +144,7 @@ router.get('/slug/:slug', async (req, res) => {
     res.status(500).json({ error: 'Error del servidor' });
   }
 });
+
+
 
 module.exports = router;
