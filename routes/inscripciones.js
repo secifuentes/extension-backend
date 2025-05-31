@@ -322,7 +322,11 @@ router.get('/', async (req, res) => {
     const inscripciones = await Inscripcion.find().sort({ fechaInscripcion: -1 });
     res.json(inscripciones);
   } catch (error) {
-    res.status(500).json({ error: 'Error al obtener inscripciones' });
+    console.error('❌ Error al obtener inscripciones:', error); // 🔍 Aquí se mostrará el error real
+    res.status(500).json({
+      error: 'Error al obtener inscripciones',
+      detalle: error.message, // 👈 Esto lo verás en el navegador o en Postman
+    });
   }
 });
 
