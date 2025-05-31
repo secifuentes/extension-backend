@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Inscripcion = require('../models/Inscripcion');
 const nodemailer = require('nodemailer');
+const mongoose = require('mongoose');
 
 // Configuración de Nodemailer
 const transporter = nodemailer.createTransport({
@@ -319,15 +320,21 @@ router.post('/', async (req, res) => {
 // Resto de rutas (sin cambios)
 router.get('/', async (req, res) => {
   try {
-    const inscripciones = await Inscripcion.aggregate([
-  { $sort: { fechaInscripcion: -1 } }
-]).option({ allowDiskUse: true }); // ✅ Esto permite usar el disco y evita el error
+    const inscripciones = await mongoose.connection.db
+      .collection('inscripcions') // ⚠️ OJO: verifica el nombre real de tu colección si no se llama exactamente así
+      .aggregate([
+        { $sort: { fechaInscripcion: -1 } }
+      ], {
+        allowDiskUse: true
+      })
+      .toArray();
+
     res.json(inscripciones);
   } catch (error) {
-    console.error('❌ Error al obtener inscripciones:', error); // 🔍 Aquí se mostrará el error real
+    console.error('❌ Error al obtener inscripciones:', error);
     res.status(500).json({
       error: 'Error al obtener inscripciones',
-      detalle: error.message, // 👈 Esto lo verás en el navegador o en Postman
+      detalle: error.message,
     });
   }
 });
