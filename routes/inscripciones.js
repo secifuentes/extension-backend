@@ -319,7 +319,9 @@ router.post('/', async (req, res) => {
 // Resto de rutas (sin cambios)
 router.get('/', async (req, res) => {
   try {
-    const inscripciones = await Inscripcion.find().sort({ fechaInscripcion: -1 });
+    const inscripciones = await Inscripcion.aggregate([
+  { $sort: { fechaInscripcion: -1 } }
+]).option({ allowDiskUse: true });
     res.json(inscripciones);
   } catch (error) {
     console.error('❌ Error al obtener inscripciones:', error); // 🔍 Aquí se mostrará el error real
