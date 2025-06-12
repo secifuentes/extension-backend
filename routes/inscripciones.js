@@ -194,33 +194,20 @@ const enviarCorreoActualizacion = (inscripcion, cursoAnterior) => {
 
 
 const enviarCorreoPagoMensual = (inscripcion, mes) => {
+  let titulo = '';
   let mensajePersonalizado = '';
 
   if (mes === 2) {
+    titulo = '¡Confirmamos tu pago del mes 2! 💙';
     mensajePersonalizado = `
-      ¡Hola ${inscripcion.nombres}!  
-      ¡Confirmamos tu pago del mes 2! 💙
-
       Estás avanzando con firmeza. Tu constancia en este proceso formativo nos inspira.  
       Gracias por seguir construyendo esta experiencia junto a nosotros.
-
-      _“Más que cursos, experiencias que inspiran.”_
-
-      EQUIPO DE EXTENSIÓN LA PRESENTACIÓN  
-      Girardota – Antioquia
     `;
   } else if (mes === 3) {
+    titulo = '¡Tu pago del mes 3 ha sido confirmado! 💙';
     mensajePersonalizado = `
-      ¡Hola ${inscripcion.nombres}!  
-      ¡Tu pago del mes 3 ha sido confirmado! 💙
-
       Has llegado muy lejos en este proceso y eso merece una felicitación.  
       ¡Gracias por tu compromiso y por demostrar que el aprendizaje sí transforma!
-
-      _“Más que cursos, experiencias que inspiran.”_
-
-      EQUIPO DE EXTENSIÓN LA PRESENTACIÓN  
-      Girardota – Antioquia
     `;
   }
 
@@ -229,18 +216,64 @@ const enviarCorreoPagoMensual = (inscripcion, mes) => {
     to: inscripcion.correo,
     subject: `${inscripcion.nombres}, ¡HEMOS CONFIRMADO TU PAGO DEL MES ${mes}!`,
     html: `
-      <div style="font-family: 'Segoe UI', sans-serif; background-color: #f4f6f9; padding: 30px;">
-        <div style="max-width: 600px; margin: auto; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); padding: 30px; color: #333;">
-          ${mensajePersonalizado}
-          <div style="text-align: center; margin-top: 30px;">
-            <p style="font-size: 14px; font-weight: bold; color: #444;">Síguenos en nuestras redes sociales:</p>
-            <p style="font-size: 14px; color: #888;">
-              <a href="https://instagram.com/presentaciongirardota" style="color: #d4a017; text-decoration: none;">Instagram</a> |
-              <a href="https://www.tiktok.com/@presentaciongirardota" style="color: #d4a017; text-decoration: none;">TikTok</a> |
-              <a href="https://www.facebook.com/presentaciondegirardota" style="color: #d4a017; text-decoration: none;">Facebook</a> |
-              <a href="https://www.youtube.com/@Presentaciongirardota" style="color: #d4a017; text-decoration: none;">YouTube</a>
+      <div style="margin:0;padding:0;background-color:#f4f6f9;font-family:'Segoe UI',sans-serif;">
+        <div style="max-width:600px;width:100%;margin:0 auto;background:#ffffff;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.06);padding:30px;box-sizing:border-box;">
+    
+          <!-- Logo -->
+          <div style="text-align:center;margin-bottom:20px;">
+            <img src="https://www.extensionlapresentacion.com/logo_extensionce.jpg" alt="Logo Extensión La Presentación" style="max-width:180px;" />
+          </div>
+    
+          <!-- Encabezado -->
+          <h2 style="text-align:center;color:#21145F;font-size:26px;margin-bottom:20px;">
+            ¡Hola <span style="color:#21145F;">${inscripcion.nombres}</span>!
+          </h2>
+          <p style="text-align:center;font-size:18px;color:#444;margin-bottom:30px;">
+            ${titulo}
+          </p>
+    
+          <!-- Mensaje -->
+          <p style="font-size:16px;line-height:1.7;color:#555;">
+            ${mensajePersonalizado}
+          </p>
+    
+          <!-- Banner emocional -->
+          <div style="margin:35px 0;padding:25px;background-color:#21145F;border-radius:10px;text-align:center;">
+            <p style="font-size:18px;color:#ffffff;font-weight:600;margin:0;">
+              ¡Seguimos avanzando juntos!<br />
+              <span style="color:#4da6ff;">Gracias por tu constancia</span>
             </p>
           </div>
+    
+          <!-- Botón -->
+          <div style="text-align:center;margin-bottom:30px;">
+            <a href="https://extensionlapresentacion.com" target="_blank" style="display:inline-block;padding:14px 30px;background-color:#1a428a;color:#fff;text-decoration:none;border-radius:50px;font-size:16px;">
+              Ver mi curso
+            </a>
+          </div>
+    
+          <!-- Cierre -->
+          <p style="text-align:center;font-size:15px;color:#555;margin:0;">
+            “Más que cursos, experiencias que inspiran.” 💙
+          </p>
+    
+          <!-- Firma -->
+          <h3 style="text-align:center;color:#21145F;margin-top:40px;font-size:20px;letter-spacing:1px;">
+            EQUIPO DE EXTENSIÓN LA PRESENTACIÓN
+          </h3>
+          <p style="text-align:center;font-size:13px;color:#aaa;">Girardota – Antioquia</p>
+    
+          <!-- Redes Sociales -->
+          <div style="text-align:center;margin-top:30px;">
+            <p style="font-size:15px;font-weight:bold;color:#444;">Síguenos en nuestras redes sociales:</p>
+            <p style="font-size:14px;color:#888;line-height:2;margin:10px 0;word-break:break-word;">
+              <a href="https://instagram.com/presentaciongirardota" style="color:#d4a017;text-decoration:none;">Instagram</a> |
+              <a href="https://www.tiktok.com/@presentaciongirardota" style="color:#d4a017;text-decoration:none;">TikTok</a> |
+              <a href="https://www.facebook.com/presentaciondegirardota" style="color:#d4a017;text-decoration:none;">Facebook</a> |
+              <a href="https://www.youtube.com/@Presentaciongirardota" style="color:#d4a017;text-decoration:none;">YouTube</a>
+            </p>
+          </div>
+    
         </div>
       </div>
     `,
@@ -448,12 +481,6 @@ if (pagoExistenteIndex !== -1) {
   });
 }
 
-    // Agregar nuevo pago mensual
-    inscripcion.pagosMensuales.push({
-      mes,
-      comprobante, // Usa 'comprobante' directamente, no 'comprobanteBase64'
-      estado: 'pendiente'
-    });
 
     await inscripcion.save();
 
