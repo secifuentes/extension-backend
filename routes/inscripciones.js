@@ -320,10 +320,15 @@ router.post('/', async (req, res) => {
 // Resto de rutas (sin cambios)
 router.get('/', async (req, res) => {
   try {
-    const inscripciones = await Inscripcion.find().sort({ fechaInscripcion: -1 });
+    const inscripciones = await Inscripcion.find();
 
-    console.log("✅ Inscripciones cargadas:", inscripciones.length);
-    res.json(inscripciones);
+    // Ordenar en memoria
+    const ordenadas = inscripciones.sort((a, b) => {
+      return new Date(b.fechaInscripcion) - new Date(a.fechaInscripcion);
+    });
+
+    console.log("✅ Inscripciones cargadas y ordenadas:", ordenadas.length);
+    res.json(ordenadas);
   } catch (error) {
     console.error('❌ Error al obtener inscripciones:', error);
     res.status(500).json({
