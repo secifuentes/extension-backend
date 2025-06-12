@@ -485,7 +485,12 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
   };
 
   // 🧠 Obtener todas las formas posibles para ese tipo
-  const posibles = equivalentes[tipo.toLowerCase()] || [tipo];
+  let posibles = equivalentes[tipo.toLowerCase()] || [tipo];
+
+// 🎯 Si es Registro Civil o Tarjeta de Identidad, buscar ambos
+if (posibles.includes('Registro Civil') || posibles.includes('Tarjeta de Identidad')) {
+  posibles = ['Registro Civil', 'Tarjeta de Identidad', 'RC', 'TI', 'rc', 'ti'];
+}
 
   try {
     const inscripciones = await Inscripcion.find({
