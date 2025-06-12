@@ -424,10 +424,28 @@ router.put('/pagos-mensuales/:id', async (req, res) => {
     }
 
     // Verificar si ya hay comprobante para ese mes
-    const yaExiste = inscripcion.pagosMensuales.find(p => p.mes === mes);
-    if (yaExiste) {
-      return res.status(400).json({ error: `Ya se subió un comprobante para el mes ${mes}` });
-    }
+    // Verifica si ya existe un pago para ese mes
+const pagoExistenteIndex = inscripcion.pagosMensuales.findIndex(p => p.mes === mes);
+
+if (pagoExistenteIndex !== -1) {
+  // ✅ Reemplazar solo si el estado es 'rechazado'
+  if (inscripcion.pagosMensuales[pagoExistenteIndex].estado === 'rechazado') {
+    inscripcion.pagosMensuales[pagoExistenteIndex] = {
+      mes,
+      comprobante,
+      estado: 'pendiente'
+    };
+  } else {
+    return res.status(400).json({ error: `Ya hay un comprobante en estado ${inscripcion.pagosMensuales[pagoExistenteIndex].estado} para el mes ${mes}` });
+  }
+} else {
+  // ✅ Si no existe, lo agrega
+  inscripcion.pagosMensuales.push({
+    mes,
+    comprobante,
+    estado: 'pendiente'
+  });
+}
 
     // Agregar nuevo pago mensual
     inscripcion.pagosMensuales.push({
