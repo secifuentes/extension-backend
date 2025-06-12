@@ -355,9 +355,10 @@ router.put('/confirmar-pago/:id', async (req, res) => {
 }
 
 // ✅ Limpieza de pagosMensuales incompletos
+// ✅ Limpieza más segura (opcional)
 if (Array.isArray(inscripcion.pagosMensuales)) {
   inscripcion.pagosMensuales = inscripcion.pagosMensuales.filter(
-    (p) => p.comprobante && p.mes
+    (p) => p.mes && typeof p.mes === 'number'
   );
 }
 
