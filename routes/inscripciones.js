@@ -475,11 +475,29 @@ router.put('/pagos-mensuales/:id/confirmar', async (req, res) => {
 router.get('/estado/:tipo/:documento', async (req, res) => {
   const { tipo, documento } = req.params;
 
+  // 🎯 Diccionario de equivalentes
+  const equivalentes = {
+    ti: ['TI', 'ti', 'Tarjeta de Identidad'],
+    rc: ['RC', 'rc', 'Registro Civil'],
+    cc: ['CC', 'cc', 'Cédula de Ciudadanía'],
+    ce: ['CE', 'ce', 'Cédula de Extranjería'],
+    pa: ['PA', 'pa', 'Pasaporte'],
+  };
+
+  // 🧠 Obtener todas las formas posibles para ese tipo
+  const posibles = equivalentes[tipo.toLowerCase()] || [tipo];
+
   try {
     const inscripciones = await Inscripcion.find({
-      tipoDoc: new RegExp(`^${tipo.trim()}$`, 'i'),
+      tipoDoc: { $in: posibles },
       documento: documento.trim()
     });
+
+    if (!inscripciones || inscripciones.length === 0) {
+      return res.status(404).json({ tipo: 'no-encontrado' });
+    }
+
+    // El resto del código sigue igual...
 
     if (!inscripciones || inscripciones.length === 0) {
       return res.status(404).json({ tipo: 'no-encontrado' });
