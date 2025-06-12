@@ -320,15 +320,9 @@ router.post('/', async (req, res) => {
 // Resto de rutas (sin cambios)
 router.get('/', async (req, res) => {
   try {
-    const inscripciones = await mongoose.connection.db
-      .collection('inscripcions') // ⚠️ OJO: verifica el nombre real de tu colección si no se llama exactamente así
-      .aggregate([
-        { $sort: { fechaInscripcion: -1 } }
-      ], {
-        allowDiskUse: true
-      })
-      .toArray();
+    const inscripciones = await Inscripcion.find().sort({ fechaInscripcion: -1 });
 
+    console.log("✅ Inscripciones cargadas:", inscripciones.length);
     res.json(inscripciones);
   } catch (error) {
     console.error('❌ Error al obtener inscripciones:', error);
