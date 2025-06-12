@@ -489,9 +489,9 @@ router.get('/estado/:tipo/:documento', async (req, res) => {
 
   try {
     const inscripciones = await Inscripcion.find({
-      tipoDoc: { $in: posibles },
-      documento: documento.trim()
-    });
+  tipoDocumento: { $in: posibles },
+  documento: documento.trim()
+});
 
     if (!inscripciones || inscripciones.length === 0) {
       return res.status(404).json({ tipo: 'no-encontrado' });
