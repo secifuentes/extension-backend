@@ -350,6 +350,9 @@ router.put('/confirmar-pago/:id', async (req, res) => {
     }
 
     inscripcion.pagoConfirmado = true;
+    if (inscripcion.comprobanteEstado !== 'verificado') {
+  inscripcion.comprobanteEstado = 'verificado';
+}
 
 // ✅ Limpieza de pagosMensuales incompletos
 if (Array.isArray(inscripcion.pagosMensuales)) {
