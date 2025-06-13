@@ -58,30 +58,24 @@ const wrapInTemplate = (contenido, nombre, curso, horario) => `
 
 // 📤 Enviar correos personalizados
 router.post('/enviar', async (req, res) => {
-  const { seleccionados, asunto, mensajeHtml } = req.body;
+  const { correos, asunto, mensajeHtml } = req.body;
 
-  if (!seleccionados || !Array.isArray(seleccionados)) {
-    return res.status(400).json({ message: 'Debes enviar un array de IDs de inscripciones.' });
+  if (!correos || !Array.isArray(correos)) {
+    return res.status(400).json({ message: 'Debes enviar un array de correos electrónicos.' });
   }
 
   try {
-    const estudiantes = await Inscripcion.find({ _id: { $in: seleccionados } });
+    const mensajeFinal = wrapInTemplate(mensajeHtml, 'estudiante', 'curso', 'horario');
 
-    for (const est of estudiantes) {
-      const mensajeFinal = wrapInTemplate(mensajeHtml, est.nombres, est.cursoNombre, est.horario);
+    await transporter.sendMail({
+      from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
+      to: process.env.MAIL_USER,
+      bcc: correos,
+      subject: asunto,
+      html: mensajeFinal,
+    });
 
-      await transporter.sendMail({
-        from: `"EXTENSIÓN LA PRESENTACIÓN" <${process.env.MAIL_USER}>`,
-        to: est.correo,
-        bcc: 'secifuentes@lapresentaciongirardota.edu.co',
-        subject: asunto
-          .replace(/{{nombre}}/gi, est.nombres)
-          .replace(/{{curso}}/gi, est.cursoNombre),
-        html: mensajeFinal,
-      });
-    }
-
-    res.status(200).json({ message: `✅ Correos enviados a ${estudiantes.length} estudiantes.` });
+    res.status(200).json({ message: `✅ Correos enviados a ${correos.length} destinatarios.` });
   } catch (error) {
     console.error('❌ Error al enviar correos:', error);
     res.status(500).json({ error: 'Error al enviar correos' });
